@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:src="@drawable/checkin" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkin test"
+            android:fontFamily="@font/googlesans_bold"
+            android:textColor="@color/black"
+            android:textSize="34dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/checkinP"
+            android:textColor="@color/black"
+            android:textSize="21dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Start Checkin"
+            android:textSize="26dp"
+            android:fontFamily="@font/googlesans_bold"
+            android:textColor="#0000FF" />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
