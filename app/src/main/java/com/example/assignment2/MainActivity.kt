@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         list.add(MeasureModel("Breathing", "min"))
         list.add(MeasureModel("Blood Oxygen Saturation", "%"))
         list.add(MeasureModel("Body Temperature", "Celsius"))
-        list.add(MeasureModel("Pulase Rate","min"))
+        list.add(MeasureModel("Pulse Rate","min"))
 
 //        listView.adapter = MyListAdapter(this,R.layout.row,list)
 //        listView.setOnItemClickListener{parent, view, position, id ->
