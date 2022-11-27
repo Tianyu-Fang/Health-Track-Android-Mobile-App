@@ -24,3 +24,8 @@ hs_err_pid*
 replay_pid*
 *.bin
 *.bin
+*.bin
+*.bin
+*.lock
+.gradle/7.4/fileHashes/fileHashes.bin
+.gradle/7.4/fileHashes/fileHashes.bin
