@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.profile)
+        setContentView(R.layout.activity_login)
 
-        constructRecyclerView(this@MainActivity)
+        //constructRecyclerView(this@MainActivity)
     }
 }
 
