@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.assignment2.MainActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.assignment2.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_scoreFragment_to_measurementFragment"
+            app:destination="@id/measurementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heightFragment"
+        android:name="com.example.assignment2.HeightFragment"
+        android:label="fragment_height"
+        tools:layout="@layout/fragment_height" >
+        <action
+            android:id="@+id/action_heightFragment_to_measurementFragment"
+            app:destination="@id/measurementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietFragment"
+        android:name="com.example.assignment2.DietFragment"
+        android:label="fragment_diet"
+        tools:layout="@layout/fragment_diet" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.assignment2.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.example.assignment2.JournalFragment"
+        android:label="fragment_journal"
+        tools:layout="@layout/fragment_journal" />
+    <fragment
+        android:id="@+id/measurementFragment"
+        android:name="com.example.assignment2.MeasurementFragment"
+        android:label="fragment_measurement"
+        tools:layout="@layout/fragment_measurement" >
+        <action
+            android:id="@+id/action_measurementFragment_to_weightFragment"
+            app:destination="@id/weightFragment" />
+        <action
+            android:id="@+id/action_measurementFragment_to_heightFragment"
+            app:destination="@id/heightFragment" />
+        <action
+            android:id="@+id/action_measurementFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sleepFragment"
+        android:name="com.example.assignment2.SleepFragment"
+        android:label="fragment_sleep"
+        tools:layout="@layout/fragment_sleep" />
+    <fragment
+        android:id="@+id/weightFragment"
+        android:name="com.example.assignment2.WeightFragment"
+        android:label="fragment_weight"
+        tools:layout="@layout/fragment_weight" >
+        <action
+            android:id="@+id/action_weightFragment_to_measurementFragment"
+            app:destination="@id/measurementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.assignment2.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.assignment2.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.assignment2.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.assignment2.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heartRateFragment"
+        android:name="com.example.assignment2.HeartRateFragment"
+        android:label="fragment_heart_rate"
+        tools:layout="@layout/fragment_heart_rate" />
+    <fragment
+        android:id="@+id/walkingFragment"
+        android:name="com.example.assignment2.WalkingFragment"
+        android:label="fragment_walking"
+        tools:layout="@layout/fragment_walking" />
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.example.assignment2.ExerciseFragment"
+        android:label="fragment_exercise"
+        tools:layout="@layout/fragment_exercise" />
+    <activity
+        android:id="@+id/checkinActivity"
+        android:name="com.example.assignment2.CheckinActivity"
+        android:label="activity_checkin"
+        tools:layout="@layout/activity_checkin" />
+    <fragment
+        android:id="@+id/fillCheckinFragment"
+        android:name="com.example.assignment2.FillCheckinFragment"
+        android:label="fragment_fill_checkin"
+        tools:layout="@layout/fragment_fill_checkin" />
+    <fragment
+        android:id="@+id/checkinHistoryFragment"
+        android:name="com.example.assignment2.CheckinHistoryFragment"
+        android:label="fragment_checkin_history"
+        tools:layout="@layout/fragment_checkin_history" >
+        <action
+            android:id="@+id/action_checkinHistoryFragment_to_checkReportFragment"
+            app:destination="@id/checkReportFragment" />
+        <action
+            android:id="@+id/action_checkinHistoryFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_checkinHistoryFragment_to_healthTrackFragment"
+            app:destination="@id/healthTrackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkReportFragment"
+        android:name="com.example.assignment2.CheckReportFragment"
+        android:label="fragment_check_report"
+        tools:layout="@layout/fragment_check_report" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.assignment2.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/healthTrackFragment"
+        android:name="com.example.assignment2.HealthTrackFragment"
+        android:label="fragment_health_track"
+        tools:layout="@layout/fragment_health_track" />
+</navigation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/healthMeasurements"
+            android:title="Health Measurements" />
+
+        <item
+            android:id="@+id/healthDiet"
+            android:title="Health Diet" />
+
+        <item
+            android:id="@+id/healthInformation"
+            android:title="Health Information" />
+
+        <item
+            android:id="@+id/journal"
+            android:title="Journal" />
+
+        <item
+            android:id="@+id/sleep"
+            android:title="Sleep" />
+    </group>
+
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/logout"
+            android:title="logout"
+            />
+    </group>
+</menu>

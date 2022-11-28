@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Assignment2</string>
+    <string name="username">Tang</string>
+    <string name="checkinP">This test allows you to easily determine your risk of illness</string>
     <string name="profile_title">title</string>
-    <string name="measurement">measurement</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

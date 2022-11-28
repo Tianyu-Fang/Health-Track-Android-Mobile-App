@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CheckinActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:src="@drawable/checkin" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkin test"
+            android:fontFamily="@font/googlesans_bold"
+            android:textColor="@color/black"
+            android:textSize="34dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/checkinP"
+            android:textColor="@color/black"
+            android:textSize="21dp" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="30dp"
+
+
+            android:background="@drawable/login_button"
+
+            android:fontFamily="@font/googlesans_bold"
+
+            android:text="Start Checkin"
+
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+        />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
