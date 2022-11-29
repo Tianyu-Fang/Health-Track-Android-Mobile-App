@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.model
 
 data class ProfileModel(
     val id: Int = 0,
