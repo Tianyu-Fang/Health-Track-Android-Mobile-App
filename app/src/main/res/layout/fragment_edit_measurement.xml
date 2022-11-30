@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".measurement.EditMeasurementFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/header_title"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/measurement"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Health Measurements"
+                android:textSize="@dimen/titleSize"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/navigation"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/measurement"
+                android:layout_marginStart="50dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:text="Edit"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:text="View"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/grey">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/measure_glucose"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Blood Glucose Level"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Date"
+                    android:background="@color/white"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="5dp"/>
+                <TextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Time"
+                    android:background="@color/white"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="5dp"/>
+                <TextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/unit"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Unit"
+                    android:background="@color/white"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="5dp"/>
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+

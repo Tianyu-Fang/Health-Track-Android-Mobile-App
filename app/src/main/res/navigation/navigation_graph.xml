@@ -47,7 +47,7 @@
         android:id="@+id/measurementFragment"
         android:name="com.example.assignment2.MeasurementFragment"
         android:label="fragment_measurement"
-        tools:layout="@layout/fragment_measurement" >
+        tools:layout="@layout/fragment_viewmeasurement" >
         <action
             android:id="@+id/action_measurementFragment_to_weightFragment"
             app:destination="@id/weightFragment" />
