@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.view.MenuCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.R
 import me.relex.circleindicator.CircleIndicator3
@@ -89,7 +91,22 @@ class InfoActivity : AppCompatActivity() {
 
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        val navController = findNavController(R.id.infoActivity)
 
+        when(id){
+            R.id.measurementFragment ->  {
+                navController.navigate(R.id.measurementFragment)
+
+            }
+            R.id.infoFragment -> {
+                navController.navigate(R.id.infoActivity)
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
 
 

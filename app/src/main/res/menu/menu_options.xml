@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:id="@+id/group1">
         <item
-            android:id="@+id/healthMeasurements"
+            android:id="@+id/measurementFragment"
             android:title="Health Measurements" />
 
         <item
-            android:id="@+id/healthDiet"
+            android:id="@+id/dietFragment"
             android:title="Health Diet" />
 
         <item
-            android:id="@+id/healthInformation"
+            android:id="@+id/infoFragment"
             android:title="Health Information" />
 
         <item
