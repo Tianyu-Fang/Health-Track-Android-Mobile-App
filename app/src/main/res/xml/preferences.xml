@@ -43,7 +43,8 @@
         <PreferenceScreen
             android:key="reset_password"
             android:summary="Reset your password"
-            android:title="Change password" />
+            android:title="Change password">
+        </PreferenceScreen>
 
 
         <androidx.preference.SwitchPreference

@@ -7,7 +7,7 @@
     android:background="@color/blue">
 
     <TextView
-        android:id="@+id/doneSubtitle"
+        android:id="@+id/donetitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -18,7 +18,7 @@
         android:textSize="@dimen/subTitleSize" />
 
     <TextView
-        android:id="@+id/changeSubtitle"
+        android:id="@+id/done"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
