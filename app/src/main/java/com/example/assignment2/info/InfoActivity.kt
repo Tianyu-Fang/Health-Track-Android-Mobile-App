@@ -11,6 +11,8 @@ import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.view.MenuCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.LogoutActivity
 import com.example.assignment2.R
@@ -19,6 +21,7 @@ import me.relex.circleindicator.CircleIndicator3
 class InfoActivity : AppCompatActivity() {
     private val data = mutableListOf<String>()
     private val fragmentList = ArrayList<Fragment>()
+    var appBarConfiguration: AppBarConfiguration? = null
     private lateinit var viewPager: ViewPager2
     private lateinit var indicator: CircleIndicator3 // https://android-arsenal.com/details/1/1268
     private lateinit var btnNext: Button
@@ -92,6 +95,11 @@ class InfoActivity : AppCompatActivity() {
         fragmentList.add(InfoExpertFragment())
 
     }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.infoActivity)
+        return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
+                || super.onSupportNavigateUp())
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
@@ -115,7 +123,6 @@ class InfoActivity : AppCompatActivity() {
 
             else -> {
                 super.onOptionsItemSelected(item)
-
             }
         }
 
