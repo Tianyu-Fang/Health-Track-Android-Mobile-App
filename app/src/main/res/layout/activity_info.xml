@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     android:id="@+id/infoActivity"
     tools:context=".info.InfoActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+    <TextView
+        android:id="@+id/info"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="10dp"
+        android:text="Health Information"
+        android:textSize="@dimen/titleSize"
+        android:textStyle="bold" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_back"
@@ -36,13 +51,15 @@
         android:layout_height="48dp"
         android:background="#1e88e5"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
+    <!--    change to end of from parent to botton bar    -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/indicator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

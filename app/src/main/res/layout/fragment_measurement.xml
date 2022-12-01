@@ -24,15 +24,7 @@
         android:textSize="@dimen/titleSize"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/navigation"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@id/measurement"
-        android:layout_marginStart="50dp"
-        android:background="#00FFFFFF"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+
     </RelativeLayout>
             <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.tabs.TabLayout
