@@ -1,10 +1,11 @@
-package com.example.assignment2
+package com.example.assignment2.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.assignment2.model.ProfileModel
+import com.example.assignment2.R
 
 class ProfileAdapter(
     private val dataList: ArrayList<ProfileModel>
@@ -12,8 +13,12 @@ class ProfileAdapter(
 
     inner class DataViewHolder(itemView: View):
             RecyclerView.ViewHolder(itemView){
-                val dataTitle = itemView.findViewById<com.google.android.material.textfield.TextInputLayout>(R.id.profileTitle)
-                val data = itemView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.profileData)
+                val dataTitle = itemView.findViewById<com.google.android.material.textfield.TextInputLayout>(
+                    R.id.profileTitle
+                )
+                val data = itemView.findViewById<com.google.android.material.textfield.TextInputEditText>(
+                    R.id.profileData
+                )
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
