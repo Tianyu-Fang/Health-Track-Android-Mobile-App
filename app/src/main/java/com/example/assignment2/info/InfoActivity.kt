@@ -1,6 +1,7 @@
 package com.example.assignment2.info
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -11,6 +12,7 @@ import androidx.core.view.MenuCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.example.assignment2.LogoutActivity
 import com.example.assignment2.R
 import me.relex.circleindicator.CircleIndicator3
 
@@ -95,17 +97,28 @@ class InfoActivity : AppCompatActivity() {
         val id = item.itemId
         val navController = findNavController(R.id.infoActivity)
 
-        when(id){
+        return when(id){
             R.id.measurementFragment ->  {
                 navController.navigate(R.id.measurementFragment)
-
+                true
             }
             R.id.infoFragment -> {
                 navController.navigate(R.id.infoActivity)
+                true
+            }
+            R.id.logout ->{
+//                val intent = Intent(this, LogoutActivity::class.java)
+//                startActivity(intent)
+                navController.navigate(R.id.logoutActivity)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+
             }
         }
 
-        return super.onOptionsItemSelected(item)
     }
 
 
