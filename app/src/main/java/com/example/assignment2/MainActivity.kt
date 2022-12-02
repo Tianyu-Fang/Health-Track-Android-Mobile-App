@@ -16,47 +16,47 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-fun constructRecyclerView(context: AppCompatActivity) {
-    val ProfileAdapter = ProfileAdapter(populateCourseList())
-
-    val courseRecyclerView = context.findViewById<RecyclerView>(R.id.profile_recyclerview)
-
-    val linearLayoutManager = LinearLayoutManager(
-        context,
-        LinearLayoutManager.VERTICAL,
-        false
-    )
-
-//    val gridLayoutManager = GridLayoutManager(
+//fun constructRecyclerView(context: ProfileFragment) {
+//    val ProfileAdapter = ProfileAdapter(populateCourseList())
+//
+//    val courseRecyclerView = context.findViewById<RecyclerView>(R.id.profile_recyclerview)
+//
+//    val linearLayoutManager = LinearLayoutManager(
 //        context,
-//        2,
-//        RecyclerView.VERTICAL,
+//        LinearLayoutManager.VERTICAL,
 //        false
 //    )
-    courseRecyclerView.layoutManager = linearLayoutManager
-    courseRecyclerView.adapter = ProfileAdapter
-}
-
-fun populateCourseList(): ArrayList<ProfileModel> {
-    val courseList = ArrayList<ProfileModel>()
-    courseList.add(
-        ProfileModel(1, "PE3", "Good subject")
-    )
-    courseList.add(
-        ProfileModel(2, "IoT", "Very good subject")
-    )
-    courseList.add(
-        ProfileModel(3, "PE4", "Good subject")
-    )
-    courseList.add(
-        ProfileModel(4, "IoT2", "Very good subject")
-    )
-    courseList.add(
-        ProfileModel(5, "PE5", "Good subject")
-    )
-    courseList.add(
-        ProfileModel(6, "IoT3", "Very good subject")
-    )
-
-    return courseList
-}
+//
+////    val gridLayoutManager = GridLayoutManager(
+////        context,
+////        2,
+////        RecyclerView.VERTICAL,
+////        false
+////    )
+//    courseRecyclerView.layoutManager = linearLayoutManager
+//    courseRecyclerView.adapter = ProfileAdapter
+//}
+//
+//fun populateCourseList(): ArrayList<ProfileModel> {
+//    val courseList = ArrayList<ProfileModel>()
+//    courseList.add(
+//        ProfileModel(1, "PE3", "Good subject")
+//    )
+//    courseList.add(
+//        ProfileModel(2, "IoT", "Very good subject")
+//    )
+//    courseList.add(
+//        ProfileModel(3, "PE4", "Good subject")
+//    )
+//    courseList.add(
+//        ProfileModel(4, "IoT2", "Very good subject")
+//    )
+//    courseList.add(
+//        ProfileModel(5, "PE5", "Good subject")
+//    )
+//    courseList.add(
+//        ProfileModel(6, "IoT3", "Very good subject")
+//    )
+//
+//    return courseList
+//}

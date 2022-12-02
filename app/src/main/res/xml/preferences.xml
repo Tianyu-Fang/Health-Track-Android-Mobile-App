@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- https://developer.android.com/reference/androidx/preference/SwitchPreferenceCompat -->
+
+    <PreferenceCategory
+        android:key="account_settings"
+        android:title="Account Settings">
+
+        <androidx.preference.ListPreference
+            android:key="timezone_list"
+            android:summary="Select Your Time zone"
+            android:title="Time Zone"
+            android:defaultValue="-1"
+            android:entries="@array/pref_list_timezones"
+            android:entryValues="@array/pref_list_timezones"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            />
+
+        <androidx.preference.ListPreference
+            android:key="lang_list"
+            android:summary="Select Your Language"
+            android:title="Language"
+            android:defaultValue="-1"
+            android:entries="@array/pref_list_lang"
+            android:entryValues="@array/pref_list_lang"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            />
+
+        <androidx.preference.ListPreference
+            android:key="region_list"
+            android:summary="Select Your Region"
+            android:title="Region"
+            android:defaultValue="-1"
+            android:entries="@array/pref_list_region"
+            android:entryValues="@array/pref_list_region"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            />
+
+
+        <PreferenceScreen
+            android:key="reset_password"
+            android:summary="Reset your password"
+            android:title="Change password">
+        </PreferenceScreen>
+
+
+        <androidx.preference.SwitchPreference
+            android:defaultValue="true"
+            android:key="push_switch"
+            android:summary="On/Off"
+            android:title="Push notification" />
+
+    </PreferenceCategory>
+
+
+        <!--
+
+                <androidx.preference.DropDownPreference
+                    android:key="example_dropdownlist"
+                    android:summary="@string/ddl_summary"
+                    android:title="@string/ddl_title" />
+    -->
+
+    <PreferenceCategory
+        android:key="features"
+        android:title="Features">
+
+        <PreferenceScreen
+            android:key="Medical_ID"
+            android:summary="Update your medical-related info"
+            android:title="Update Your Medical ID" />
+
+    </PreferenceCategory>
+
+
+
+
+    <PreferenceCategory
+        android:key="more"
+        android:title="More">
+
+        <PreferenceScreen
+            android:key="about"
+            android:summary=""
+            android:title="About us" />
+
+        <PreferenceScreen
+            android:key="privacy"
+            android:summary=""
+            android:title="Privacy policy" />
+
+        <PreferenceScreen
+            android:key="terms"
+            android:summary=""
+            android:title="Terms and conditions" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+

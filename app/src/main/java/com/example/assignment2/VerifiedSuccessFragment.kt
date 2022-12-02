@@ -8,34 +8,26 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.findNavController
+import org.w3c.dom.Text
 
 
-class RegisterFragment : Fragment() {
-
+class VerifiedSuccessFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false)
+        return inflater.inflate(R.layout.fragment_verified_success, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //register
-        val btnRegister = view.findViewById<Button>(R.id.register_button)
+        //verify
+        val textDone = view.findViewById<TextView>(R.id.done)
 
-        btnRegister.setOnClickListener {
-            view.findNavController().navigate(R.id.loginFragment)
-        }
-
-        //login
-        val textLogin = view.findViewById<TextView>(R.id.textLogin)
-
-        textLogin.setOnClickListener {
+        textDone.setOnClickListener {
             view.findNavController().navigate(R.id.loginFragment)
         }
     }
