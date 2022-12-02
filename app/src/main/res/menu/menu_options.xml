@@ -14,11 +14,11 @@
             android:title="Health Information" />
 
         <item
-            android:id="@+id/journal"
+            android:id="@+id/journalFragment"
             android:title="Journal" />
 
         <item
-            android:id="@+id/sleep"
+            android:id="@+id/sleepFragment"
             android:title="Sleep" />
     </group>
 

@@ -114,6 +114,18 @@ class InfoActivity : AppCompatActivity() {
                 navController.navigate(R.id.infoActivity)
                 true
             }
+            R.id.dietFragment -> {
+                navController.navigate(R.id.dietFragment)
+                true
+            }
+            R.id.journalFragment -> {
+                navController.navigate(R.id.journalFragment)
+                true
+            }
+            R.id.sleepFragment -> {
+                navController.navigate(R.id.sleepFragment)
+                true
+            }
             R.id.logout ->{
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
