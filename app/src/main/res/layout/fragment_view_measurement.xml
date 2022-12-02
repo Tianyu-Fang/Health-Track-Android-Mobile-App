@@ -14,7 +14,7 @@
         android:id="@+id/total_score_card"
         android:layout_width="360dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="100dp"
         app:cardBackgroundColor="@color/blue"
         app:cardCornerRadius="18dp"
@@ -50,16 +50,613 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
         <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:background="@drawable/round_button"
             app:cardBackgroundColor="@color/white"
+            android:fontFamily="@font/googlesans_bold"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="300dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="290dp"
+            android:text="92"
 
-            android:id="@+id/totla_score"/>
-
+            android:id="@+id/total_score"/>
 
     </androidx.cardview.widget.CardView>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="210dp"
+        android:layout_marginBottom="55dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:rowCount="4">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/height_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/career"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Heart Rate"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/height_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:text="180"
+                android:id="@+id/height_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/height_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="cm"
+                android:id="@+id/height_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/height_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/weight_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/gym"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Exercise"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/weight_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:text="70"
+                android:id="@+id/weight_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/weight_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="kg"
+                android:id="@+id/weight_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/weight_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/glucose_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/career"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Blood Glucose Level"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/glucose_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:text="120"
+                android:id="@+id/glucose_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/glucose_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="mg/dL"
+                android:id="@+id/glucose_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/glucose_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/presure_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/gym"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Blood Presure"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/presure_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="110/70"
+                android:id="@+id/presure_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="45sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/presure_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="mmHg"
+                android:id="@+id/presure_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/presure_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/breathing_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/career"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Breathing"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/breathing_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:text="14"
+                android:id="@+id/breathing_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/breathing_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="/min"
+                android:id="@+id/breathing_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/breathing_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/oxygen_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/gym"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Blood Oxygen Saturation"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/oxygen_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:text="70"
+                android:id="@+id/oxygen_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/oxygen_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="%"
+                android:id="@+id/oxygen_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/oxygen_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/temperature_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/career"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Body Temperature"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/temperature_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:text="37"
+                android:id="@+id/temperature_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/temperature_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="C"
+                android:id="@+id/temperature_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/temperature_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/pulse_imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/gym"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="Pulse Rate"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/pulse_imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:text="77"
+                android:id="@+id/pulse_data"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/pulse_imageView"
+                app:layout_constraintTop_toTopOf="parent"            />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="/min"
+                android:id="@+id/pulse_unit"
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/pulse_data"
+                app:layout_constraintTop_toTopOf="parent"            />
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
