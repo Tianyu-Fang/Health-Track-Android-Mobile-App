@@ -10,6 +10,8 @@ import android.widget.ImageView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.assignment2.adapter.ProfileAdapter
+import com.example.assignment2.model.ProfileModel
 
 
 class ProfileFragment : Fragment() {
