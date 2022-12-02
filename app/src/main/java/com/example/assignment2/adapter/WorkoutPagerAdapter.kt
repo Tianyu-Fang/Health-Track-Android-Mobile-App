@@ -1,0 +1,23 @@
+package com.example.assignment2.adapter
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.assignment2.WorkoutScoreFragment
+import com.example.assignment2.WorkoutHistoryFragment
+
+class WorkoutPagerAdapter(fragmentActivity: FragmentActivity, private var totalCount: Int) :
+    FragmentStateAdapter(fragmentActivity) { // https://developer.android.com/reference/androidx/viewpager2/adapter/FragmentStateAdapter
+
+    override fun getItemCount(): Int {
+        return totalCount
+    }
+
+    override fun createFragment(position: Int): Fragment {
+        return when (position) {
+            0 -> WorkoutScoreFragment()
+            1 -> WorkoutHistoryFragment()
+            else -> WorkoutScoreFragment()
+        }
+    }
+}
