@@ -57,14 +57,15 @@
             android:fontFamily="@font/googlesans_bold"
             android:layout_marginTop="15dp"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textColor="@color/stream_ui_accent_green"
             android:layout_marginLeft="290dp"
             android:text="92"
 
             android:id="@+id/total_score"/>
 
     </androidx.cardview.widget.CardView>
-    <ScrollView android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:layout_marginTop="210dp"
