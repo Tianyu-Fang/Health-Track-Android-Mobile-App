@@ -89,21 +89,21 @@ class InfoActivity : AppCompatActivity() {
         for (item in 1..3) {
             data.add("item $item")
         }
-
+        //problem, InfoFragment
         fragmentList.add(InfoFragment())
         fragmentList.add(InfoVideoFragment())
         fragmentList.add(InfoExpertFragment())
 
     }
     override fun onSupportNavigateUp(): Boolean {
-        val navController = this.findNavController(R.id.infoActivity)
+        val navController = this.findNavController(R.id.info_navigation)
         return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
                 || super.onSupportNavigateUp())
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-        val navController = findNavController(R.id.infoActivity)
+        val navController = findNavController(R.id.info_navigation)
 
         return when(id){
             R.id.measurementFragment ->  {
@@ -119,7 +119,7 @@ class InfoActivity : AppCompatActivity() {
                 true
             }
             R.id.journalFragment -> {
-                navController.navigate(R.id.journalFragment)
+                navController.navigate(R.id.journalFragment_info)
                 true
             }
             R.id.sleepFragment -> {
