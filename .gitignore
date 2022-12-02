@@ -29,3 +29,9 @@ replay_pid*
 *.lock
 .gradle/7.4/fileHashes/fileHashes.bin
 .gradle/7.4/fileHashes/fileHashes.bin
+*.bin
+*.lock
+*.lock
+.gradle/7.4/executionHistory/executionHistory.bin
+.gradle/7.4/executionHistory/executionHistory.lock
+.gradle/7.4/fileHashes/fileHashes.lock
