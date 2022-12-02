@@ -64,7 +64,8 @@
             android:id="@+id/total_score"/>
 
     </androidx.cardview.widget.CardView>
-    <ScrollView android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:layout_marginTop="210dp"
