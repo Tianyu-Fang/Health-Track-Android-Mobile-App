@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileSubpage">
+    tools:context=".ProfileSubpage"
+    android:orientation="horizontal">
 
     <fragment
         android:id="@+id/profile_subpage"

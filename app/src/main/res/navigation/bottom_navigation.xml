@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/profileFragment2">
+
+    <activity
+        android:id="@+id/checkinActivity2"
+        android:name="com.example.assignment2.CheckinActivity"
+        android:label="activity_checkin"
+        tools:layout="@layout/activity_checkin" />
+    <activity
+        android:id="@+id/workoutActivity2"
+        android:name="com.example.assignment2.WorkoutActivity"
+        android:label="activity_workout"
+        tools:layout="@layout/activity_workout" />
+    <activity
+        android:id="@+id/homeActivity2"
+        android:name="com.example.assignment2.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/chatActivity2"
+        android:name="com.example.assignment2.ChatActivity"
+        android:label="activity_chat"
+        tools:layout="@layout/activity_chat" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.assignment2.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile"/>
+</navigation>

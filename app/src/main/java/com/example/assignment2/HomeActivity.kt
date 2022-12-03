@@ -10,7 +10,7 @@ import androidx.core.view.MenuCompat
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_checkin_history)
+        setContentView(R.layout.activity_home)
     }
 
     @SuppressLint("RestrictedApi")
