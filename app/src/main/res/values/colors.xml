@@ -32,4 +32,12 @@
     <color name="gunmetal">#525a5b</color>
     <color name="sandTwo">#dbe48b</color>
     <color name='exciteOrange'>#F85C28</color>
+    <color name="dashboard1">#D2416E</color>
+    <color name="dashboard2">#7042C9</color>
+    <color name="dashboard3">#0DB1AD</color>
+    <color name="dashboard4">#197BD2</color>
+    <color name="dashboard5">#81CFFA</color>
+    <color name="dashboard6">#67CE67</color>
+    <color name="dashboard7">#1C6BA4</color>
+    <color name="dashboard8">#FFF1D4</color>
 </resources>
