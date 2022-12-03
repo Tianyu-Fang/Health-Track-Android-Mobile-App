@@ -107,15 +107,15 @@ class InfoActivity : AppCompatActivity() {
 
         return when(id){
             R.id.measurementFragment ->  {
-                navController.navigate(R.id.measurementFragment)
+                navController.navigate(R.id.measurementFragment3)
                 true
             }
             R.id.infoFragment -> {
-                navController.navigate(R.id.infoActivity)
+                navController.navigate(R.id.viewInfoFragment_info)
                 true
             }
             R.id.dietFragment -> {
-                navController.navigate(R.id.dietFragment)
+                navController.navigate(R.id.dietFragment2)
                 true
             }
             R.id.journalFragment -> {
@@ -123,13 +123,13 @@ class InfoActivity : AppCompatActivity() {
                 true
             }
             R.id.sleepFragment -> {
-                navController.navigate(R.id.sleepFragment)
+                navController.navigate(R.id.sleepFragment2)
                 true
             }
             R.id.logout ->{
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
-                navController.navigate(R.id.logoutActivity)
+                navController.navigate(R.id.logoutActivity2)
                 true
             }
 

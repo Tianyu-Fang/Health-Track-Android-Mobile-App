@@ -27,6 +27,15 @@
         <action
             android:id="@+id/action_viewInfoFragment_to_journalFragment_info"
             app:destination="@id/journalFragment_info" />
+        <action
+            android:id="@+id/action_viewInfoFragment_info_to_dietFragment2"
+            app:destination="@id/dietFragment2" />
+        <action
+            android:id="@+id/action_viewInfoFragment_info_to_measurementFragment3"
+            app:destination="@id/measurementFragment3" />
+        <action
+            android:id="@+id/action_viewInfoFragment_info_to_sleepFragment2"
+            app:destination="@id/sleepFragment2" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment2"
@@ -43,4 +52,32 @@
         android:name="com.example.assignment2.info.InfoVideoFragment"
         android:label="fragment_info_video"
         tools:layout="@layout/fragment_info_video" />
+    <fragment
+        android:id="@+id/dietFragment2"
+        android:name="com.example.assignment2.DietFragment"
+        android:label="fragment_diet"
+        tools:layout="@layout/fragment_diet" />
+    <fragment
+        android:id="@+id/measurementFragment3"
+        android:name="com.example.assignment2.measurement.MeasurementFragment"
+        android:label="fragment_measurement"
+        tools:layout="@layout/fragment_measurement" >
+        <action
+            android:id="@+id/measureFragment2"
+            app:destination="@id/viewInfoFragment_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/sleepFragment2"
+        android:name="com.example.assignment2.SleepFragment"
+        android:label="fragment_sleep"
+        tools:layout="@layout/fragment_sleep" >
+        <action
+            android:id="@+id/action_sleepFragment2_to_viewInfoFragment_info"
+            app:destination="@id/viewInfoFragment_info" />
+    </fragment>
+    <activity
+        android:id="@+id/logoutActivity2"
+        android:name="com.example.assignment2.LogoutActivity"
+        android:label="activity_logout"
+        tools:layout="@layout/activity_logout" />
 </navigation>
