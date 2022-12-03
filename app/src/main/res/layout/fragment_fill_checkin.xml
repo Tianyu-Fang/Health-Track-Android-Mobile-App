@@ -12,21 +12,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:fontFamily="@font/googlesans_regular"
         android:text="Symptoms you have?"
+        android:textColor="@color/black"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/sSymptom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="@font/googlesans_regular"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/sSymptom"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/blue_outline"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
@@ -50,8 +47,6 @@
         android:id="@+id/sStress"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginBottom="25dp"
         android:background="@drawable/blue_outline"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
@@ -76,8 +71,6 @@
         android:id="@+id/sTreatment"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginBottom="25dp"
         android:background="@drawable/blue_outline"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -102,8 +95,7 @@
         android:id="@+id/sHealth"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/blue_outline"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,4 +103,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:listitem="@layout/item_symptom" />
+
+    <Button
+        android:id="@+id/fillcheckin_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_button"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sHealth"
+        tools:layout_editor_absoluteX="82dp" />
+
+    />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

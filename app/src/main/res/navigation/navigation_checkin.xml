@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_checkin"
+    app:startDestination="@id/checkinBoardFragment">
+
+    <fragment
+        android:id="@+id/checkinBoardFragment"
+        android:name="com.example.assignment2.CheckinBoardFragment"
+        android:label="fragment_checkin_board"
+        tools:layout="@layout/fragment_checkin_board" >
+        <action
+            android:id="@+id/action_checkinBoardFragment_to_fillCheckinFragment2"
+            app:destination="@id/fillCheckinFragment2" />
+    </fragment>
+    <activity
+        android:id="@+id/checkinActivity2"
+        android:name="com.example.assignment2.CheckinActivity"
+        android:label="activity_checkin"
+        tools:layout="@layout/activity_checkin" />
+    <fragment
+        android:id="@+id/fillCheckinFragment2"
+        android:name="com.example.assignment2.FillCheckinFragment"
+        android:label="fragment_fill_checkin"
+        tools:layout="@layout/fragment_fill_checkin" >
+        <action
+            android:id="@+id/action_fillCheckinFragment2_to_checkinHistoryFragment2"
+            app:destination="@id/checkinHistoryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkinHistoryFragment2"
+        android:name="com.example.assignment2.CheckinHistoryFragment"
+        android:label="fragment_checkin_history"
+        tools:layout="@layout/fragment_checkin_history" >
+        <action
+            android:id="@+id/action_checkinHistoryFragment2_to_fillCheckinFragment2"
+            app:destination="@id/fillCheckinFragment2" />
+    </fragment>
+</navigation>
