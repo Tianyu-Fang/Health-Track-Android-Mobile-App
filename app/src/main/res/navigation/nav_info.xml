@@ -28,4 +28,19 @@
             android:id="@+id/action_viewInfoFragment_to_journalFragment_info"
             app:destination="@id/journalFragment_info" />
     </fragment>
+    <fragment
+        android:id="@+id/infoFragment2"
+        android:name="com.example.assignment2.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/infoExpertFragment"
+        android:name="com.example.assignment2.info.InfoExpertFragment"
+        android:label="fragment_info_expert"
+        tools:layout="@layout/fragment_info_expert" />
+    <fragment
+        android:id="@+id/infoVideoFragment"
+        android:name="com.example.assignment2.info.InfoVideoFragment"
+        android:label="fragment_info_video"
+        tools:layout="@layout/fragment_info_video" />
 </navigation>

@@ -50,6 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
         <Button
+            android:id="@+id/total_score_btn"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/round_button"
@@ -59,9 +60,7 @@
             android:textSize="30sp"
             android:textColor="@color/stream_ui_accent_green"
             android:layout_marginLeft="290dp"
-            android:text="92"
-
-            android:id="@+id/total_score"/>
+            android:text="92" />
 
     </androidx.cardview.widget.CardView>
     <ScrollView
@@ -103,7 +102,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/career"
+                    android:src="@drawable/ic_height"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -112,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Heart Rate"
+                    android:text="Height"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -175,7 +174,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/gym"
+                    android:src="@drawable/ic_weight"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -184,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Exercise"
+                    android:text="Weight"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -202,7 +201,7 @@
                 android:id="@+id/weight_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="40dp"
                 android:textColor="@color/white"
                 android:textSize="85sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -246,7 +245,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/career"
+                    android:src="@drawable/ic_glucose"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -318,7 +317,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/gym"
+                    android:src="@drawable/ic_pressure"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -389,7 +388,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/career"
+                    android:src="@drawable/ic_breathe"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -461,7 +460,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/gym"
+                    android:src="@drawable/ic_oxygen"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -533,7 +532,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/career"
+                    android:src="@drawable/ic_temperature"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -605,7 +604,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/gym"
+                    android:src="@drawable/ic_heart"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
