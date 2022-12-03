@@ -15,7 +15,7 @@
         android:layout_width="360dp"
         android:layout_height="100dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         app:cardBackgroundColor="@color/blue"
         app:cardCornerRadius="18dp"
         app:cardElevation="6dp"
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="110dp"
         android:layout_marginBottom="55dp">
 
     <GridLayout
