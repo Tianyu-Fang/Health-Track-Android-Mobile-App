@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_diet" />
     <fragment
         android:id="@+id/infoFragment"
-        android:name="com.example.assignment2.InfoFragment"
+        android:name="com.example.assignment2.info.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
     <fragment
@@ -45,7 +45,7 @@
         tools:layout="@layout/fragment_journal" />
     <fragment
         android:id="@+id/measurementFragment"
-        android:name="com.example.assignment2.MeasurementFragment"
+        android:name="com.example.assignment2.measurement.MeasurementFragment"
         android:label="fragment_measurement"
         tools:layout="@layout/fragment_measurement" >
         <action
@@ -169,4 +169,9 @@
         android:name="com.example.assignment2.HealthTrackFragment"
         android:label="fragment_health_track"
         tools:layout="@layout/fragment_health_track" />
+    <activity
+        android:id="@+id/infoActivity3"
+        android:name="com.example.assignment2.info.InfoActivity"
+        android:label="activity_info"
+        tools:layout="@layout/activity_info" />
 </navigation>
