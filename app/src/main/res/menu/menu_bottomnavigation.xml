@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/firstFragment"
+        android:id="@+id/dashboardFragment_btm"
         android:icon="@drawable/ic_home"
         android:title="Home" />
 
     <item
-        android:id="@+id/secondFragment"
+        android:id="@+id/checkinBoardFragment_btm"
         android:icon="@drawable/ic_dashboard"
         android:title="Check in" />
     <item
-        android:id="@+id/thirdFragment"
+        android:id="@+id/workoutActivity_btm"
         android:icon="@drawable/ic_exercise"
         android:title="Exercise" />
 
     <item
-        android:id="@+id/fourthFragment"
+        android:id="@+id/chatActivity_btm"
         android:icon="@drawable/ic_chat"
         android:title="Chat" />
 
     <item
-        android:id="@+id/fifthFragment"
+        android:id="@+id/profileFragment_btm"
         android:icon="@drawable/ic_profile"
         android:title="Profile" />
 </menu>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/dashboardFragment_btm">
+
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.assignment2.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/profileFragment_btm"
+        android:name="com.example.assignment2.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_btm_to_dashboardFragment"
+            app:destination="@id/dashboardFragment_btm" />
+    </fragment>
+    <activity
+        android:id="@+id/chatActivity_btm"
+        android:name="com.example.assignment2.ChatActivity"
+        android:label="activity_chat"
+        tools:layout="@layout/activity_chat" />
+    <fragment
+        android:id="@+id/dashboardFragment_btm"
+        android:name="com.example.assignment2.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment2"
+            app:destination="@id/profileFragment_btm" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_chatActivity2"
+            app:destination="@id/chatActivity_btm" />
+        <action
+            android:id="@+id/action_dashboardFragment_btm_to_checkinBoardFragment2"
+            app:destination="@id/checkinBoardFragment_btm" />
+        <action
+            android:id="@+id/action_dashboardFragment_btm_to_workoutActivity2"
+            app:destination="@id/workoutActivity_btm" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkinBoardFragment_btm"
+        android:name="com.example.assignment2.CheckinBoardFragment"
+        android:label="fragment_checkin_board"
+        tools:layout="@layout/fragment_checkin_board" >
+        <action
+            android:id="@+id/action_checkinBoardFragment_btm_to_dashboardFragment_btm"
+            app:destination="@id/dashboardFragment_btm" />
+        <action
+            android:id="@+id/action_checkinBoardFragment_btm_to_fillCheckinFragment_btm"
+            app:destination="@id/fillCheckinFragment_btm" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkinHistoryFragment_btm"
+        android:name="com.example.assignment2.CheckinHistoryFragment"
+        android:label="fragment_checkin_history"
+        tools:layout="@layout/fragment_checkin_history" >
+        <action
+            android:id="@+id/action_checkinHistoryFragment_btm_to_fillCheckinFragment_btm"
+            app:destination="@id/fillCheckinFragment_btm" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillCheckinFragment_btm"
+        android:name="com.example.assignment2.FillCheckinFragment"
+        android:label="fragment_fill_checkin"
+        tools:layout="@layout/fragment_fill_checkin" >
+        <action
+            android:id="@+id/action_fillCheckinFragment_btm_to_checkinHistoryFragment3"
+            app:destination="@id/checkinHistoryFragment_btm" />
+    </fragment>
+    <activity
+        android:id="@+id/workoutActivity_btm"
+        android:name="com.example.assignment2.WorkoutActivity"
+        android:label="activity_workout"
+        tools:layout="@layout/activity_workout" />
+</navigation>

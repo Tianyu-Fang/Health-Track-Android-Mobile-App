@@ -2,20 +2,22 @@ package com.example.assignment2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.adapter.WorkoutPagerAdapter
 import com.example.assignment2.databinding.ActivityWorkoutBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class WorkoutActivity : AppCompatActivity() {
+    var appBarConfiguration: AppBarConfiguration? = null
 
     private lateinit var binding: ActivityWorkoutBinding
 
-    /**
-     * The pager widget, which handles animation and allows swiping horizontally to access previous
-     * and next wizard steps.
-     */
     private lateinit var viewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +28,15 @@ class WorkoutActivity : AppCompatActivity() {
 
         setupViewPager()
         setupTabLayout()
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_t)
+        val navController = findNavController(R.id.bottomNavigation_workout)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(R.id.dashboardFragment_btm, R.id.checkinBoardFragment_btm,R.id.workoutActivity_btm,R.id.chatActivity_btm,R.id.profileFragment_btm)
+        )
+
+        setupActionBarWithNavController(navController, appBarConfiguration!!)
+        bottomNav.setupWithNavController(navController)
     }
 
     private fun setupTabLayout() {

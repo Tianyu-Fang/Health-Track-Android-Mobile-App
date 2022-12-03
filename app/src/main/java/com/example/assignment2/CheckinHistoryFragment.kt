@@ -60,7 +60,7 @@ class CheckinHistoryFragment : Fragment() {
 
         btnCheckin.setOnClickListener {
 
-            view.findNavController().navigate(R.id.fillCheckinFragment2)
+            view.findNavController().navigate(R.id.fillCheckinFragment_btm)
 
         }
     }
