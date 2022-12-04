@@ -29,7 +29,7 @@ class LoginFragment : Fragment() {
         val btnLogin = view.findViewById<Button>(R.id.login_btn)
 
         btnLogin.setOnClickListener {
-            view.findNavController().navigate(R.id.profileFragment)
+            view.findNavController().navigate(R.id.mainActivity3)
         }
         //forget password
         val textForget = view.findViewById<TextView>(R.id.forget)

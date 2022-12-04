@@ -20,7 +20,7 @@ class SettingFragment : PreferenceFragmentCompat() {
         //setPreferencesFromResource(R.xml.preferences, rootKey)
         addPreferencesFromResource(R.xml.preferences)
         val showValueListener = Preference.OnPreferenceClickListener {
-            findNavController().navigate(R.id.changePasswordFragment)
+            findNavController().navigate(R.id.changePasswordFragment2)
             true
         }
         findPreference<PreferenceScreen>("reset_password")?.onPreferenceClickListener = showValueListener

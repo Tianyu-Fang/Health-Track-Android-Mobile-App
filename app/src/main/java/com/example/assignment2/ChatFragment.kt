@@ -1,9 +1,12 @@
 package com.example.assignment2
 
 import android.os.Bundle
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import com.example.assignment2.databinding.ActivityChatBinding
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import com.example.assignment2.databinding.FragmentChatBinding
 import io.getstream.chat.android.client.ChatClient
 import io.getstream.chat.android.client.logger.ChatLogLevel
 import io.getstream.chat.android.client.models.Filters
@@ -15,17 +18,21 @@ import io.getstream.chat.android.ui.channel.list.viewmodel.ChannelListViewModel
 import io.getstream.chat.android.ui.channel.list.viewmodel.bindView
 import io.getstream.chat.android.ui.channel.list.viewmodel.factory.ChannelListViewModelFactory
 
-class ChatActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityChatBinding
+class ChatFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private lateinit var binding: FragmentChatBinding
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        binding = FragmentChatBinding.inflate(layoutInflater)
+        return binding.root
+    }
 
-        // Step 0 - inflate binding
-        binding = ActivityChatBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         // Step 1 - Set up the OfflinePlugin for offline storage
         val offlinePluginFactory = StreamOfflinePluginFactory(
             config = Config(
@@ -34,11 +41,11 @@ class ChatActivity : AppCompatActivity() {
                 persistenceEnabled = true,
                 uploadAttachmentsNetworkType = UploadAttachmentsNetworkType.NOT_ROAMING,
             ),
-            appContext = applicationContext,
+            appContext = requireActivity().applicationContext,
         )
 
         // Step 2 - Set up the client for API calls with the plugin for offline storage
-        val client = ChatClient.Builder("n8gv2yn2vm9u", applicationContext)
+        val client = ChatClient.Builder("n8gv2yn2vm9u", requireActivity().applicationContext)
             .withPlugin(offlinePluginFactory)
             .logLevel(ChatLogLevel.ALL) // Set to NOTHING in prod
             .build()
@@ -62,14 +69,15 @@ class ChatActivity : AppCompatActivity() {
             Filters.eq("type", "messaging"),
             Filters.`in`("members", listOf(user.id))
         )
-        val viewModelFactory = ChannelListViewModelFactory(filter, ChannelListViewModel.DEFAULT_SORT)
+        val viewModelFactory =
+            ChannelListViewModelFactory(filter, ChannelListViewModel.DEFAULT_SORT)
         val viewModel: ChannelListViewModel by viewModels { viewModelFactory }
 
         // Step 5 - Connect the ChannelListViewModel to the ChannelListView, loose
         //          coupling makes it easy to customize
         viewModel.bindView(binding.channelListView, this)
         binding.channelListView.setChannelItemClickListener { channel ->
-            startActivity(ChannelActivity.newIntent(this, channel))
+            startActivity(ChannelActivity.newIntent(requireActivity(), channel))
         }
     }
 }

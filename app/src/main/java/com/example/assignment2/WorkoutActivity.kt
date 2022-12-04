@@ -30,9 +30,9 @@ class WorkoutActivity : AppCompatActivity() {
         setupTabLayout()
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_t)
-        val navController = findNavController(R.id.bottomNavigation_workout)
+        val navController = findNavController(R.id.bottomNavigation)
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.dashboardFragment_btm, R.id.checkinBoardFragment_btm,R.id.workoutActivity_btm,R.id.chatActivity_btm,R.id.profileFragment_btm)
+            setOf(R.id.dashboardFragment_btm, R.id.checkinBoardFragment_btm,R.id.workoutActivity_btm,R.id.chatFragment_btm,R.id.profileFragment_btm)
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration!!)

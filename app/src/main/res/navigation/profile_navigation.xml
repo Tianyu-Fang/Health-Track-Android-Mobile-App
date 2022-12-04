@@ -16,26 +16,14 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment2_to_profileFragment2"
-            app:destination="@id/profileFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_registerFragment2"
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
             app:destination="@id/forgetPasswordFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.assignment2.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
         <action
-            android:id="@+id/action_profileFragment_to_loginFragment2"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_profileFragment_to_settingFragment2"
-            app:destination="@id/settingFragment" />
+            android:id="@+id/action_loginFragment_to_mainActivity3"
+            app:destination="@id/mainActivity3" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -73,24 +61,9 @@
             android:id="@+id/action_verifiedSuccessFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/changePasswordFragment"
-        android:name="com.example.assignment2.ChangePasswordFragment"
-        android:label="fragment_change_password"
-        tools:layout="@layout/fragment_change_password" >
-        <action
-            android:id="@+id/action_changePasswordFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_changePasswordFragment_to_forgetPasswordFragment"
-            app:destination="@id/forgetPasswordFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.example.assignment2.SettingFragment"
-        android:label="SettingFragment" >
-        <action
-            android:id="@+id/action_settingFragment_to_changePasswordFragment"
-            app:destination="@id/changePasswordFragment" />
-    </fragment>
+    <activity
+        android:id="@+id/mainActivity3"
+        android:name="com.example.assignment2.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

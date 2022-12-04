@@ -15,7 +15,7 @@
         android:title="Exercise" />
 
     <item
-        android:id="@+id/chatActivity_btm"
+        android:id="@+id/chatFragment_btm"
         android:icon="@drawable/ic_chat"
         android:title="Chat" />
 
