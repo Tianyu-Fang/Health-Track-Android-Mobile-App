@@ -1,4 +1,4 @@
-package com.example.assignment2.measurement
+package com.example.assignment2
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,36 +8,38 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.R
+import com.example.assignment2.adapter.WorkoutPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 
-class MeasurementFragment : Fragment() {
+class WorkoutFragment : Fragment() {
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_measurement, container, false)
-        val view: View = inflater.inflate(R.layout.fragment_measurement, container, false)
-        val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
-        val viewpager2 = view.findViewById<ViewPager2>(R.id.viewpager2)
-        val viewPagerAdapter = ViewPagerAdapter(this)
-        viewpager2.adapter = viewPagerAdapter
 
-        val titles = arrayOf("View", "Edit")
+        val view: View = inflater.inflate(R.layout.fragment_workout, container, false)
+
+
+        val tabLayout = view?.findViewById<TabLayout>(R.id.tabLayout)
+        val viewpager2 = view?.findViewById<ViewPager2>(R.id.viewPager)
+
+        val viewPagerAdapter = WorkoutPagerAdapter(this)
+        viewpager2?.adapter = viewPagerAdapter
+
+        val titles = arrayOf("Workout Score","Workout History")
 
         TabLayoutMediator(
-            tabLayout,
-            viewpager2
+            tabLayout!!,
+            viewpager2!!
         ){
-            tab: TabLayout.Tab, position: Int ->
+                tab: TabLayout.Tab, position: Int ->
             tab.text = titles[position]
         }.attach()
         return view
+
     }
-
-
 }

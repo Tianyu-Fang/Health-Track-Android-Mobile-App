@@ -6,9 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".measurement.MeasurementFragment"
     android:orientation="vertical">
-
-
-
+/
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_marginTop="10dp"

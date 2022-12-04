@@ -63,6 +63,12 @@ class CheckinHistoryFragment : Fragment() {
             view.findNavController().navigate(R.id.fillCheckinFragment_btm)
 
         }
+
+        val checkin_report = binding.checkinReportIcon
+
+        checkin_report.setOnClickListener {
+            view.findNavController().navigate(R.id.checkinFragment_btm)
+        }
     }
 
 

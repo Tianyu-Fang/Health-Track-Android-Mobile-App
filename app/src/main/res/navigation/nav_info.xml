@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_info"
-    app:startDestination="@id/viewInfoFragment_info">
+    app:startDestination="@id/viewInfoFragment_info_btm">
 
     <activity
         android:id="@+id/infoActivity_info"
@@ -17,10 +17,10 @@
         tools:layout="@layout/fragment_journal" >
         <action
             android:id="@+id/action_journalFragment_info_to_viewInfoFragment"
-            app:destination="@id/viewInfoFragment_info" />
+            app:destination="@id/viewInfoFragment_info_btm" />
     </fragment>
     <fragment
-        android:id="@+id/viewInfoFragment_info"
+        android:id="@+id/viewInfoFragment_info_btm"
         android:name="com.example.assignment2.info.ViewInfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_view_info" >
@@ -64,7 +64,7 @@
         tools:layout="@layout/fragment_measurement" >
         <action
             android:id="@+id/measureFragment2"
-            app:destination="@id/viewInfoFragment_info" />
+            app:destination="@id/viewInfoFragment_info_btm" />
     </fragment>
     <fragment
         android:id="@+id/sleepFragment2"
@@ -73,7 +73,7 @@
         tools:layout="@layout/fragment_sleep" >
         <action
             android:id="@+id/action_sleepFragment2_to_viewInfoFragment_info"
-            app:destination="@id/viewInfoFragment_info" />
+            app:destination="@id/viewInfoFragment_info_btm" />
     </fragment>
     <activity
         android:id="@+id/logoutActivity2"
