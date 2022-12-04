@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_t)
         val navController = findNavController(R.id.bottomNavigation)
         appBarConfiguration = AppBarConfiguration(

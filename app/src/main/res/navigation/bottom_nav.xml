@@ -71,6 +71,12 @@
         <action
             android:id="@+id/action_dashboardFragment_btm_to_logoutActivity3"
             app:destination="@id/logoutActivity_btm" />
+        <action
+            android:id="@+id/action_dashboardFragment_btm_self"
+            app:destination="@id/dashboardFragment_btm" />
+        <action
+            android:id="@+id/action_dashboardFragment_btm_to_chatFragment_btm"
+            app:destination="@id/chatFragment_btm" />
     </fragment>
     <fragment
         android:id="@+id/checkinBoardFragment_btm"
@@ -212,6 +218,9 @@
         <action
             android:id="@+id/action_viewMeasurementFragment_btm_to_weightFragment3"
             app:destination="@id/weightFragment_btm" />
+        <action
+            android:id="@+id/action_viewMeasurementFragment_btm_to_dashboardFragment_btm"
+            app:destination="@id/dashboardFragment_btm" />
     </fragment>
     <fragment
         android:id="@+id/editMeasurementFragment2"
@@ -238,4 +247,9 @@
         android:name="com.example.assignment2.CheckinFragment"
         android:label="fragment_checkin"
         tools:layout="@layout/fragment_checkin" />
+    <activity
+        android:id="@+id/logoutActivity_btm"
+        android:name="com.example.assignment2.LogoutActivity"
+        android:label="activity_logout"
+        tools:layout="@layout/activity_logout" />
 </navigation>
