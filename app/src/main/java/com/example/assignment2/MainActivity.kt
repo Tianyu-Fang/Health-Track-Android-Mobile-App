@@ -1,9 +1,15 @@
 package com.example.assignment2
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.view.menu.MenuBuilder
+import androidx.core.view.MenuCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -23,6 +29,64 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration!!)
         bottomNav.setupWithNavController(navController)
+    }
+
+    @SuppressLint("RestrictedApi")
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_options, menu)
+
+        // Show icons on Overflow option menu
+        if (menu is MenuBuilder) {
+            menu.setOptionalIconsVisible(true)
+        }
+
+        MenuCompat.setGroupDividerEnabled(menu!!, true)
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.bottomNavigation)
+        return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
+                || super.onSupportNavigateUp())
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        val navController = findNavController(R.id.bottomNavigation)
+
+        return when(id){
+            R.id.measurementFragment ->  {
+                navController.navigate(R.id.measurementFragment3)
+                true
+            }
+            R.id.infoFragment -> {
+                navController.navigate(R.id.viewInfoFragment_info_btm)
+                true
+            }
+            R.id.dietFragment -> {
+                navController.navigate(R.id.dietFragment2)
+                true
+            }
+            R.id.journalFragment -> {
+                navController.navigate(R.id.journalFragment_info)
+                true
+            }
+            R.id.sleepFragment -> {
+                navController.navigate(R.id.sleepFragment2)
+                true
+            }
+            R.id.logout ->{
+//                val intent = Intent(this, LogoutActivity::class.java)
+//                startActivity(intent)
+                navController.navigate(R.id.logoutActivity2)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
+        }
 
     }
 

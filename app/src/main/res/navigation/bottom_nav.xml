@@ -41,6 +41,9 @@
         <action
             android:id="@+id/action_dashboardFragment_btm_to_workoutFragment_btm"
             app:destination="@id/workoutFragment_btm" />
+        <action
+            android:id="@+id/action_dashboardFragment_btm_to_viewInfoFragment"
+            app:destination="@id/viewInfoFragment_info_btm" />
     </fragment>
     <fragment
         android:id="@+id/checkinBoardFragment_btm"
@@ -77,4 +80,9 @@
         android:name="com.example.assignment2.WorkoutFragment"
         android:label="fragment_workout"
         tools:layout="@layout/fragment_workout" />
+    <fragment
+        android:id="@+id/viewInfoFragment_info_btm"
+        android:name="com.example.assignment2.info.ViewInfoFragment"
+        android:label="fragment_view_info"
+        tools:layout="@layout/fragment_view_info" />
 </navigation>
