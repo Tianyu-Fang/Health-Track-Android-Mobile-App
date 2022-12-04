@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_dashboard"
         android:title="Check in" />
     <item
-        android:id="@+id/workoutActivity_btm"
+        android:id="@+id/workoutFragment_btm"
         android:icon="@drawable/ic_exercise"
         android:title="Exercise" />
 

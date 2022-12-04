@@ -83,6 +83,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_dashboardFragment_btm_to_workoutActivity2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_dashboardFragment_to_chatActivity2">
                               <value>
                                 <LayoutPositions />
@@ -152,13 +157,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="workoutActivity2">
+                  <entry key="workoutFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="394" />
-                            <option name="y" value="-116" />
+                            <option name="x" value="358" />
+                            <option name="y" value="-42" />
                           </Point>
                         </option>
                       </LayoutPositions>

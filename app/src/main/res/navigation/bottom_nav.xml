@@ -39,8 +39,8 @@
             android:id="@+id/action_dashboardFragment_btm_to_checkinBoardFragment2"
             app:destination="@id/checkinBoardFragment_btm" />
         <action
-            android:id="@+id/action_dashboardFragment_btm_to_workoutActivity2"
-            app:destination="@id/workoutActivity_btm" />
+            android:id="@+id/action_dashboardFragment_btm_to_workoutFragment_btm"
+            app:destination="@id/workoutFragment_btm" />
     </fragment>
     <fragment
         android:id="@+id/checkinBoardFragment_btm"
@@ -72,9 +72,9 @@
             android:id="@+id/action_fillCheckinFragment_btm_to_checkinHistoryFragment3"
             app:destination="@id/checkinHistoryFragment_btm" />
     </fragment>
-    <activity
-        android:id="@+id/workoutActivity_btm"
-        android:name="com.example.assignment2.WorkoutActivity"
-        android:label="activity_workout"
-        tools:layout="@layout/activity_workout" />
+    <fragment
+        android:id="@+id/workoutFragment_btm"
+        android:name="com.example.assignment2.WorkoutFragment"
+        android:label="fragment_workout"
+        tools:layout="@layout/fragment_workout" />
 </navigation>

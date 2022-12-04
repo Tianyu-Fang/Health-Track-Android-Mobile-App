@@ -14,7 +14,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 
 class WorkoutFragment : Fragment() {
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
