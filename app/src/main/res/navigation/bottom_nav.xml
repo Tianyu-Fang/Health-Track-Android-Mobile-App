@@ -80,6 +80,9 @@
         <action
             android:id="@+id/action_checkinHistoryFragment_btm_to_fillCheckinFragment_btm"
             app:destination="@id/fillCheckinFragment_btm" />
+        <action
+            android:id="@+id/action_checkinHistoryFragment_btm_to_checkinFragment"
+            app:destination="@id/checkinFragment_btm" />
     </fragment>
     <fragment
         android:id="@+id/fillCheckinFragment_btm"
@@ -125,4 +128,44 @@
         android:name="com.example.assignment2.LogoutActivity"
         android:label="activity_logout"
         tools:layout="@layout/activity_logout" />
+    <fragment
+        android:id="@+id/viewMeasurementFragment_btm"
+        android:name="com.example.assignment2.measurement.ViewMeasurementFragment"
+        android:label="fragment_view_measurement"
+        tools:layout="@layout/fragment_view_measurement" >
+        <action
+            android:id="@+id/action_viewMeasurementFragment_btm_to_healthScoreFragment2"
+            app:destination="@id/healthScoreFragment_btm" />
+        <action
+            android:id="@+id/action_viewMeasurementFragment_btm_to_heightFragment3"
+            app:destination="@id/heightFragment_btm" />
+        <action
+            android:id="@+id/action_viewMeasurementFragment_btm_to_weightFragment3"
+            app:destination="@id/weightFragment_btm" />
+    </fragment>
+    <fragment
+        android:id="@+id/editMeasurementFragment2"
+        android:name="com.example.assignment2.measurement.EditMeasurementFragment"
+        android:label="fragment_edit_measurement"
+        tools:layout="@layout/fragment_edit_measurement" />
+    <fragment
+        android:id="@+id/healthScoreFragment_btm"
+        android:name="com.example.assignment2.measurement.HealthScoreFragment"
+        android:label="fragment_health_score"
+        tools:layout="@layout/fragment_health_score" />
+    <fragment
+        android:id="@+id/heightFragment_btm"
+        android:name="com.example.assignment2.HeightFragment"
+        android:label="fragment_height"
+        tools:layout="@layout/fragment_height" />
+    <fragment
+        android:id="@+id/weightFragment_btm"
+        android:name="com.example.assignment2.WeightFragment"
+        android:label="fragment_weight"
+        tools:layout="@layout/fragment_weight" />
+    <fragment
+        android:id="@+id/checkinFragment_btm"
+        android:name="com.example.assignment2.CheckinFragment"
+        android:label="fragment_checkin"
+        tools:layout="@layout/fragment_checkin" />
 </navigation>

@@ -163,7 +163,7 @@
                 android:layout_marginTop="5dp">
 
                 <ImageView
-                    android:id="@+id/checin_report_icon"
+                    android:id="@+id/checkin_report_icon"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
@@ -183,7 +183,7 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
-                    app:layout_constraintStart_toEndOf="@+id/checin_report_icon"
+                    app:layout_constraintStart_toEndOf="@+id/checkin_report_icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -239,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Checkin Report"
+                    android:text="Health Track"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"

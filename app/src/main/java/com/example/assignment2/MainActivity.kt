@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
         return when(id){
             R.id.measurementFragment ->  {
-                navController.navigate(R.id.measurementFragment3)
+                navController.navigate(R.id.measurementFragment_btm)
                 true
             }
             R.id.infoFragment -> {
@@ -65,21 +65,21 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.dietFragment -> {
-                navController.navigate(R.id.dietFragment2)
+                navController.navigate(R.id.dietFragment_btm)
                 true
             }
             R.id.journalFragment -> {
-                navController.navigate(R.id.journalFragment_info)
+                navController.navigate(R.id.journalFragment_btm)
                 true
             }
             R.id.sleepFragment -> {
-                navController.navigate(R.id.sleepFragment2)
+                navController.navigate(R.id.sleepFragment_btm)
                 true
             }
             R.id.logout ->{
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
-                navController.navigate(R.id.logoutActivity2)
+                navController.navigate(R.id.logoutActivity_btm)
                 true
             }
 

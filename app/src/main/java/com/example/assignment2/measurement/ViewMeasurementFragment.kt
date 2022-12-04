@@ -68,7 +68,7 @@ class ViewMeasurementFragment : Fragment() {
         val btnHealthScore = view.findViewById<Button>(R.id.total_score_btn)
 
         btnHealthScore.setOnClickListener {
-            view.findNavController().navigate(R.id.healthScoreFragment)
+            view.findNavController().navigate(R.id.healthScoreFragment_btm)
         }
 
 
@@ -76,7 +76,7 @@ class ViewMeasurementFragment : Fragment() {
         val textHeight = view.findViewById<TextView>(R.id.height_data)
 
         textHeight.setOnClickListener {
-            view.findNavController().navigate(R.id.heightFragment2)
+            view.findNavController().navigate(R.id.heightFragment_btm)
         }
 
 //        weight
@@ -84,7 +84,7 @@ class ViewMeasurementFragment : Fragment() {
         val textWeight = view.findViewById<TextView>(R.id.weight_data)
 
         textWeight.setOnClickListener {
-            view.findNavController().navigate(R.id.weightFragment2)
+            view.findNavController().navigate(R.id.weightFragment_btm)
         }
     }
 
