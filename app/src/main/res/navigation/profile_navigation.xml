@@ -21,9 +21,6 @@
         <action
             android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
             app:destination="@id/forgetPasswordFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_mainActivity3"
-            app:destination="@id/mainActivity3" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -61,9 +58,4 @@
             android:id="@+id/action_verifiedSuccessFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-    <activity
-        android:id="@+id/mainActivity3"
-        android:name="com.example.assignment2.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
 </navigation>

@@ -3,15 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_nav"
-    app:startDestination="@id/dashboardFragment_btm">
+    app:startDestination="@id/loginFragment">
 
     <activity
         android:id="@+id/mainActivity2"
         android:name="com.example.assignment2.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+
+
     <fragment
-        android:id="@+id/profileFragment_btm"
+        android:id="@+id/loginFragment"
+        android:name="com.example.assignment2.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_profileFragment_btm"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment2"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment2_to_forgetPasswordFragment2"
+            app:destination="@id/forgetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
         android:name="com.example.assignment2.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
@@ -20,7 +37,7 @@
             app:destination="@id/dashboardFragment_btm" />
         <action
             android:id="@+id/action_profileFragment_btm_to_settingFragment2"
-            app:destination="@id/settingFragment2" />
+            app:destination="@id/settingFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment_btm"
@@ -29,7 +46,7 @@
         tools:layout="@layout/fragment_dashboard" >
         <action
             android:id="@+id/action_dashboardFragment_to_profileFragment2"
-            app:destination="@id/profileFragment_btm" />
+            app:destination="@id/profileFragment" />
         <action
             android:id="@+id/action_dashboardFragment_btm_to_checkinBoardFragment2"
             app:destination="@id/checkinBoardFragment_btm" />
@@ -84,41 +101,52 @@
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
-        android:id="@+id/settingFragment2"
+        android:id="@+id/settingFragment"
         android:name="com.example.assignment2.SettingFragment"
         android:label="SettingFragment" >
         <action
             android:id="@+id/action_settingFragment2_to_changePasswordFragment2"
-            app:destination="@id/changePasswordFragment2" />
+            app:destination="@id/changePasswordFragment" />
     </fragment>
     <fragment
-        android:id="@+id/changePasswordFragment2"
+        android:id="@+id/changePasswordFragment"
         android:name="com.example.assignment2.ChangePasswordFragment"
         android:label="fragment_change_password"
         tools:layout="@layout/fragment_change_password" />
     <fragment
-        android:id="@+id/loginFragment2"
-        android:name="com.example.assignment2.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
-    <fragment
-        android:id="@+id/registerFragment2"
+        android:id="@+id/registerFragment"
         android:name="com.example.assignment2.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment2_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/forgetPasswordFragment2"
+        android:id="@+id/forgetPasswordFragment"
         android:name="com.example.assignment2.ForgetPasswordFragment"
         android:label="fragment_forget_password"
-        tools:layout="@layout/fragment_forget_password" />
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forgetPasswordFragment2_to_emailVerifyFragment2"
+            app:destination="@id/emailVerifyFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/emailVerifyFragment2"
+        android:id="@+id/emailVerifyFragment"
         android:name="com.example.assignment2.EmailVerifyFragment"
         android:label="fragment_email_verify"
-        tools:layout="@layout/fragment_email_verify" />
+        tools:layout="@layout/fragment_email_verify" >
+        <action
+            android:id="@+id/action_emailVerifyFragment2_to_verifiedSuccessFragment2"
+            app:destination="@id/verifiedSuccessFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/verifiedSuccessFragment2"
+        android:id="@+id/verifiedSuccessFragment"
         android:name="com.example.assignment2.VerifiedSuccessFragment"
         android:label="fragment_verified_success"
-        tools:layout="@layout/fragment_verified_success" />
+        tools:layout="@layout/fragment_verified_success" >
+        <action
+            android:id="@+id/action_verifiedSuccessFragment2_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
