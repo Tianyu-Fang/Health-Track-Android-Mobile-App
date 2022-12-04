@@ -7,8 +7,16 @@
     tools:context=".measurement.MeasurementFragment"
     android:orientation="vertical">
 
-
-
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_marginTop="10dp"
