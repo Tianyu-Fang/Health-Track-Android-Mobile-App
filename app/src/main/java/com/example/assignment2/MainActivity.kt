@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.view.MenuCompat
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -23,7 +25,13 @@ class MainActivity : AppCompatActivity() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_t)
         val navController = findNavController(R.id.bottomNavigation)
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.dashboardFragment_btm, R.id.checkinBoardFragment_btm,R.id.workoutFragment_btm,R.id.chatFragment_btm,R.id.profileFragment)
+            setOf(
+                R.id.dashboardFragment_btm,
+                R.id.checkinBoardFragment_btm,
+                R.id.workoutFragment_btm,
+                R.id.chatFragment_btm,
+                R.id.profileFragment
+            )
         )
 //
 //        supportActionBar?.setDisplayShowHomeEnabled(false)
@@ -31,6 +39,15 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration!!)
         bottomNav.setupWithNavController(navController)
+        bottomNav.visibility = View.GONE
+        navController.addOnDestinationChangedListener { _, nd: NavDestination, _ ->
+            if (nd.id == R.id.profileFragment) {
+                bottomNav.visibility = View.VISIBLE
+            }
+            else if(nd.id== R.id.settingFragment || nd.id == R.id.loginFragment){
+                bottomNav.visibility = View.GONE
+            }
+        }
     }
 
     @SuppressLint("RestrictedApi")
