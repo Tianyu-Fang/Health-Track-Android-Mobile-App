@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 
 
@@ -21,8 +22,9 @@ class FillCheckinFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val btnCheckin = view.findViewById<Button>(R.id.fillcheckin_button)
 
         btnCheckin.setOnClickListener {

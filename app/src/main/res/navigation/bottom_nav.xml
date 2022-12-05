@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_nav"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/loginFragment"
+    tools:ignore="ExtraText">
 
     <activity
         android:id="@+id/mainActivity2"
@@ -72,9 +73,6 @@
             android:id="@+id/action_dashboardFragment_btm_to_logoutActivity3"
             app:destination="@id/logoutActivity_btm" />
         <action
-            android:id="@+id/action_dashboardFragment_btm_self"
-            app:destination="@id/dashboardFragment_btm" />
-        <action
             android:id="@+id/action_dashboardFragment_btm_to_chatFragment_btm"
             app:destination="@id/chatFragment_btm" />
     </fragment>
@@ -141,11 +139,7 @@
         android:name="com.example.assignment2.DietFragment"
         android:label="fragment_diet"
         tools:layout="@layout/fragment_diet" />
-    <activity
-        android:id="@+id/workoutActivity_btm"
-        android:name="com.example.assignment2.WorkoutActivity"
-        android:label="activity_workout"
-        tools:layout="@layout/activity_workout" />
+
     <fragment
         android:id="@+id/chatFragment_btm"
         android:name="com.example.assignment2.ChatFragment"
@@ -200,10 +194,6 @@
             android:id="@+id/action_verifiedSuccessFragment2_to_loginFragment2"
             app:destination="@id/loginFragment" />
     </fragment>
-        android:id="@+id/logoutActivity_btm"
-        android:name="com.example.assignment2.LogoutActivity"
-        android:label="activity_logout"
-        tools:layout="@layout/activity_logout" />
     <fragment
         android:id="@+id/viewMeasurementFragment_btm"
         android:name="com.example.assignment2.measurement.ViewMeasurementFragment"

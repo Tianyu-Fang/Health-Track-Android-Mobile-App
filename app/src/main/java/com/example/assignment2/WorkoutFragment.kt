@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.R
 import com.example.assignment2.adapter.WorkoutPagerAdapter
@@ -39,6 +40,11 @@ class WorkoutFragment : Fragment() {
                 tab: TabLayout.Tab, position: Int ->
             tab.text = titles[position]
         }.attach()
+
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.setDisplayShowHomeEnabled(false)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
         return view
 
     }

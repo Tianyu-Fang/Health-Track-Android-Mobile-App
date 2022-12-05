@@ -20,15 +20,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_t)
         val navController = findNavController(R.id.bottomNavigation)
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.dashboardFragment_btm, R.id.checkinBoardFragment_btm,R.id.workoutActivity_btm,R.id.chatFragment_btm,R.id.profileFragment)
+            setOf(R.id.dashboardFragment_btm, R.id.checkinBoardFragment_btm,R.id.workoutFragment_btm,R.id.chatFragment_btm,R.id.profileFragment)
         )
+//
+//        supportActionBar?.setDisplayShowHomeEnabled(false)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         setupActionBarWithNavController(navController, appBarConfiguration!!)
         bottomNav.setupWithNavController(navController)

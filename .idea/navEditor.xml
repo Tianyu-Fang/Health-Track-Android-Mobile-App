@@ -101,8 +101,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-618" />
-                            <option name="y" value="134" />
+                            <option name="x" value="-769" />
+                            <option name="y" value="-11" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -326,8 +326,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-1809" />
-                            <option name="y" value="3" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -481,7 +481,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_viewMeasurementFragment_btm_self">
+                            <entry key="action_viewMeasurementFragment_btm_to_dashboardFragment_btm">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -513,18 +513,6 @@
                           <Point>
                             <option name="x" value="603" />
                             <option name="y" value="55" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="workoutActivity_btm">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-336" />
-                            <option name="y" value="1058" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -885,13 +873,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="viewInfoFragment_info">
+                  <entry key="viewInfoFragment_info_btm">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="410" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                         <option name="myPositions">

@@ -94,14 +94,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stepsView"
-        tools:text="2/4 hours \n of your daily goal" />
+        tools:text="2/4 hours \n of your daily goal"
+        android:text="2/4 hours \n of your daily goal"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/scorePercentTV"
         style="@style/ScoreDetailsPercentStyle"
         app:layout_constraintStart_toStartOf="@+id/stepsView"
         app:layout_constraintTop_toTopOf="@+id/stepsView"
-        tools:text="+10%" />
+        tools:text="+10%"
+        android:text="+10%"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/scoreTV"
@@ -145,7 +147,8 @@
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Walking: 2 hours" />
+            tools:text="Walking: 2 hours"
+            android:text="Walking: 2 hours" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/runningTV"
@@ -163,7 +166,8 @@
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/walkingTV"
-            tools:text="Running: 1 h 15 m" />
+            tools:text="Running: 1 h 15 m"
+            android:text="Running: 1 h 15 m"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/otherTV"
@@ -181,7 +185,8 @@
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/runningTV"
-            tools:text="Other: 45 minutes" />
+            tools:text="Other: 45 minutes"
+            android:text="Other: 45 minutes"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

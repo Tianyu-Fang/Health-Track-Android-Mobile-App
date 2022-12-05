@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.R
 import com.google.android.material.tabs.TabLayout
@@ -19,6 +20,9 @@ class MeasurementFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_measurement, container, false)
         val view: View = inflater.inflate(R.layout.fragment_measurement, container, false)

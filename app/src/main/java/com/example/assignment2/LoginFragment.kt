@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 
@@ -25,6 +26,9 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //login
         val btnLogin = view.findViewById<Button>(R.id.login_btn)
 

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment2.adapter.CheckinAdapter
@@ -19,11 +20,16 @@ class CheckinFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        //support bar
+
         return inflater.inflate(R.layout.fragment_checkin, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         constructRecyclerView(view, this@CheckinFragment)
     }
@@ -52,24 +58,17 @@ class CheckinFragment : Fragment() {
     fun populateCheckinList(): ArrayList<CheckinModel> {
         val CheckinList = ArrayList<CheckinModel>()
         CheckinList.add(
-            CheckinModel(1, "PE3", "Good subject")
+            CheckinModel(1, "Symptoms", "None")
         )
         CheckinList.add(
-            CheckinModel(2, "IoT", "Very good subject")
+            CheckinModel(2, "Stress Level", "Light")
         )
         CheckinList.add(
-            CheckinModel(3, "PE4", "Good subject")
+            CheckinModel(3, "Treatments", "None")
         )
         CheckinList.add(
-            CheckinModel(4, "IoT2", "Very good subject")
+            CheckinModel(4, "Health Factors", "Running")
         )
-        CheckinList.add(
-            CheckinModel(5, "PE5", "Good subject")
-        )
-        CheckinList.add(
-            CheckinModel(6, "IoT3", "Very good subject")
-        )
-
         return CheckinList
     }
 }

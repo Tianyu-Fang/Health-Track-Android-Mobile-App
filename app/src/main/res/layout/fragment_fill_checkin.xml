@@ -37,6 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:fontFamily="@font/googlesans_regular"
+        android:textColor="@color/black"
         android:text="Your Stress level?"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/sStress"
@@ -61,6 +63,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:fontFamily="@font/googlesans_regular"
+        android:textColor="@color/black"
         android:text="Treatments you have?"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/sTreatment"
@@ -85,6 +89,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:fontFamily="@font/googlesans_regular"
+        android:textColor="@color/black"
         android:text="Health factors"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/sHealth"
@@ -115,6 +121,7 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sHealth"
+        app:layout_constraintVertical_bias="0.29000002"
         tools:layout_editor_absoluteX="82dp" />
 
     />

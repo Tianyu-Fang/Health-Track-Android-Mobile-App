@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.R
 import me.relex.circleindicator.CircleIndicator3
@@ -23,6 +24,9 @@ class ViewInfoFragment: Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_view_info, container, false)
         viewPager = view.findViewById(R.id.view_pager2)
