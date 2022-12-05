@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- https://developer.android.com/reference/androidx/preference/SwitchPreferenceCompat -->
 
     <PreferenceCategory
         android:key="account_settings"
-        android:title="Account Settings">
+        android:title="Account Settings"
+        android:layout="@layout/custom_preference"
+        >
 
         <androidx.preference.ListPreference
             android:key="timezone_list"
@@ -46,7 +49,6 @@
             android:title="Change password">
         </PreferenceScreen>
 
-
         <androidx.preference.SwitchPreference
             android:defaultValue="true"
             android:key="push_switch"
@@ -66,7 +68,8 @@
 
     <PreferenceCategory
         android:key="features"
-        android:title="Features">
+        android:title="Features"
+        android:layout="@layout/custom_preference">
 
         <PreferenceScreen
             android:key="Medical_ID"
@@ -80,7 +83,8 @@
 
     <PreferenceCategory
         android:key="more"
-        android:title="More">
+        android:title="More"
+        android:layout="@layout/custom_preference">
 
         <PreferenceScreen
             android:key="about"
@@ -92,10 +96,10 @@
             android:summary=""
             android:title="Privacy policy" />
 
-        <PreferenceScreen
-            android:key="terms"
-            android:summary=""
-            android:title="Terms and conditions" />
+<!--        <PreferenceScreen-->
+<!--            android:key="terms"-->
+<!--            android:summary=""-->
+<!--            android:title="Terms and conditions"/>-->
 
     </PreferenceCategory>
 

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="pref_list_timezones">
-        <item>Malaysia</item>
-        <item>England</item>
-        <item>China</item>
+        <item>UTC +14 Christmas Island/Kiribati</item>
+        <item>UTC +13:45 Chatham Islands/New Zealand</item>
+        <item>UTC +13 New Zealand with exceptions and 5 more</item>
+        <item>UTC +12 Fiji, small region of Russia and 7 more</item>
+        <item>UTC +11 much of Australia and 7 more</item>
+        <item>UTC +10:30 small region of Australia</item>
+        <item>UTC +10Queensland/Australia and 6 more</item>
     </string-array>
 
 
     <string-array name="pref_list_lang">
-        <item>BM</item>
+        <item>Malay</item>
         <item>English</item>
         <item>Chinese</item>
     </string-array>
 
     <string-array name="pref_list_region">
         <item>US</item>
-        <item>American</item>
+        <item>UK</item>
         <item>China</item>
     </string-array>
 

@@ -11,6 +11,9 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:colorControlActivated">@color/blue</item>
+        <item name="android:preferenceCategoryStyle">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
         <!-- Customize your theme here. -->
         <!--
         <item name="colorPrimary">@color/black</item>
@@ -21,6 +24,7 @@
     <style name="Theme.Assignment2.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
     </style>
 
     <style name="Theme.Assignment2.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -43,4 +47,9 @@
         <item name="android:lines">1</item>
     </style>
 
+    <style name="theme_switch_compat" parent="Widget.AppCompat.CompoundButton.Switch">
+
+        <item name="colorAccent">@color/blue</item>
+
+    </style>
 </resources>
