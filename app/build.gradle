@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -66,4 +67,20 @@ dependencies {
 //pager+circle
     implementation 'me.relex:circleindicator:2.1.6'
     implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    //mvvm room
+    implementation 'androidx.room:room-ktx:2.4.3'
+    kapt "androidx.room:room-compiler:2.4.3"
+    androidTestImplementation "androidx.room:room-testing:2.4.3"
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
 }
