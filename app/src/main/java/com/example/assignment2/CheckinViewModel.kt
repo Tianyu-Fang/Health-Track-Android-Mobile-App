@@ -1,0 +1,36 @@
+package com.example.assignment2
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import com.example.assignment2.model.Checkin
+
+class CheckinViewModel(private val repository: CheckinRepository): ViewModel() {
+
+    // insert note
+    fun addNote(checkindata: Checkin) {
+        repository.addNote(checkindata)
+    }
+
+//    // update
+//    suspend fun updateNote(note: Note) {
+//        repository.updateNote(note)
+//    }
+//
+//    // delete note
+//    suspend fun deleteNote(note: Note) {
+//        repository.deleteNote(note)
+//    }
+}
+
+class CheckinViewModelFactory(private val repository: CheckinRepository)
+    : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(CheckinViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return CheckinViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}

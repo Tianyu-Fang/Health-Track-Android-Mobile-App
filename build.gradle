@@ -12,6 +12,7 @@ buildscript {
         }
     }
     dependencies {
+        classpath 'com.google.gms:google-services:4.3.13'
         classpath "com.android.tools.build:gradle:$gradle_build_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
     }

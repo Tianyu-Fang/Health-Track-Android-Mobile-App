@@ -23,4 +23,38 @@
         <item>China</item>
     </string-array>
 
+    <string-array name="symptom_list">
+        <item>Cough</item>
+        <item>Headache</item>
+        <item>Sleepless</item>
+        <item>item4</item>
+    </string-array>
+
+    <string-array name="stress_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="treatment_list">
+        <item>XX Medcine</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="healthfactor_list">
+        <item>None</item>
+        <item>Swimming</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
 </resources>
