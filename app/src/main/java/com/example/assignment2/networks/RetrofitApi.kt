@@ -8,11 +8,11 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface RetrofitApi {
-    @GET("notes/")
+    @GET("checkin/")
     fun getAllNotes(): Call<List<Checkin>>
 //    suspend fun getAllNotes(): Response<List<Note>>
 
-    @POST("/notes")
-    suspend fun addNote(@Body note: Checkin): Response<Checkin>
+    @POST("/checkin")
+    suspend fun addNote(@Body checkin: Checkin): Response<Checkin>
 
 }
