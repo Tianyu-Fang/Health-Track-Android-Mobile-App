@@ -21,7 +21,6 @@ import kotlin.collections.ArrayList
 
 
 class CheckinHistoryFragment : Fragment() {
-
     private lateinit var binding: FragmentCheckinHistoryBinding
     private val sdf = SimpleDateFormat("MMMM yyyy", Locale.ENGLISH)
     private val cal = Calendar.getInstance(Locale.ENGLISH)

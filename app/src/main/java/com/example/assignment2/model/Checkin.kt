@@ -8,7 +8,7 @@ class Checkin(
     //change
     var symptom: String = " ",
 
-    var stress_level: Int = 0,
+    var stress_level: String = " ",
 
     var treatments: String = " ",
 

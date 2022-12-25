@@ -12,37 +12,40 @@ class CheckinRepository {
 
     var db = Firebase.firestore
 
-//    fun getAllNotes(): LiveData<List<Checkin>> {
-//        val allNotes: MutableLiveData<List<Checkin>> = MutableLiveData()
-//
-//        val notes = ArrayList<Checkin>()
-//
-//        val TAG = "NOTE"
-//        db.collection("Checkin")
-//            .get()
-//            .addOnSuccessListener { result ->
-//                for (document in result) {
-//                    val note =
-//                        Checkin(
-////                            document.id,
-//                            document.data["word"].toString()
-//                        )
-//                    notes.add(note)
-//                    Log.d(TAG, "${document.id} => ${document.data}")
-//                }
-//                allNotes.value = notes
-//            }
-//            .addOnFailureListener { exception ->
-//                Log.d(TAG, "Error getting documents: ", exception)
-//            }
-//
-//        return allNotes
-//    }
+    fun getAllCheckin(): LiveData<List<Checkin>> {
+        val allRecords: MutableLiveData<List<Checkin>> = MutableLiveData()
 
-    fun addNote(checkindata: Checkin) {
+        val records = ArrayList<Checkin>()
+
+        val TAG = "Checkin"
+        db.collection("Checkin")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    val note =
+                        Checkin(
+//                            document.id,
+                            document.data["symptom"].toString(),
+                            document.data["stress_level"].toString(),
+                            document.data["treatments"].toString(),
+                            document.data["health_factors"].toString()
+                        )
+                    records.add(note)
+                    Log.d(TAG, "${document.id} => ${document.data}")
+                }
+                allRecords.value = records
+            }
+            .addOnFailureListener { exception ->
+                Log.d(TAG, "Error getting documents: ", exception)
+            }
+
+        return allRecords
+    }
+
+    fun addCheckin(checkindata: Checkin) {
 
         // Add a new document with a generated ID
-        val TAG = "Note"
+        val TAG = "Checkin"
         db.collection("Checkin")
             .add(checkindata)
             .addOnSuccessListener { documentReference ->

@@ -31,17 +31,16 @@
     </string-array>
 
     <string-array name="stress_list">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>Good</item>
+        <item>Mild</item>
+        <item>Moderate</item>
+        <item>Serve</item>
+        <item>Destructive</item>
     </string-array>
 
     <string-array name="treatment_list">
-        <item>XX Medcine</item>
-        <item>1</item>
+        <item>ZZ Medicine</item>
+        <item>YY Medicine</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -51,10 +50,10 @@
     <string-array name="healthfactor_list">
         <item>None</item>
         <item>Swimming</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>Basketball</item>
+        <item>Running</item>
+        <item>Cooking</item>
+        <item>Riding</item>
     </string-array>
 
 </resources>

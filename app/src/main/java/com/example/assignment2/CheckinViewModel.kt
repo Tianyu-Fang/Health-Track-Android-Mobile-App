@@ -8,10 +8,28 @@ import com.example.assignment2.model.Checkin
 
 class CheckinViewModel(private val repository: CheckinRepository): ViewModel() {
 
-    // insert note
-    fun addNote(checkindata: Checkin) {
-        repository.addNote(checkindata)
+    var _checkindata: LiveData<List<Checkin>> = MutableLiveData()
+    val allRecords: LiveData<List<Checkin>>
+        get() = _checkindata
+
+    init {
+//        viewModelScope.launch {
+        getAllCheckin()
+//        }
+
     }
+
+    // insert note
+    fun addCheckin(checkindata: Checkin) {
+        repository.addCheckin(checkindata)
+    }
+
+    fun getAllCheckin() {
+        _checkindata = repository.getAllCheckin()
+    }
+
+
+
 
 //    // update
 //    suspend fun updateNote(note: Note) {
