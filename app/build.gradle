@@ -93,6 +93,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-database'  // realtime database
+    implementation 'com.google.firebase:firebase-database-ktx' // realtime database
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
     //firebase login
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:31.1.1')

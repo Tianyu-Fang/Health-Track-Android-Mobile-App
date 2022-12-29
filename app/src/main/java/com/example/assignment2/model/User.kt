@@ -1,6 +1,7 @@
 package com.example.assignment2.model
 
 import android.os.Parcelable
+import android.text.Editable
 import kotlinx.parcelize.Parcelize
 
 

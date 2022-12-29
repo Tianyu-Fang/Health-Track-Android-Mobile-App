@@ -1,16 +1,13 @@
 package com.example.assignment2.repository
 
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.example.assignment2.model.User
-import com.example.assignment2.model.Workout
 //import com.example.firebasefirestore.data.model.Course
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.HashMap
@@ -120,6 +117,27 @@ class AuthRepository {
 
     // Firestore
     var db = Firebase.firestore
+
+    fun updateUser(email: String, user: User): MutableLiveData<Boolean>{
+        var status: MutableLiveData<Boolean> = MutableLiveData()
+
+        val map: MutableMap<String, Any?> = HashMap()
+        map["userEmail"] = email
+        map["userName"] = user.userName
+        map["bloodType"] = user.bloodType
+        map["gender"] = user.gender
+        map["doB"] = user.DoB
+        map["height"] = user.height
+        map["weight"] = user.weight
+
+        db.collection("User").document(email)
+            .set(map)
+            .addOnSuccessListener {  }
+            .addOnFailureListener {  }
+        status.value = true
+
+        return status
+    }
 
     fun findUser(){
         val userDB = db.collection("User").document(userEmail)

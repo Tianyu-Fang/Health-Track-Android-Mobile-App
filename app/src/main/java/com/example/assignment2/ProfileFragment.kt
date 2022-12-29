@@ -10,8 +10,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +20,6 @@ import com.example.assignment2.repository.AuthRepository
 import com.example.assignment2.viewmodel.AuthViewModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.delay
 
 
 class ProfileFragment : Fragment() {
@@ -51,6 +48,11 @@ class ProfileFragment : Fragment() {
             view.findNavController().navigate(R.id.loginFragment)
         }
 
+        val btnUpdate = view.findViewById<Button>(R.id.update_button)
+        btnUpdate.setOnClickListener {
+            view.findNavController().navigate(R.id.profileUpdateFragment)
+        }
+
         val btnSetting = view.findViewById<ImageView>(R.id.setting)
         btnSetting.setOnClickListener{
             view.findNavController().navigate(R.id.settingFragment)
@@ -69,9 +71,9 @@ class ProfileFragment : Fragment() {
                         document.data!!["userName"].toString(),
                         document.data!!["bloodType"].toString(),
                         document.data!!["gender"].toString(),
-                        document.data!!["DoB"].toString(),
-                        document.data!!["Height"].toString(),
-                        document.data!!["Weight"].toString()
+                        document.data!!["doB"].toString(),
+                        document.data!!["height"].toString(),
+                        document.data!!["weight"].toString()
                     )
                 Log.d("1", "DocumentSnapshot data: ${document.data}")
                 val userName = view.findViewById<TextView>(R.id.userName)

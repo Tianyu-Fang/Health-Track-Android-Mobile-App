@@ -36,14 +36,18 @@ class AuthViewModel(val repository: AuthRepository) : ViewModel() {
     fun getUserEmail(): String =
         repository.getUserEmail()
 
-    fun findUser() =
-        repository.findUser()
+    fun updateUser(email: String, user: User): LiveData<Boolean> =
+        repository.updateUser(email,user)
 
-    fun getUser(): User? =
-        repository.getUser()
-
+//    fun findUser() =
+//        repository.findUser()
+//
+//    fun getUser(): User? =
+//        repository.getUser()
+//
     fun addUserInfo(email: String): LiveData<Boolean> =
         repository.addUserInfo(email)
+
 
     class Provider(private val repository: AuthRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {

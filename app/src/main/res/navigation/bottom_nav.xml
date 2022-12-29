@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_profileFragment_btm_to_settingFragment2"
             app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileUpdateFragment"
+            app:destination="@id/profileUpdateFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment_btm"
@@ -242,4 +245,13 @@
         android:name="com.example.assignment2.LogoutActivity"
         android:label="activity_logout"
         tools:layout="@layout/activity_logout" />
+    <fragment
+        android:id="@+id/profileUpdateFragment"
+        android:name="com.example.assignment2.ProfileUpdateFragment"
+        android:label="fragment_profile_update"
+        tools:layout="@layout/fragment_profile_update" >
+        <action
+            android:id="@+id/action_profileUpdateFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>
