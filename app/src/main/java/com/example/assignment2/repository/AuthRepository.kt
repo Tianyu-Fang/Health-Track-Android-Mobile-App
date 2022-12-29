@@ -79,7 +79,6 @@ class AuthRepository {
             .addOnCompleteListener { task -> // This interface is used as a method of being notified when an operation has been acknowledged by the Database servers and can be considered complete
                 status.value = task.isSuccessful
             }
-
         return status
     }
 

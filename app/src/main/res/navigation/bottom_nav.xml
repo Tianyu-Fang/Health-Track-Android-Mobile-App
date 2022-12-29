@@ -176,27 +176,19 @@
         android:label="fragment_forget_password"
         tools:layout="@layout/fragment_forget_password" >
         <action
-            android:id="@+id/action_forgetPasswordFragment2_to_emailVerifyFragment2"
-            app:destination="@id/emailVerifyFragment" />
+            android:id="@+id/action_forgetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailVerifyFragment"
         android:name="com.example.assignment2.EmailVerifyFragment"
         android:label="fragment_email_verify"
-        tools:layout="@layout/fragment_email_verify" >
-        <action
-            android:id="@+id/action_emailVerifyFragment2_to_verifiedSuccessFragment2"
-            app:destination="@id/verifiedSuccessFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_email_verify" />
     <fragment
         android:id="@+id/verifiedSuccessFragment"
         android:name="com.example.assignment2.VerifiedSuccessFragment"
         android:label="fragment_verified_success"
-        tools:layout="@layout/fragment_verified_success" >
-        <action
-            android:id="@+id/action_verifiedSuccessFragment2_to_loginFragment2"
-            app:destination="@id/loginFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_verified_success" />
     <fragment
         android:id="@+id/viewMeasurementFragment_btm"
         android:name="com.example.assignment2.measurement.ViewMeasurementFragment"
