@@ -4,6 +4,7 @@ package com.example.assignment2.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.assignment2.model.User
 //import com.example.firebasefirestore.data.model.Course
 import com.example.assignment2.repository.AuthRepository
 
@@ -29,7 +30,20 @@ class AuthViewModel(val repository: AuthRepository) : ViewModel() {
     fun isLoggedIn(): LiveData<Boolean> =
         repository.isLoggedIn()
 
+    fun setUserEmail(email: String): LiveData<Boolean> =
+        repository.setUserEmail(email)
 
+    fun getUserEmail(): String =
+        repository.getUserEmail()
+
+    fun findUser() =
+        repository.findUser()
+
+    fun getUser(): User? =
+        repository.getUser()
+
+    fun addUserInfo(email: String): LiveData<Boolean> =
+        repository.addUserInfo(email)
 
     class Provider(private val repository: AuthRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {

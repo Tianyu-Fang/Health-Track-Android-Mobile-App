@@ -30,8 +30,10 @@ class WorkoutScoreFragment: Fragment() {
 
         val workoutData = Workout(1000, 200, 300,
             200)
+
         val workoutDB = db.collection("Workout").document("randomnumber")
-            workoutDB.set(workoutData)
+
+        workoutDB.set(workoutData)
         var data = Workout(1,1,1,1)
 
             workoutDB.get().addOnSuccessListener { document ->

@@ -3,6 +3,8 @@ package com.example.assignment2.repository
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.example.assignment2.model.User
+import com.example.assignment2.model.Workout
 //import com.example.firebasefirestore.data.model.Course
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -16,7 +18,8 @@ import java.util.HashMap
 class AuthRepository {
     /* Authentication Functions */
     private lateinit var auth: FirebaseAuth
-
+    private lateinit var userEmail: String
+    private lateinit var user: User
     fun signIn(email: String, password: String): MutableLiveData<Boolean> {
         val status: MutableLiveData<Boolean> = MutableLiveData()
         auth = FirebaseAuth.getInstance()
@@ -32,6 +35,23 @@ class AuthRepository {
         return status
     }
 
+    fun setUserEmail(email: String): MutableLiveData<Boolean>{
+        val status: MutableLiveData<Boolean> = MutableLiveData()
+        userEmail = email
+
+        return status
+    }
+
+    fun getUserEmail(): String{
+        return userEmail
+    }
+
+    fun getUser(): User? {
+        if(user==null)
+            return null
+        else
+            return user
+    }
     fun signUp(email: String, password: String): MutableLiveData<Boolean> {
         val status: MutableLiveData<Boolean> = MutableLiveData()
         auth = FirebaseAuth.getInstance()
@@ -43,6 +63,17 @@ class AuthRepository {
         return status
     }
 
+    fun addUserInfo(email: String):MutableLiveData<Boolean>{
+        var status: MutableLiveData<Boolean> = MutableLiveData()
+        val u : User = User(email,"","","","","","")
+
+        db.collection("User")
+            .document(email)
+            .set(u)
+            .addOnSuccessListener { documentReference ->
+            }
+        return status
+    }
     fun forgotPassword(email: String): MutableLiveData<Boolean> {
         val status: MutableLiveData<Boolean> = MutableLiveData()
         auth = FirebaseAuth.getInstance()
@@ -89,6 +120,28 @@ class AuthRepository {
 
     // Firestore
     var db = Firebase.firestore
+
+    fun findUser(){
+        val userDB = db.collection("User").document(userEmail)
+
+        var data = User()
+        userDB.get().addOnSuccessListener { document ->
+            user =
+                User(
+                    document.data!!["userEmail"].toString(),
+                    document.data!!["userName"].toString(),
+                    document.data!!["bloodType"].toString(),
+                    document.data!!["gender"].toString(),
+                    document.data!!["DoB"].toString(),
+                    document.data!!["height"].toString(),
+                    document.data!!["weight"].toString()
+                )
+
+        }
+
+
+
+    }
 
 
     companion object {

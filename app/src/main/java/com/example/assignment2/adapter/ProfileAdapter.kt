@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment2.model.ProfileModel
 import com.example.assignment2.R
+import com.example.assignment2.model.User
 
 class ProfileAdapter(
     private val dataList: ArrayList<ProfileModel>
@@ -30,6 +31,7 @@ class ProfileAdapter(
     }
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
+
         val courseModel: ProfileModel = dataList.get(position)
         holder.dataTitle.setHint(courseModel.title.toString())
         holder.data.setText(courseModel.data.toString())
