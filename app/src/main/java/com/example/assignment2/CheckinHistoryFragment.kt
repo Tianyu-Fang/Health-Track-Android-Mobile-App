@@ -57,6 +57,7 @@ class CheckinHistoryFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mActivity.supportActionBar?.title = "Checkin history"
 
         val btnCheckin = binding.reCheckinButton
 

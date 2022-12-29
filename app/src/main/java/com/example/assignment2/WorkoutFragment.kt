@@ -21,7 +21,6 @@ class WorkoutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
         val view: View = inflater.inflate(R.layout.fragment_workout, container, false)
 
 
@@ -44,6 +43,7 @@ class WorkoutFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setDisplayShowHomeEnabled(false)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        mActivity.supportActionBar?.title = "Workout"
 
         return view
 

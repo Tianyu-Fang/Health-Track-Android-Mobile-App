@@ -38,6 +38,7 @@ class CheckinFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mActivity.supportActionBar?.title = "Checkin Report"
 
         constructRecyclerView(view, this@CheckinFragment)
         val fab = view.findViewById<FloatingActionButton>(R.id.fab_checkin)

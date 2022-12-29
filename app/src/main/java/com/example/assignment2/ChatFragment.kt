@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import com.example.assignment2.databinding.FragmentChatBinding
 import io.getstream.chat.android.client.ChatClient
@@ -33,6 +34,8 @@ class ChatFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.title = "Channels"
         // Step 1 - Set up the OfflinePlugin for offline storage
         val offlinePluginFactory = StreamOfflinePluginFactory(
             config = Config(
