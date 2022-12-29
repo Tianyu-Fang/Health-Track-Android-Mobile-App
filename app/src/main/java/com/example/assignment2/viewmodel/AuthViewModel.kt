@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 //import com.example.firebasefirestore.data.model.Course
 import com.example.assignment2.repository.AuthRepository
 
-class HomeViewModel(val repository: AuthRepository) : ViewModel() {
+class AuthViewModel(val repository: AuthRepository) : ViewModel() {
 
     fun forgotPassword(email: String): LiveData<Boolean> =
         repository.forgotPassword(email)
@@ -33,8 +33,8 @@ class HomeViewModel(val repository: AuthRepository) : ViewModel() {
 
     class Provider(private val repository: AuthRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
-                return HomeViewModel(repository) as T
+            if (modelClass.isAssignableFrom(AuthViewModel::class.java)) {
+                return AuthViewModel(repository) as T
             }
 
             throw IllegalArgumentException("Invalid viewmodel")
