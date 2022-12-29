@@ -65,8 +65,9 @@ class CheckinFragment : Fragment() {
         )
         checkinViewModel.allRecords.observe(requireActivity()) {
                 records ->
-            val datalist = populateCheckinList(records[0].symptom,records[0].stress_level,
-            records[0].treatments,records[0].health_factors)
+            val count = records.size - 1
+            val datalist = populateCheckinList(records[count].symptom,records[count].stress_level,
+            records[count].treatments,records[count].health_factors)
             val checkinAdapter = CheckinAdapter(datalist)
             CheckinRecyclerView.adapter = checkinAdapter
             CheckinRecyclerView.layoutManager = linearLayoutManager

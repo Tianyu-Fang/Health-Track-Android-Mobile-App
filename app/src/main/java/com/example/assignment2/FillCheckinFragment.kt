@@ -104,7 +104,7 @@ class FillCheckinFragment : Fragment() {
             //add new check in data
             //val intent = Intent(requireActivity(), NewNoteActivity::class.java)
             //startActivity(intent)
-            val checkindata = Checkin(symptom, stressLevel,treatment,health_factors)
+            val checkindata = Checkin("admin@qq.com",symptom, stressLevel,treatment,health_factors)
             lifecycleScope.launch(Dispatchers.IO) {
                 checkinViewModel.addCheckin(checkindata)
             }

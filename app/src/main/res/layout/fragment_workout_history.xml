@@ -24,11 +24,12 @@
 
     </com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar>
 
-<!--    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="300dp"-->
-<!--        android:id="@+id/chartview1"-->
-<!--        />-->
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/chartview1"
+        />
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
