@@ -49,18 +49,30 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-        <Button
-            android:id="@+id/total_score_btn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/round_button"
-            app:cardBackgroundColor="@color/white"
+<!--        <Button-->
+<!--            android:id="@+id/total_score_btn"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:background="@drawable/round_button"-->
+<!--            app:cardBackgroundColor="@color/white"-->
+<!--            android:fontFamily="@font/googlesans_bold"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:textSize="30sp"-->
+<!--            android:textColor="@color/stream_ui_accent_green"-->
+<!--            android:layout_marginLeft="290dp"-->
+<!--            -->
+<!--            android:text="" />-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/total_score"
+            android:text="92"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="300dp"
             android:fontFamily="@font/googlesans_bold"
-            android:layout_marginTop="15dp"
-            android:textSize="30sp"
-            android:textColor="@color/stream_ui_accent_green"
-            android:layout_marginLeft="290dp"
-            android:text="92" />
+            android:layout_marginTop="5dp"/>
+
 
     </androidx.cardview.widget.CardView>
     <ScrollView

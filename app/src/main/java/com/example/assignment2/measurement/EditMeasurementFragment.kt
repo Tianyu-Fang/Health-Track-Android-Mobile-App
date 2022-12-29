@@ -1,6 +1,7 @@
 package com.example.assignment2.measurement
 
 import android.os.Bundle
+import android.util.Log
 import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -74,37 +75,6 @@ class EditMeasurementFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
-
-//        val measurementData = MeasurementModel(180, 70, 120,"110/70",14, 70, 37, 77)
-//        val measurementDB = db.collection("Measurement").document("randomnumber")
-//
-//        measurementDB.set(measurementData)
-//        var data = MeasurementModel(180, 70, 120,"110/70",14, 70, 37, 77)
-//
-//
-//
-//
-//
-//        measurementDB.get().addOnSuccessListener { document ->
-//            data =
-//                MeasurementModel(
-////                            document.id
-//                    (document.data!!["height"] as Number?)!!.toInt(),
-//                    (document.data!!["weight"] as Number?)!!.toInt(),
-//                    (document.data!!["glucose"] as Number?)!!.toInt(),
-//                    (document.data!!["pressure"] as String?)!!.toString(),
-//                    (document.data!!["breathing"] as Number?)!!.toInt(),
-//                    (document.data!!["temperature"] as Number?)!!.toInt(),
-//                    (document.data!!["pulse"] as Number?)!!.toInt(),
-//
-//                )
-//
-//
-//        }
-
-
 //        var Height: Int
         val unit_height = view.findViewById<TextInputEditText>(R.id.unit_height_textfield)
 //        unit_height.
@@ -142,22 +112,31 @@ class EditMeasurementFragment : Fragment() {
 
         val btnMeasurement = view.findViewById<Button>(R.id.measure_button)
 
-        val measurementDB = db.collection("Measurement").document("randomnumber")
+        val docRef = db.collection("Measurement")
+        docRef.get().addOnSuccessListener {
+                result ->
+            val count = result.size()
+            val measurementDB = db.collection("Measurement").document(count.toString())
 
-        btnMeasurement.setOnClickListener {
-            val height = unit_height.text.toString().toInt()
-            val weight = unit_weight.text.toString().toInt()
-            val glucose = unit_glucose.text.toString().toInt()
-            val pressure = unit_pressure.text.toString()
-            val breathing = unit_breating.text.toString().toInt()
-            val oxygen = unit_oxygen.text.toString().toInt()
-            val temperature = unit_temperature.text.toString().toInt()
-            val pulse = unit_pulse.text.toString().toInt()
+            btnMeasurement.setOnClickListener {
+                val height = unit_height.text.toString().toInt()
+                val weight = unit_weight.text.toString().toInt()
+                val glucose = unit_glucose.text.toString().toInt()
+                val pressure = unit_pressure.text.toString()
+                val breathing = unit_breating.text.toString().toInt()
+                val oxygen = unit_oxygen.text.toString().toInt()
+                val temperature = unit_temperature.text.toString().toInt()
+                val pulse = unit_pulse.text.toString().toInt()
 
 
-            val measurementData = MeasurementModel(height, weight, glucose, pressure, breathing, oxygen, temperature, pulse)
-            measurementDB.set(measurementData)
-            view.findNavController ().navigate(R.id.viewMeasurementFragment_btm)
+                val measurementData = MeasurementModel(height, weight, glucose, pressure, breathing, oxygen, temperature, pulse)
+                measurementDB.set(measurementData)
+                view.findNavController ().navigate(R.id.viewMeasurementFragment_btm)
+        }
+
+//        val measurementDB = db.collection("Measurement").document(count)
+
+
         }
 
 
