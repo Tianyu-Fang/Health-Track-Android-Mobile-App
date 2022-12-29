@@ -40,7 +40,7 @@ class WorkoutScoreFragment: Fragment() {
 
         val circularProgressBar = binding.totalScore
 
-            workoutDB.get().addOnSuccessListener { document ->
+        workoutDB.get().addOnSuccessListener { document ->
                     data =
                     Workout(
 //                            document.id
