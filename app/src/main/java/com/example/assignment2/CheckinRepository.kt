@@ -25,6 +25,7 @@ class CheckinRepository {
                     val note =
                         Checkin(
 //                            document.id,
+                            document.data["userEmail"].toString(),
                             document.data["symptom"].toString(),
                             document.data["stress_level"].toString(),
                             document.data["treatments"].toString(),
@@ -45,15 +46,23 @@ class CheckinRepository {
     fun addCheckin(checkindata: Checkin) {
 
         // Add a new document with a generated ID
-        val TAG = "Checkin"
-        db.collection("Checkin")
-            .add(checkindata)
-            .addOnSuccessListener { documentReference ->
-                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error adding document", e)
-            }
+        val docRef = db.collection("Checkin")
+        docRef.get().addOnSuccessListener {
+                result ->
+            val count = result.size()
+
+            val TAG = "Checkin"
+            db.collection("Checkin")
+                .document(count.toString())
+                .set(checkindata)
+                .addOnSuccessListener { documentReference ->
+                    Log.d(TAG, "DocumentSnapshot added with ID: $count")
+                }
+                .addOnFailureListener { e ->
+                    Log.w(TAG, "Error adding document", e)
+                }
+            Log.d("add", "Number of documents in the users collection: $count")
+        }
 
     }
 }
