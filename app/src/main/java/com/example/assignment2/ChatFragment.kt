@@ -45,18 +45,17 @@ class ChatFragment : Fragment() {
         )
 
         // Step 2 - Set up the client for API calls with the plugin for offline storage
-        val client = ChatClient.Builder("n8gv2yn2vm9u", requireActivity().applicationContext)
+        val client = ChatClient.Builder("b7cukh2e9y7u", requireActivity().applicationContext)
             .withPlugin(offlinePluginFactory)
             .logLevel(ChatLogLevel.ALL) // Set to NOTHING in prod
             .build()
 
         // Step 3 - Authenticate and connect the user
         val user = User(
-            id = "test2",
-            name = "Test2",
-            image = "https://yt3.ggpht.com/ytc/AAUvwniNg3lwIeJ-ybvA1xuWBEzLoYA5KPxnKrojub0zhg=s900-c-k-c0x00ffffff-no-rj"
+            id = "admin001", //admin001
+            name = "admin@qq.com"
         )
-        val token = client.devToken("test2")
+        val token = client.devToken("admin001")
         client.connectUser(
             user = user,
             token = token
