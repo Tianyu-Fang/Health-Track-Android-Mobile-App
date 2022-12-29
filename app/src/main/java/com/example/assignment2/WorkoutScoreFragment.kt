@@ -1,5 +1,6 @@
 package com.example.assignment2
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,7 +35,7 @@ class WorkoutScoreFragment: Fragment() {
             200)
         val workoutDB = db.collection("Workout").document("randomnumber")
 
-            workoutDB.set(workoutData)
+        workoutDB.set(workoutData)
         var data = Workout(1,1,1,1)
 
         val circularProgressBar = binding.totalScore
@@ -94,6 +95,18 @@ class WorkoutScoreFragment: Fragment() {
             }
 //        binding.runningTV.text = "${data.running_time} minutes"
 //        binding.otherTV.text = "${data.other_time} minutes"
-    }
+        val fab = binding.fab
+        fab.setOnClickListener {
+
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)}
+        }
+
 
 }
