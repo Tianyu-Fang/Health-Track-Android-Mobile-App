@@ -45,8 +45,8 @@ class AuthViewModel(val repository: AuthRepository) : ViewModel() {
 //    fun getUser(): User? =
 //        repository.getUser()
 //
-    fun addUserInfo(email: String): LiveData<Boolean> =
-        repository.addUserInfo(email)
+    fun addUserInfo(email: String, name: String): LiveData<Boolean> =
+        repository.addUserInfo(email, name)
 
 
     class Provider(private val repository: AuthRepository) : ViewModelProvider.Factory {

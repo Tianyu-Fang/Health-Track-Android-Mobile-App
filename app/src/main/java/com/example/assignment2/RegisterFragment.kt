@@ -39,14 +39,16 @@ class RegisterFragment : Fragment() {
         //register
         val btnRegister = view.findViewById<Button>(R.id.register_button)
         val emailEdtText = view.findViewById<TextInputEditText>(R.id.reg_email)
+        val nameEdtText = view.findViewById<TextInputEditText>(R.id.reg_name)
         val passEdtText = view.findViewById<TextInputEditText>(R.id.choosePassword)
         btnRegister.setOnClickListener {
 
 
             var email: String = emailEdtText.text.toString()
+            var name: String = nameEdtText.text.toString()
             var password: String = passEdtText.text.toString()
             Log.d("ss",password)
-            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(name)) {
                 Toast.makeText(requireContext(), "Please fill all the fields", Toast.LENGTH_LONG)
                     .show()
             } else {
@@ -59,7 +61,7 @@ class RegisterFragment : Fragment() {
                             Toast.LENGTH_LONG
                         ).show()
                         view.findNavController().navigate(R.id.loginFragment)
-                        viewModel.addUserInfo(email)
+                        viewModel.addUserInfo(email, name)
                     } else {
                         Toast.makeText(requireContext(), "Registration Failed", Toast.LENGTH_LONG)
                             .show()

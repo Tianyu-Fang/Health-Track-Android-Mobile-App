@@ -60,9 +60,9 @@ class AuthRepository {
         return status
     }
 
-    fun addUserInfo(email: String):MutableLiveData<Boolean>{
+    fun addUserInfo(email: String, name: String):MutableLiveData<Boolean>{
         var status: MutableLiveData<Boolean> = MutableLiveData()
-        val u : User = User(email,"","","","","","")
+        val u : User = User(email, name,"","","","","")
 
         db.collection("User")
             .document(email)
