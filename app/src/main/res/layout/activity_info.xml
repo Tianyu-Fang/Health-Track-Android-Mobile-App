@@ -16,7 +16,7 @@
         android:layout_margin="10dp"
         android:layout_weight="1"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_info"
+        app:navGraph="@navigation/bottom_nav"
         />
 
 

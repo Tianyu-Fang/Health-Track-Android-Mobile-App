@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 import com.example.assignment2.adapter.CalendarAdapter
-import com.example.assignment2.databinding.ActivityCheckinBinding
+//import com.example.assignment2.databinding.ActivityCheckinBinding
 import com.example.assignment2.databinding.ActivityCheckinHistoryBinding
 import com.example.assignment2.model.CalendarDateModel
 import com.example.assignment2.utils.HorizontalItemDecoration
