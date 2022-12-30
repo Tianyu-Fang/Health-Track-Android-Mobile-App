@@ -1,10 +1,12 @@
 package com.example.assignment2.journal
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.example.assignment2.R
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -98,6 +100,11 @@ class JournalDisplayFragment : Fragment() {
 
 
             }
+
+            val fab = binding.fabJournal
+            fab.setOnClickListener {
+                view.findNavController().navigate(R.id.journalFragment_btm)
+        }
 
         }
     }

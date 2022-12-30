@@ -25,10 +25,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="498dp"
         android:layout_marginTop="10dp"
-        android:background="@color/grey">
+        android:background="@color/grey"
+        android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_image"
@@ -39,19 +39,19 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:hint="Please select one or more images"/>
+            android:hint="Please select one or more images" />
 
 
         <TextView
+            android:id="@+id/activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="What activities you experienced today?"
-            android:id="@+id/activity"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:text="What activities you experienced today?"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_activity"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -67,22 +67,22 @@
             <TextView
                 android:id="@+id/activity_text_field"
                 android:layout_width="match_parent"
-                android:background="@color/white"
                 android:layout_height="80dp"
+                android:background="@color/white"
                 android:inputType="textLongMessage"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/eat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="What did you eat today?"
-            android:id="@+id/eat"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:text="What did you eat today?"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_eat"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -98,22 +98,22 @@
             <TextView
                 android:id="@+id/eat_text_field"
                 android:layout_width="match_parent"
-                android:background="@color/white"
                 android:layout_height="80dp"
+                android:background="@color/white"
                 android:inputType="textLongMessage"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/feeling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How you feel today?"
-            android:id="@+id/feeling"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:text="How you feel today?"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_feeling"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -132,12 +132,21 @@
             android:id="@+id/feeling_text_field"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@color/white"
             android:inputType="textLongMessage"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"
             tools:ignore="TouchTargetSizeCheck" />
-
-
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_journal"
+        android:layout_width="wrap_content"
+        android:contentDescription="share"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        android:backgroundTint="@color/white" />
+
 </LinearLayout>
