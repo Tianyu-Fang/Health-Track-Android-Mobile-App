@@ -57,18 +57,19 @@ class ProfileUpdateFragment : Fragment() {
             user = User(viewModel.getUserEmail(), uName.getText().toString(),blood_Type.getText().toString(),gender_.getText().toString(),DoB_.getText().toString(),
                 height_.getText().toString(),weight_.getText().toString())
 
-            viewModel.updateUser(viewModel.getUserEmail(), user).observe(viewLifecycleOwner){
-                if(it == true) {
-                    Toast.makeText(requireContext(),
-                        "Course Updated..",
-                        Toast.LENGTH_SHORT)
-                        .show()
+            viewModel.getUserEmail()?.let { it1 ->
+                viewModel.updateUser(it1, user).observe(viewLifecycleOwner){
+                    if(it == true) {
+                        Toast.makeText(requireContext(),
+                            "Profile Updated..",
+                            Toast.LENGTH_SHORT)
+                            .show()
 
-                }
-                else {
-                    Toast.makeText(requireContext(),
-                        "Fail to update course..",
-                        Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(requireContext(),
+                            "Fail to update course..",
+                            Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
             view.findNavController().navigate(R.id.profileFragment)
@@ -82,33 +83,35 @@ class ProfileUpdateFragment : Fragment() {
 
     fun displayData(view: View){
         var db = Firebase.firestore
-        val userDB = db.collection("User").document(viewModel.getUserEmail())
+        val userDB = viewModel.getUserEmail()?.let { db.collection("User").document(it) }
         var user = User()
-        userDB.get().addOnSuccessListener { document ->
-            user =
-                User(
-                    document.data!!["userEmail"].toString(),
-                    document.data!!["userName"].toString(),
-                    document.data!!["bloodType"].toString(),
-                    document.data!!["gender"].toString(),
-                    document.data!!["doB"].toString(),
-                    document.data!!["height"].toString(),
-                    document.data!!["weight"].toString()
-                )
-            val userName = view.findViewById<TextInputEditText>(R.id.user_name)
-            val bloodType = view.findViewById<TextInputEditText>(R.id.blood_type)
-            val gender = view.findViewById<TextInputEditText>(R.id.gender)
-            val DoB = view.findViewById<TextInputEditText>(R.id.Date_of_Birth)
-            val height = view.findViewById<TextInputEditText>(R.id.height)
-            val weight = view.findViewById<TextInputEditText>(R.id.weight)
+        if (userDB != null) {
+            userDB.get().addOnSuccessListener { document ->
+                user =
+                    User(
+                        document.data!!["userEmail"].toString(),
+                        document.data!!["userName"].toString(),
+                        document.data!!["bloodType"].toString(),
+                        document.data!!["gender"].toString(),
+                        document.data!!["doB"].toString(),
+                        document.data!!["height"].toString(),
+                        document.data!!["weight"].toString()
+                    )
+                val userName = view.findViewById<TextInputEditText>(R.id.user_name)
+                val bloodType = view.findViewById<TextInputEditText>(R.id.blood_type)
+                val gender = view.findViewById<TextInputEditText>(R.id.gender)
+                val DoB = view.findViewById<TextInputEditText>(R.id.Date_of_Birth)
+                val height = view.findViewById<TextInputEditText>(R.id.height)
+                val weight = view.findViewById<TextInputEditText>(R.id.weight)
 
-            userName.setText(user.userName)
-            bloodType.setText(user.bloodType)
-            gender.setText(user.gender)
-            DoB.setText(user.DoB)
-            height.setText(user.height)
-            weight.setText(user.weight)
+                userName.setText(user.userName)
+                bloodType.setText(user.bloodType)
+                gender.setText(user.gender)
+                DoB.setText(user.DoB)
+                height.setText(user.height)
+                weight.setText(user.weight)
 
+            }
         }
 
     }

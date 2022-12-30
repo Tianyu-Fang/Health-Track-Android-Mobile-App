@@ -33,7 +33,7 @@ class AuthViewModel(val repository: AuthRepository) : ViewModel() {
     fun setUserEmail(email: String): LiveData<Boolean> =
         repository.setUserEmail(email)
 
-    fun getUserEmail(): String =
+    fun getUserEmail(): String? =
         repository.getUserEmail()
 
     fun updateUser(email: String, user: User): LiveData<Boolean> =

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_nav"
-    app:startDestination="@id/loginFragment"
+    app:startDestination="@id/dashboardFragment_btm"
     tools:ignore="ExtraText">
 
     <activity
@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_loginFragment2_to_forgetPasswordFragment2"
             app:destination="@id/forgetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment_btm"
+            app:destination="@id/dashboardFragment_btm" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"

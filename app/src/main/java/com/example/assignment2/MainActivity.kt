@@ -3,22 +3,32 @@ package com.example.assignment2
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.view.MenuCompat
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavDestination
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.assignment2.repository.AuthRepository
+import com.example.assignment2.viewmodel.AuthViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     var appBarConfiguration: AppBarConfiguration? = null
-
+    private val viewModel: AuthViewModel by viewModels {
+        AuthViewModel.Provider(AuthRepository.repository)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,72 +51,79 @@ class MainActivity : AppCompatActivity() {
         bottomNav.setupWithNavController(navController)
         bottomNav.visibility = View.GONE
         navController.addOnDestinationChangedListener { _, nd: NavDestination, _ ->
-            if (nd.id == R.id.profileFragment) {
+            if (nd.id == R.id.profileFragment || nd.id == R.id.dashboardFragment_btm) {
                 bottomNav.visibility = View.VISIBLE
-            }
-            else if(nd.id== R.id.settingFragment || nd.id == R.id.loginFragment || nd.id ==R.id.profileUpdateFragment){
+            } else if (nd.id == R.id.settingFragment || nd.id == R.id.loginFragment || nd.id == R.id.profileUpdateFragment) {
                 bottomNav.visibility = View.GONE
             }
         }
+
+            if(viewModel.getUserEmail() == null) {
+                navController.navigate(R.id.loginFragment)
+            }
+            else{
+                Log.d("main","fail")
+            }
+
     }
 
-    @SuppressLint("RestrictedApi")
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_options, menu)
+        @SuppressLint("RestrictedApi")
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.menu_options, menu)
 
-        // Show icons on Overflow option menu
-        if (menu is MenuBuilder) {
-            menu.setOptionalIconsVisible(true)
+            // Show icons on Overflow option menu
+            if (menu is MenuBuilder) {
+                menu.setOptionalIconsVisible(true)
+            }
+
+            MenuCompat.setGroupDividerEnabled(menu!!, true)
+
+            return super.onCreateOptionsMenu(menu)
         }
 
-        MenuCompat.setGroupDividerEnabled(menu!!, true)
+        override fun onSupportNavigateUp(): Boolean {
+            val navController = this.findNavController(R.id.bottomNavigation)
+            return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
+                    || super.onSupportNavigateUp())
+        }
 
-        return super.onCreateOptionsMenu(menu)
-    }
+        override fun onOptionsItemSelected(item: MenuItem): Boolean {
+            val id = item.itemId
+            val navController = findNavController(R.id.bottomNavigation)
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = this.findNavController(R.id.bottomNavigation)
-        return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
-                || super.onSupportNavigateUp())
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-        val navController = findNavController(R.id.bottomNavigation)
-
-        return when(id){
-            R.id.measurementFragment ->  {
-                navController.navigate(R.id.measurementFragment_btm)
-                true
-            }
-            R.id.infoFragment -> {
-                navController.navigate(R.id.viewInfoFragment_info_btm)
-                true
-            }
-            R.id.dietFragment -> {
-                navController.navigate(R.id.dietFragment_btm)
-                true
-            }
-            R.id.journalFragment -> {
-                navController.navigate(R.id.journalFragment_btm)
-                true
-            }
-            R.id.sleepFragment -> {
-                navController.navigate(R.id.sleepFragment_btm)
-                true
-            }
-            R.id.logout ->{
+            return when (id) {
+                R.id.measurementFragment -> {
+                    navController.navigate(R.id.measurementFragment_btm)
+                    true
+                }
+                R.id.infoFragment -> {
+                    navController.navigate(R.id.viewInfoFragment_info_btm)
+                    true
+                }
+                R.id.dietFragment -> {
+                    navController.navigate(R.id.dietFragment_btm)
+                    true
+                }
+                R.id.journalFragment -> {
+                    navController.navigate(R.id.journalFragment_btm)
+                    true
+                }
+                R.id.sleepFragment -> {
+                    navController.navigate(R.id.sleepFragment_btm)
+                    true
+                }
+                R.id.logout -> {
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
-                navController.navigate(R.id.logoutActivity_btm)
-                true
+                    navController.navigate(R.id.logoutActivity_btm)
+                    true
+                }
+
+                else -> {
+                    super.onOptionsItemSelected(item)
+                }
             }
 
-            else -> {
-                super.onOptionsItemSelected(item)
-            }
         }
-
-    }
 
 }
