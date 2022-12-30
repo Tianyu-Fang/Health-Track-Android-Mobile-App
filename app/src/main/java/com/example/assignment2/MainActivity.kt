@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
             R.id.logout ->{
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
-                navController.navigate(R.id.logoutActivity_btm)
+                navController.navigate(R.id.loginFragment)
                 true
             }
 

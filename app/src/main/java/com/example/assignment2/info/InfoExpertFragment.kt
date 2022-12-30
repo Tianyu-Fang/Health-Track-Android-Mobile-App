@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import com.example.assignment2.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -61,4 +63,28 @@ class InfoExpertFragment : Fragment() {
                 }
             }
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val advice1 = view.findViewById<Button>(R.id.advice1)
+        advice1.setOnClickListener {
+            view.findNavController().navigate(R.id.chatFragment_btm)
+        }
+
+        val advice2= view.findViewById<Button>(R.id.advice2)
+        advice2.setOnClickListener {
+            view.findNavController().navigate(R.id.chatFragment_btm)
+        }
+
+        val advice3 = view.findViewById<Button>(R.id.advice3)
+        advice3.setOnClickListener {
+            view.findNavController().navigate(R.id.chatFragment_btm)
+        }
+
+    }
+
+
+
+
 }
