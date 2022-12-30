@@ -40,7 +40,7 @@
         tools:layout="@layout/fragment_info" />
     <fragment
         android:id="@+id/journalFragment"
-        android:name="com.example.assignment2.JournalFragment"
+        android:name="com.example.assignment2.journal.JournalFragment"
         android:label="fragment_journal"
         tools:layout="@layout/fragment_journal" />
     <fragment

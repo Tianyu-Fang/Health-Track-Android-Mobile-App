@@ -72,9 +72,13 @@ class CheckinHistoryFragment : Fragment() {
         checkin_report.setOnClickListener {
             view.findNavController().navigate(R.id.checkinFragment_btm)
         }
+
+        val journalDisplay = binding.healthTrackReportIcon
+
+        journalDisplay.setOnClickListener {
+            view.findNavController().navigate(R.id.journalDisplayFragment_btm)
+        }
     }
-
-
 
     /**
      * Set up click listener
