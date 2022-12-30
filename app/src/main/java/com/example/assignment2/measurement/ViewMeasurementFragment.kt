@@ -179,9 +179,12 @@ class ViewMeasurementFragment : Fragment() {
                 if( pulseScore > 100)
                     pulseScore = 200 - pulseScore
 
-                var totalHealthScore = ((heightWeightScore + pressureScore + glucoseScore + breathingScore + oxygenScore + temperatureScore + pulseScore)/7).toInt()
+                var totalHealthScore = ((heightWeightScore + pressureScore
+                                            + glucoseScore + breathingScore
+                                            + oxygenScore  + temperatureScore
+                                            + pulseScore)/7).toInt()
 
-//                binding.totalScore.text = "$totalHealthScore"
+                binding.totalScore.text = "$totalHealthScore"
 
             }
         }

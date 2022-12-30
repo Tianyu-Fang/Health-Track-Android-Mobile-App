@@ -62,7 +62,7 @@
 <!--            android:layout_marginLeft="290dp"-->
 <!--            -->
 <!--            android:text="" />-->
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/total_score"
@@ -71,7 +71,7 @@
             android:textColor="@color/black"
             android:layout_marginLeft="300dp"
             android:fontFamily="@font/googlesans_bold"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="35dp"/>
 
 
     </androidx.cardview.widget.CardView>
