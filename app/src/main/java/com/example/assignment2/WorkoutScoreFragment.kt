@@ -38,11 +38,11 @@ class WorkoutScoreFragment: Fragment() {
         val calendar: Calendar = Calendar.getInstance()
         val date: Date = calendar.getTime()
         var dayOfWeek = SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.getTime())
-
+        // Wednesday
+        //val workoutDB = db.collection("Workout").document("Wednesday")
         val workoutDB = db.collection("Workout").document(dayOfWeek)
-        val workoutData = Workout(1000, 100, 400,
-        400)
-        workoutDB.set(workoutData)
+        //val workoutData = Workout(1000, 50, 100, 50)
+        //workoutDB.set(workoutData)
         var data = Workout(1,1,1,1)
 
 
