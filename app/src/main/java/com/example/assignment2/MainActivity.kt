@@ -1,6 +1,7 @@
 package com.example.assignment2
 
 import android.annotation.SuppressLint
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -58,11 +59,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-            if(viewModel.getUserEmail() == null) {
+        val sharedPreference = getSharedPreferences("user", Context.MODE_PRIVATE)
+        val user_id : String? = sharedPreference.getString("user_id",null)
+            if(user_id==null) {
                 navController.navigate(R.id.loginFragment)
             }
             else{
-                Log.d("main","fail")
+                viewModel.setUserEmail(user_id)
+                navController.navigate(R.id.dashboardFragment_btm)
             }
 
     }

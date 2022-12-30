@@ -1,5 +1,6 @@
 package com.example.assignment2
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -45,6 +46,14 @@ class ProfileFragment : Fragment() {
         val btnLogout = view.findViewById<Button>(R.id.logOut_button)
 
         btnLogout.setOnClickListener {
+            //after log out, remove the user_id data
+            val sharedPreference =
+                this.getActivity()?.getSharedPreferences("user", Context.MODE_PRIVATE)
+            val editor = sharedPreference?.edit()
+            if (editor != null) {
+                editor.putString("user_id", null)
+                editor.commit()
+            }
             view.findNavController().navigate(R.id.loginFragment)
         }
 

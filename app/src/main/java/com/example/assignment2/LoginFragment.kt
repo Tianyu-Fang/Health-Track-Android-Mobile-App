@@ -1,7 +1,10 @@
 package com.example.assignment2
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +18,6 @@ import androidx.navigation.findNavController
 import com.example.assignment2.repository.AuthRepository
 import com.example.assignment2.viewmodel.AuthViewModel
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.auth.FirebaseAuth
 
 
 class LoginFragment : Fragment() {
@@ -69,7 +71,15 @@ class LoginFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                         viewModel.setUserEmail(email)
-                        val user = FirebaseAuth.getInstance().currentUser
+                        //record the user email information
+                        val sharedPreference =
+                            this.getActivity()?.getSharedPreferences("user", Context.MODE_PRIVATE)
+                        val editor = sharedPreference?.edit()
+                        if (editor != null) {
+                            editor.putString("user_id", email)
+                            editor.commit()
+                        }
+
                     }
                 }
             }
