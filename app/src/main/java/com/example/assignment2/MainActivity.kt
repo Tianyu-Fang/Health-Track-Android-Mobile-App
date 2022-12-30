@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             if (nd.id == R.id.profileFragment) {
                 bottomNav.visibility = View.VISIBLE
             }
-            else if(nd.id== R.id.settingFragment || nd.id == R.id.loginFragment){
+            else if(nd.id== R.id.settingFragment || nd.id == R.id.loginFragment || nd.id ==R.id.profileUpdateFragment){
                 bottomNav.visibility = View.GONE
             }
         }
