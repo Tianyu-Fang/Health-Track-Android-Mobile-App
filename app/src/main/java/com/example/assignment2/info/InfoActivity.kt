@@ -1,6 +1,7 @@
 package com.example.assignment2.info
 
 import android.annotation.SuppressLint
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -105,7 +106,7 @@ class InfoActivity : AppCompatActivity() {
 
         return when(id){
             R.id.measurementFragment ->  {
-                navController.navigate(R.id.measurementFragment3)
+                navController.navigate(R.id.measurementFragment)
                 true
             }
             R.id.infoFragment -> {
@@ -113,21 +114,28 @@ class InfoActivity : AppCompatActivity() {
                 true
             }
             R.id.dietFragment -> {
-                navController.navigate(R.id.dietFragment2)
+                navController.navigate(R.id.dietFragment)
                 true
             }
             R.id.journalFragment -> {
-                navController.navigate(R.id.journalFragment_info)
+                navController.navigate(R.id.journalFragment)
                 true
             }
             R.id.sleepFragment -> {
-                navController.navigate(R.id.sleepFragment2)
+                navController.navigate(R.id.sleepFragment)
                 true
             }
             R.id.logout ->{
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
-                navController.navigate(R.id.logoutActivity2)
+                val sharedPreference =
+                    getSharedPreferences("user", Context.MODE_PRIVATE)
+                val editor = sharedPreference?.edit()
+                if (editor != null) {
+                    editor.putString("user_id", null)
+                    editor.commit()
+                }
+                navController.navigate(R.id.loginFragment)
                 true
             }
 

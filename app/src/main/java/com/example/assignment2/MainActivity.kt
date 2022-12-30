@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val sharedPreference = getSharedPreferences("user", Context.MODE_PRIVATE)
+
         val user_id : String? = sharedPreference.getString("user_id",null)
             if(user_id==null) {
                 navController.navigate(R.id.loginFragment)
@@ -119,7 +120,15 @@ class MainActivity : AppCompatActivity() {
                 R.id.logout -> {
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
-                    navController.navigate(R.id.logoutActivity_btm)
+                    //after log out, remove the user_id data
+                    val sharedPreference =
+                        getSharedPreferences("user", Context.MODE_PRIVATE)
+                    val editor = sharedPreference?.edit()
+                    if (editor != null) {
+                        editor.putString("user_id", null)
+                        editor.commit()
+                    }
+                        navController.navigate(R.id.loginFragment)
                     true
                 }
 
