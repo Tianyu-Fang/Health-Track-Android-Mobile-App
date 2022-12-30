@@ -138,7 +138,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:text="180"
+                tools:text="180"
                 android:id="@+id/height_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
@@ -209,7 +209,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:text="70"
+                tools:text="70"
                 android:id="@+id/weight_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
@@ -281,7 +281,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:text="120"
+                tools:text="120"
                 android:id="@+id/glucose_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
@@ -352,7 +352,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="60dp"
-                android:text="110/70"
+                tools:text="110/70"
                 android:id="@+id/presure_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="60dp"
@@ -424,7 +424,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:text="14"
+                tools:text="14"
                 android:id="@+id/breathing_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
@@ -496,7 +496,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:text="70"
+                tools:text="70"
                 android:id="@+id/oxygen_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
@@ -568,7 +568,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:text="37"
+                tools:text="37"
                 android:id="@+id/temperature_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
@@ -639,7 +639,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:text="77"
+                tools:text="77"
                 android:id="@+id/pulse_data"
                 android:fontFamily="@font/googlesans_bold"
                 android:layout_marginTop="30dp"
