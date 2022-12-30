@@ -11,8 +11,6 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import com.example.assignment2.R
 import com.example.assignment2.databinding.FragmentViewMeasurementBinding
-
-
 import com.example.assignment2.model.MeasurementModel
 import com.example.assignment2.model.Workout
 import com.google.firebase.firestore.ktx.firestore

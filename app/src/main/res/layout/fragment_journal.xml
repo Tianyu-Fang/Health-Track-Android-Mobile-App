@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".JournalFragment">
+    tools:context=".journal.JournalFragment">
 
     <RelativeLayout
         android:id="@+id/header_title"
@@ -29,16 +29,6 @@
     android:orientation="vertical"
     android:layout_marginTop="10dp"
     android:background="@color/grey">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Image(s)"
-        android:id="@+id/select_image"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_image"
@@ -49,18 +39,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        android:hint="Please select one or more images">
-
-
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/image_text_field"
-            android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:inputType="textLongMessage"
-            tools:ignore="TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:hint="Please select one or more images"/>
 
 
     <TextView
@@ -151,10 +130,26 @@
             android:id="@+id/feeling_text_field"
             android:layout_width="match_parent"
             android:background="@color/white"
-            android:layout_height="80dp"
+            android:layout_height="150dp"
             android:inputType="textLongMessage"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/journal_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_button"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sHealth"
+        app:layout_constraintVertical_bias="0.29000002"
+        tools:layout_editor_absoluteX="82dp"
+        android:layout_marginBottom="80dp"/>
 
 
 </LinearLayout>

@@ -105,6 +105,9 @@
         <action
             android:id="@+id/action_checkinHistoryFragment_btm_to_checkinFragment"
             app:destination="@id/checkinFragment_btm" />
+        <action
+            android:id="@+id/action_checkinHistoryFragment_btm_to_journalDisplayFragment"
+            app:destination="@id/journalDisplayFragment_btm" />
     </fragment>
     <fragment
         android:id="@+id/fillCheckinFragment_btm"
@@ -137,7 +140,7 @@
         tools:layout="@layout/fragment_sleep" />
     <fragment
         android:id="@+id/journalFragment_btm"
-        android:name="com.example.assignment2.JournalFragment"
+        android:name="com.example.assignment2.journal.JournalFragment"
         android:label="fragment_journal"
         tools:layout="@layout/fragment_journal" />
     <fragment
@@ -249,4 +252,9 @@
             android:id="@+id/action_profileUpdateFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/journalDisplayFragment_btm"
+        android:name="com.example.assignment2.journal.JournalDisplayFragment"
+        android:label="fragment_journal_display"
+        tools:layout="@layout/fragment_journal_display" />
 </navigation>

@@ -5,55 +5,50 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import com.example.assignment2.databinding.FragmentHeightBinding
+import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
+import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
+import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HeightFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HeightFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding:FragmentHeightBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val mActivity = activity as AppCompatActivity
+        mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mActivity.supportActionBar?.title="Height Data"
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_height, container, false)
+        binding =FragmentHeightBinding.inflate(layoutInflater)
+        return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupData()
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HeightFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HeightFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun setupData() {
+        val aaChartModel : AAChartModel = AAChartModel()
+            .legendEnabled(true)
+            .yAxisVisible(true)
+            .chartType(AAChartType.Area)
+            .backgroundColor("#FFFFFF")
+            .categories(arrayOf("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))
+            .series(arrayOf(
+                AASeriesElement()
+                    .name("Height")
+                    .data(arrayOf(170,171,172,173,174,175,176)))
+            )
+        aaChartModel.colorsTheme(arrayOf("#7e9df4","#a5bbf8","#cbd859","#FFD700"))
+        //draw diagram
+        binding.chartview2.aa_drawChartWithChartModel(aaChartModel)
+
     }
+
 }

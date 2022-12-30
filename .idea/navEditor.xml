@@ -75,8 +75,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="301" />
-                            <option name="y" value="-501" />
+                            <option name="x" value="167" />
+                            <option name="y" value="-560" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -87,6 +87,11 @@
                               </value>
                             </entry>
                             <entry key="action_checkinHistoryFragment_btm_to_fillCheckinFragment_btm">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_checkinHistoryFragment_btm_to_journalDisplayFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -195,15 +200,6 @@
                             <option name="y" value="-240" />
                           </Point>
                         </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_emailVerifyFragment2_to_verifiedSuccessFragment2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -239,7 +235,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_forgetPasswordFragment2_to_emailVerifyFragment2">
+                            <entry key="action_forgetPasswordFragment_to_loginFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -268,6 +264,18 @@
                           <Point>
                             <option name="x" value="154" />
                             <option name="y" value="265" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="journalDisplayFragment_btm">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -373,6 +381,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_profileFragment_to_profileUpdateFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -386,6 +399,15 @@
                             <option name="x" value="-799" />
                             <option name="y" value="1089" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_profileUpdateFragment_to_profileFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -452,15 +474,6 @@
                             <option name="x" value="-1325" />
                             <option name="y" value="380" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_verifiedSuccessFragment2_to_loginFragment2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

@@ -22,12 +22,10 @@
             android:textSize="@dimen/titleSize"
             android:textStyle="bold" />
     </RelativeLayout>
-    <ImageView
+
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
         android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:background="@color/grey"
-
-        android:src="@drawable/height"/>
-
-
+        android:layout_height="300dp"
+        android:id="@+id/chartview2"
+        />
 </LinearLayout>
