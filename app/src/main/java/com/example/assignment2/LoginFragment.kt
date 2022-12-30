@@ -61,7 +61,7 @@ class LoginFragment : Fragment() {
                         ).show()
 
                     } else {
-                        view.findNavController().navigate(R.id.profileFragment)
+                        view.findNavController().navigate(R.id.dashboardFragment_btm)
 
                         Toast.makeText(
                             requireActivity(),

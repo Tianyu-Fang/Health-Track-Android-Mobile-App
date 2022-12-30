@@ -52,42 +52,41 @@ class ChangePasswordFragment : Fragment() {
             }
             else {
                 //check if origin password is correct
-                viewModel.login(viewModel.getUserEmail(),origin).observe(viewLifecycleOwner){
-                    if(!it){
-                        Toast.makeText(requireActivity(),
-                            "Wrong Origin Password",
-                            Toast.LENGTH_SHORT).show()
-                    }else{
-                        if(new!=confirm){
+                viewModel.getUserEmail()?.let { it1 ->
+                    viewModel.login(it1,origin).observe(viewLifecycleOwner){
+                        if(!it){
                             Toast.makeText(requireActivity(),
-                                "The two entered passwords do not match",
+                                "Wrong Origin Password",
                                 Toast.LENGTH_SHORT).show()
-                        }
-                        else{
-                            if(new.length<6){
+                        }else{
+                            if(new!=confirm){
                                 Toast.makeText(requireActivity(),
-                                    "The password must be at 6 characters long",
+                                    "The two entered passwords do not match",
                                     Toast.LENGTH_SHORT).show()
-                            }
-                            else {
-                                viewModel.updatePassword(new).observe(viewLifecycleOwner){
-                                if(it) {
+                            } else{
+                                if(new.length<6){
+                                    Toast.makeText(requireActivity(),
+                                        "The password must be at 6 characters long",
+                                        Toast.LENGTH_SHORT).show()
+                                } else {
+                                    viewModel.updatePassword(new).observe(viewLifecycleOwner){
+                                        if(it) {
 
-                                    Toast.makeText(
-                                        requireContext(),
-                                        "Password changes successfully",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                    view.findNavController().navigate(R.id.loginFragment)
-                                }
-                                    else{
-                                    Toast.makeText(requireContext(),
-                                        "Password not changed",
-                                        Toast.LENGTH_SHORT)
-                                        .show()
+                                            Toast.makeText(
+                                                requireContext(),
+                                                "Password changes successfully",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                            view.findNavController().navigate(R.id.loginFragment)
+                                        } else{
+                                            Toast.makeText(requireContext(),
+                                                "Password not changed",
+                                                Toast.LENGTH_SHORT)
+                                                .show()
+                                        }
+                                    }
                                 }
                             }
-                        }
                         }
                     }
                 }

@@ -62,8 +62,9 @@ class ProfileFragment : Fragment() {
 
     fun constructRecyclerView(view: View, context: ProfileFragment) {
             var db = Firebase.firestore
-            val userDB = db.collection("User").document(viewModel.getUserEmail())
+            val userDB = viewModel.getUserEmail()?.let { db.collection("User").document(it) }
             var user = User()
+        if (userDB != null) {
             userDB.get().addOnSuccessListener { document ->
                 user =
                     User(
@@ -91,6 +92,7 @@ class ProfileFragment : Fragment() {
                 courseRecyclerView.layoutManager = linearLayoutManager
                 courseRecyclerView.adapter = ProfileAdapter
 
+            }
         }
 
 //            val ProfileAdapter = ProfileAdapter(populateCourseList(viewModel.getUser()))

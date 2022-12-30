@@ -15,7 +15,7 @@ import java.util.HashMap
 class AuthRepository {
     /* Authentication Functions */
     private lateinit var auth: FirebaseAuth
-    private lateinit var userEmail: String
+    private var userEmail: String? = null
     private lateinit var user: User
     fun signIn(email: String, password: String): MutableLiveData<Boolean> {
         val status: MutableLiveData<Boolean> = MutableLiveData()
@@ -39,7 +39,7 @@ class AuthRepository {
         return status
     }
 
-    fun getUserEmail(): String{
+    fun getUserEmail(): String?{
         return userEmail
     }
 
@@ -139,21 +139,23 @@ class AuthRepository {
     }
 
     fun findUser(){
-        val userDB = db.collection("User").document(userEmail)
+        val userDB = userEmail?.let { db.collection("User").document(it) }
 
         var data = User()
-        userDB.get().addOnSuccessListener { document ->
-            user =
-                User(
-                    document.data!!["userEmail"].toString(),
-                    document.data!!["userName"].toString(),
-                    document.data!!["bloodType"].toString(),
-                    document.data!!["gender"].toString(),
-                    document.data!!["DoB"].toString(),
-                    document.data!!["height"].toString(),
-                    document.data!!["weight"].toString()
-                )
+        if (userDB != null) {
+            userDB.get().addOnSuccessListener { document ->
+                user =
+                    User(
+                        document.data!!["userEmail"].toString(),
+                        document.data!!["userName"].toString(),
+                        document.data!!["bloodType"].toString(),
+                        document.data!!["gender"].toString(),
+                        document.data!!["DoB"].toString(),
+                        document.data!!["height"].toString(),
+                        document.data!!["weight"].toString()
+                    )
 
+            }
         }
 
 
