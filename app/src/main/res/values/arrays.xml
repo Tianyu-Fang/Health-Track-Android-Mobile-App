@@ -27,7 +27,9 @@
         <item>Cough</item>
         <item>Headache</item>
         <item>Sleepless</item>
-        <item>item4</item>
+        <item>Burning</item>
+        <item>Stiffness</item>
+        <item>Stinging</item>
     </string-array>
 
     <string-array name="stress_list">
@@ -39,21 +41,23 @@
     </string-array>
 
     <string-array name="treatment_list">
-        <item>ZZ Medicine</item>
-        <item>YY Medicine</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>Tylenol</item>
+        <item>Corticosteroid</item>
+        <item>Muscle relaxers</item>
+        <item>Opioids</item>
+        <item>Diazepam</item>
+        <item>Celecoxib</item>
     </string-array>
 
     <string-array name="healthfactor_list">
         <item>None</item>
+        <item>Walking</item>
         <item>Swimming</item>
         <item>Basketball</item>
         <item>Running</item>
         <item>Cooking</item>
         <item>Riding</item>
+        <item>Table Tennis</item>
     </string-array>
 
 </resources>

@@ -14,11 +14,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment2.adapter.CheckinAdapter
 import com.example.assignment2.model.CheckinModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class CheckinFragment : Fragment() {
     val TAG = "GetCheckin"
     val TAG2 = "Debug1"
+    var sharedReport :String = " "
     private val checkinViewModel: CheckinViewModel by viewModels {
         CheckinViewModelFactory((requireActivity().application as CheckinApplication).repository)
     }
@@ -46,7 +50,7 @@ class CheckinFragment : Fragment() {
 
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+                putExtra(Intent.EXTRA_TEXT, sharedReport)
                 type = "text/plain"
             }
 
@@ -72,8 +76,15 @@ class CheckinFragment : Fragment() {
             val checkinAdapter = CheckinAdapter(datalist)
             CheckinRecyclerView.adapter = checkinAdapter
             CheckinRecyclerView.layoutManager = linearLayoutManager
-
             Log.d(TAG, "${records[0].symptom}")
+            val calendar: Calendar = Calendar.getInstance()
+            val date: Date = calendar.getTime()
+            var dayOfWeek = SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.getTime())
+            sharedReport = "Hi! This is my daily report on ${dayOfWeek}!" +
+                    "\n Symtom: ${records[count].symptom}" +
+                    "\n Stress level: ${records[count].stress_level}" +
+                    "\n Treatments: ${records[count].treatments}" +
+                    "\n Health factors: ${records[count].health_factors}"
         }
 
     }
