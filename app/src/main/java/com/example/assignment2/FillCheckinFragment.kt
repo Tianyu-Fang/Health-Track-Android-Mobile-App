@@ -14,6 +14,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import com.example.assignment2.model.Checkin
+import com.example.assignment2.viewmodel.CheckinViewModel
+import com.example.assignment2.viewmodel.CheckinViewModelFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

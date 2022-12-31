@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment2.adapter.CheckinAdapter
 import com.example.assignment2.model.CheckinModel
+import com.example.assignment2.viewmodel.CheckinViewModel
+import com.example.assignment2.viewmodel.CheckinViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.text.SimpleDateFormat
 import java.util.*
@@ -68,23 +70,22 @@ class CheckinFragment : Fragment() {
             LinearLayoutManager.VERTICAL,
             false
         )
-        checkinViewModel.allRecords.observe(requireActivity()) {
+        checkinViewModel.newRecord.observe(requireActivity()) {
                 records ->
-            val count = records.size - 1
-            val datalist = populateCheckinList(records[count].symptom,records[count].stress_level,
-            records[count].treatments,records[count].health_factors)
+            val datalist = populateCheckinList(records.symptom,records.stress_level,
+            records.treatments,records.health_factors)
             val checkinAdapter = CheckinAdapter(datalist)
             CheckinRecyclerView.adapter = checkinAdapter
             CheckinRecyclerView.layoutManager = linearLayoutManager
-            Log.d(TAG, "${records[0].symptom}")
+            Log.d(TAG, "${records.symptom}")
             val calendar: Calendar = Calendar.getInstance()
             val date: Date = calendar.getTime()
             var dayOfWeek = SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.getTime())
             sharedReport = "Hi! This is my daily report on ${dayOfWeek}!" +
-                    "\n Symtom: ${records[count].symptom}" +
-                    "\n Stress level: ${records[count].stress_level}" +
-                    "\n Treatments: ${records[count].treatments}" +
-                    "\n Health factors: ${records[count].health_factors}"
+                    "\n Symtom: ${records.symptom}" +
+                    "\n Stress level: ${records.stress_level}" +
+                    "\n Treatments: ${records.treatments}" +
+                    "\n Health factors: ${records.health_factors}"
         }
 
     }

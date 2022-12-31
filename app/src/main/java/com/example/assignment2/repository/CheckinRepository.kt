@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -65,4 +65,38 @@ class CheckinRepository {
         }
 
     }
+
+    fun getNewCheckin(): LiveData<Checkin> {
+        val newRecord: MutableLiveData<Checkin> = MutableLiveData()
+
+        val TAG = "Checkin"
+        val docRef = db.collection("Checkin")
+        docRef.get().addOnSuccessListener { result ->
+            val count = result.size() - 1
+            db.collection("Checkin")
+                .document(count.toString())
+                .get()
+                .addOnSuccessListener { result ->
+                        val record =
+                            Checkin(
+                                result.data!!["userEmail"].toString(),
+                                result.data!!["symptom"].toString(),
+                                result.data!!["stress_level"].toString(),
+                                result.data!!["treatments"].toString(),
+                                result.data!!["health_factors"].toString()
+                            )
+                        Log.d(TAG, "${result.id} => ${result.data}")
+                    newRecord.value = record
+                }
+                .addOnFailureListener { exception ->
+                    Log.d(TAG, "Error getting documents: ", exception)
+                }
+
+        }
+
+        return newRecord
+    }
+
+
+
 }
