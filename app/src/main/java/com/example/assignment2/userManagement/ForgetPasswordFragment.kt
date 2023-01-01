@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.userManagement
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -10,10 +10,9 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
+import com.example.assignment2.R
 import com.example.assignment2.repository.AuthRepository
 import com.example.assignment2.viewmodel.AuthViewModel
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
 
 

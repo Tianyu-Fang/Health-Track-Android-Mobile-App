@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.userManagement
 
 import android.content.Context
 import android.os.Bundle
@@ -14,6 +14,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.assignment2.R
 import com.example.assignment2.adapter.ProfileAdapter
 import com.example.assignment2.model.ProfileModel
 import com.example.assignment2.model.User

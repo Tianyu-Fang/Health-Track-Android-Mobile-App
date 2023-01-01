@@ -1,10 +1,11 @@
-package com.example.assignment2
+package com.example.assignment2.userManagement
 
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceScreen
+import com.example.assignment2.R
 
 
 class SettingFragment : PreferenceFragmentCompat() {

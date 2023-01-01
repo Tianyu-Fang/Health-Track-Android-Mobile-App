@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.assignment2.LoginFragment"
+        android:name="com.example.assignment2.userManagement.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.assignment2.ProfileFragment"
+        android:name="com.example.assignment2.userManagement.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -160,7 +160,7 @@
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.example.assignment2.SettingFragment"
+        android:name="com.example.assignment2.userManagement.SettingFragment"
         android:label="SettingFragment" >
         <action
             android:id="@+id/action_settingFragment2_to_changePasswordFragment2"
@@ -168,12 +168,12 @@
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
-        android:name="com.example.assignment2.ChangePasswordFragment"
+        android:name="com.example.assignment2.userManagement.ChangePasswordFragment"
         android:label="fragment_change_password"
         tools:layout="@layout/fragment_change_password" />
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.assignment2.RegisterFragment"
+        android:name="com.example.assignment2.userManagement.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -182,7 +182,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgetPasswordFragment"
-        android:name="com.example.assignment2.ForgetPasswordFragment"
+        android:name="com.example.assignment2.userManagement.ForgetPasswordFragment"
         android:label="fragment_forget_password"
         tools:layout="@layout/fragment_forget_password" >
         <action
@@ -249,7 +249,7 @@
         tools:layout="@layout/activity_logout" />
     <fragment
         android:id="@+id/profileUpdateFragment"
-        android:name="com.example.assignment2.ProfileUpdateFragment"
+        android:name="com.example.assignment2.userManagement.ProfileUpdateFragment"
         android:label="fragment_profile_update"
         tools:layout="@layout/fragment_profile_update" >
         <action

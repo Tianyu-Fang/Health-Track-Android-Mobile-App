@@ -11,8 +11,10 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.view.MenuCompat
+import androidx.core.view.size
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -30,12 +32,14 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: AuthViewModel by viewModels {
         AuthViewModel.Provider(AuthRepository.repository)
     }
-
+    var aMenu: Menu? = null
+    var optionMenuOn: Boolean = false
+    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_t)
-        val navController = findNavController(R.id.bottomNavigation)
+        navController = findNavController(R.id.bottomNavigation)
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.dashboardFragment_btm,
@@ -55,8 +59,12 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, nd: NavDestination, _ ->
             if (nd.id == R.id.profileFragment || nd.id == R.id.dashboardFragment_btm) {
                 bottomNav.visibility = View.VISIBLE
+                optionMenuOn = true
+                checkOptionMenu()
             } else if (nd.id == R.id.settingFragment || nd.id == R.id.loginFragment || nd.id == R.id.profileUpdateFragment) {
                 bottomNav.visibility = View.GONE
+                optionMenuOn = false
+                checkOptionMenu()
             }
         }
 
@@ -75,14 +83,11 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("RestrictedApi")
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_options, menu)
-
         // Show icons on Overflow option menu
         if (menu is MenuBuilder) {
             menu.setOptionalIconsVisible(true)
         }
-
         MenuCompat.setGroupDividerEnabled(menu!!, true)
-
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -94,7 +99,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-        val navController = findNavController(R.id.bottomNavigation)
+        navController = findNavController(R.id.bottomNavigation)
 
         return when (id) {
             R.id.measurementFragment -> {
@@ -111,10 +116,6 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.journalFragment -> {
                 navController.navigate(R.id.journalFragment_btm)
-                true
-            }
-            R.id.sleepFragment -> {
-                navController.navigate(R.id.sleepFragment_btm)
                 true
             }
             R.id.logout -> {
@@ -139,4 +140,31 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun checkOptionMenu()
+    {
+        if (null != aMenu) {
+            if (optionMenuOn) {
+                for (i in 0 until aMenu!!.size()){
+                    aMenu!!.getItem(i).setVisible(true);
+                    aMenu!!.getItem(i).setEnabled(true);
+                }
+            } else {
+                for (i in 0 until aMenu!!.size()){
+                    aMenu!!.getItem(i).setVisible(false);
+                    aMenu!!.getItem(i).setEnabled(false);
+                }
+            }
+        }
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        if (menu != null) {
+            aMenu = menu
+        }
+        checkOptionMenu()
+        return super.onPrepareOptionsMenu(menu)
+    }
+
 }
+
+
