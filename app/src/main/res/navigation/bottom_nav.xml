@@ -158,12 +158,12 @@
     <fragment
         android:id="@+id/changePasswordFragment"
         android:name="com.example.assignment2.userManagement.ChangePasswordFragment"
-        android:label="fragment_change_password"
+        android:label="Change Password"
         tools:layout="@layout/fragment_change_password" />
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.assignment2.userManagement.RegisterFragment"
-        android:label="fragment_register"
+        android:label="Sign Up"
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_registerFragment2_to_loginFragment2"
@@ -172,7 +172,7 @@
     <fragment
         android:id="@+id/forgetPasswordFragment"
         android:name="com.example.assignment2.userManagement.ForgetPasswordFragment"
-        android:label="fragment_forget_password"
+        android:label="Forgot Password"
         tools:layout="@layout/fragment_forget_password" >
         <action
             android:id="@+id/action_forgetPasswordFragment_to_loginFragment"
