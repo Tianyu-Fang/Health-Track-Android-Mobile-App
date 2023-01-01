@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.userManagement
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.example.assignment2.R
 import com.example.assignment2.model.User
 import com.example.assignment2.repository.AuthRepository
 import com.example.assignment2.viewmodel.AuthViewModel
