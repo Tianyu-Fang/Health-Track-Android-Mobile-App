@@ -142,7 +142,11 @@
         android:id="@+id/journalFragment_btm"
         android:name="com.example.assignment2.journal.JournalFragment"
         android:label="fragment_journal"
-        tools:layout="@layout/fragment_journal" />
+        tools:layout="@layout/fragment_journal" >
+        <action
+            android:id="@+id/action_journalFragment_btm_to_journalDisplayFragment_btm"
+            app:destination="@id/journalDisplayFragment_btm" />
+    </fragment>
     <fragment
         android:id="@+id/dietFragment_btm"
         android:name="com.example.assignment2.DietFragment"

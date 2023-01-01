@@ -13,7 +13,7 @@ import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
 
 
 class HeightFragment : Fragment() {
-    private lateinit var binding:FragmentHeightBinding
+    private lateinit var binding: FragmentHeightBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,11 +22,12 @@ class HeightFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        mActivity.supportActionBar?.title="Height Data"
+        mActivity.supportActionBar?.title = "Height Data"
         // Inflate the layout for this fragment
-        binding =FragmentHeightBinding.inflate(layoutInflater)
+        binding = FragmentHeightBinding.inflate(layoutInflater)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupData()
@@ -34,18 +35,20 @@ class HeightFragment : Fragment() {
     }
 
     private fun setupData() {
-        val aaChartModel : AAChartModel = AAChartModel()
+        val aaChartModel: AAChartModel = AAChartModel()
             .legendEnabled(true)
             .yAxisVisible(true)
             .chartType(AAChartType.Area)
             .backgroundColor("#FFFFFF")
-            .categories(arrayOf("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))
-            .series(arrayOf(
-                AASeriesElement()
-                    .name("Height")
-                    .data(arrayOf(170,171,172,173,174,175,176)))
+            .categories(arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"))
+            .series(
+                arrayOf(
+                    AASeriesElement()
+                        .name("Height")
+                        .data(arrayOf(170, 171, 172, 173, 174, 175, 176))
+                )
             )
-        aaChartModel.colorsTheme(arrayOf("#7e9df4","#a5bbf8","#cbd859","#FFD700"))
+        aaChartModel.colorsTheme(arrayOf("#7e9df4", "#a5bbf8", "#cbd859", "#FFD700"))
         //draw diagram
         binding.chartview2.aa_drawChartWithChartModel(aaChartModel)
 

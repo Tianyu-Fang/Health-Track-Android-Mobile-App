@@ -35,7 +35,7 @@ class JournalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        var activity:String
+        //        var activity:String
         val activity = view.findViewById<TextInputEditText>(R.id.activity_text_field)
         activity.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15f)
 
@@ -50,8 +50,7 @@ class JournalFragment : Fragment() {
         val btnJournal = view.findViewById<Button>(R.id.journal_button)
 
         val docRef = db.collection("Journal")
-        docRef.get().addOnSuccessListener {
-                result ->
+        docRef.get().addOnSuccessListener { result ->
             val count = result.size()
             val measurementDB = db.collection("Journal").document(count.toString())
 
@@ -59,23 +58,16 @@ class JournalFragment : Fragment() {
                 val activity = activity.text.toString()
                 val eat = eat.text.toString()
                 val feeling = feeling.text.toString()
-
-
                 val journalData = JournalModel(activity, eat, feeling)
                 measurementDB.set(journalData)
+                view.findNavController().navigate(R.id.journalDisplayFragment_btm)
             }
-
-
 
 
         }
 
 
     }
-
-
-
-
 
 
 }
