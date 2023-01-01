@@ -22,6 +22,7 @@ class ForgetPasswordFragment : Fragment() {
     private val viewModel: AuthViewModel by viewModels {
         AuthViewModel.Provider(AuthRepository.repository)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

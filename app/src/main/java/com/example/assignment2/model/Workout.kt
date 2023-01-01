@@ -12,4 +12,4 @@ class Workout(
     var running_time: Int = 0,
 
     var other_time: Int = 0
-): Parcelable
+) : Parcelable

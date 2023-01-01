@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 class Checkin(
     //change
-    var userEmail:String = " ",
+    var userEmail: String = " ",
 
     var symptom: String = " ",
 

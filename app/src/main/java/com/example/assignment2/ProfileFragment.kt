@@ -42,7 +42,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        constructRecyclerView(view,this@ProfileFragment)
+        constructRecyclerView(view, this@ProfileFragment)
         val btnLogout = view.findViewById<Button>(R.id.logOut_button)
 
         btnLogout.setOnClickListener {
@@ -63,16 +63,16 @@ class ProfileFragment : Fragment() {
         }
 
         val btnSetting = view.findViewById<ImageView>(R.id.setting)
-        btnSetting.setOnClickListener{
+        btnSetting.setOnClickListener {
             view.findNavController().navigate(R.id.settingFragment)
         }
 
     }
 
     fun constructRecyclerView(view: View, context: ProfileFragment) {
-            var db = Firebase.firestore
-            val userDB = viewModel.getUserEmail()?.let { db.collection("User").document(it) }
-            var user = User()
+        var db = Firebase.firestore
+        val userDB = viewModel.getUserEmail()?.let { db.collection("User").document(it) }
+        var user = User()
         if (userDB != null) {
             userDB.get().addOnSuccessListener { document ->
                 user =
@@ -119,11 +119,11 @@ class ProfileFragment : Fragment() {
 
     fun populateCourseList(user: User): ArrayList<ProfileModel> {
         val dataList = ArrayList<ProfileModel>()
-        dataList.add(ProfileModel(1,"Date of Birth",user.DoB))
-        dataList.add(ProfileModel(2,"Gender",user.gender))
-        dataList.add(ProfileModel(3, "Blood Type",user.bloodType))
-        dataList.add(ProfileModel(4, "Height",user.height))
-        dataList.add(ProfileModel(5, "Weight",user.weight))
+        dataList.add(ProfileModel(1, "Date of Birth", user.DoB))
+        dataList.add(ProfileModel(2, "Gender", user.gender))
+        dataList.add(ProfileModel(3, "Blood Type", user.bloodType))
+        dataList.add(ProfileModel(4, "Height", user.height))
+        dataList.add(ProfileModel(5, "Weight", user.weight))
         return dataList
     }
 

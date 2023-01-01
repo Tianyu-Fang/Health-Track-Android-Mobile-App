@@ -22,4 +22,4 @@ class MeasurementModel(
     var temperature: Int = 0,
 
     var pulse: Int = 0
-): Parcelable
+) : Parcelable

@@ -47,7 +47,7 @@ class RegisterFragment : Fragment() {
             var email: String = emailEdtText.text.toString()
             var name: String = nameEdtText.text.toString()
             var password: String = passEdtText.text.toString()
-            Log.d("ss",password)
+            Log.d("ss", password)
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(name)) {
                 Toast.makeText(requireContext(), "Please fill all the fields", Toast.LENGTH_LONG)
                     .show()
@@ -71,12 +71,12 @@ class RegisterFragment : Fragment() {
             }
         }
 
-                //login
-                val textLogin = view.findViewById<TextView>(R.id.textLogin)
+        //login
+        val textLogin = view.findViewById<TextView>(R.id.textLogin)
 
-                textLogin.setOnClickListener {
-                    view.findNavController().navigate(R.id.loginFragment)
-                }
+        textLogin.setOnClickListener {
+            view.findNavController().navigate(R.id.loginFragment)
+        }
     }
 
 }

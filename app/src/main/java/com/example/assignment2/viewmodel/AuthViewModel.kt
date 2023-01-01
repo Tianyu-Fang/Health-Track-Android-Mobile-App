@@ -37,9 +37,9 @@ class AuthViewModel(val repository: AuthRepository) : ViewModel() {
         repository.getUserEmail()
 
     fun updateUser(email: String, user: User): LiveData<Boolean> =
-        repository.updateUser(email,user)
+        repository.updateUser(email, user)
 
-//    fun findUser() =
+    //    fun findUser() =
 //        repository.findUser()
 //
 //    fun getUser(): User? =

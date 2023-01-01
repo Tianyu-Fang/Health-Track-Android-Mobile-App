@@ -14,9 +14,8 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
- * A simple [Fragment] subclass.
- * Use the [InfoVideoFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * A simple [Fragment] subclass. Use the [InfoVideoFragment.newInstance]
+ * factory method to create an instance of this fragment.
  */
 class InfoVideoFragment : Fragment() {
     // TODO: Rename and change types of parameters
@@ -44,8 +43,8 @@ class InfoVideoFragment : Fragment() {
 
     companion object {
         /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
+         * Use this factory method to create a new instance of this fragment using
+         * the provided parameters.
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.

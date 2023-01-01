@@ -14,5 +14,5 @@ class User(
     var DoB: String? = null,
     var height: String? = null,
     var weight: String? = null
-): Parcelable
+) : Parcelable
 

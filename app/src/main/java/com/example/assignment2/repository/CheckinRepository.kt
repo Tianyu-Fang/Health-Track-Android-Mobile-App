@@ -47,8 +47,7 @@ class CheckinRepository {
 
         // Add a new document with a generated ID
         val docRef = db.collection("Checkin")
-        docRef.get().addOnSuccessListener {
-                result ->
+        docRef.get().addOnSuccessListener { result ->
             val count = result.size()
 
             val TAG = "Checkin"
@@ -77,15 +76,15 @@ class CheckinRepository {
                 .document(count.toString())
                 .get()
                 .addOnSuccessListener { result ->
-                        val record =
-                            Checkin(
-                                result.data!!["userEmail"].toString(),
-                                result.data!!["symptom"].toString(),
-                                result.data!!["stress_level"].toString(),
-                                result.data!!["treatments"].toString(),
-                                result.data!!["health_factors"].toString()
-                            )
-                        Log.d(TAG, "${result.id} => ${result.data}")
+                    val record =
+                        Checkin(
+                            result.data!!["userEmail"].toString(),
+                            result.data!!["symptom"].toString(),
+                            result.data!!["stress_level"].toString(),
+                            result.data!!["treatments"].toString(),
+                            result.data!!["health_factors"].toString()
+                        )
+                    Log.d(TAG, "${result.id} => ${result.data}")
                     newRecord.value = record
                 }
                 .addOnFailureListener { exception ->
@@ -96,7 +95,6 @@ class CheckinRepository {
 
         return newRecord
     }
-
 
 
 }

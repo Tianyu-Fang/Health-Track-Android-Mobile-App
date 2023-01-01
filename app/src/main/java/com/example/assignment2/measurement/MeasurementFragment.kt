@@ -36,8 +36,7 @@ class MeasurementFragment : Fragment() {
         TabLayoutMediator(
             tabLayout,
             viewpager2
-        ){
-            tab: TabLayout.Tab, position: Int ->
+        ) { tab: TabLayout.Tab, position: Int ->
             tab.text = titles[position]
         }.attach()
         return view

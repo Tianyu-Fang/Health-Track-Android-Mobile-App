@@ -22,7 +22,7 @@ class WeightFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        mActivity.supportActionBar?.title="Weight Data"
+        mActivity.supportActionBar?.title = "Weight Data"
         binding = FragmentWeightBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -34,18 +34,20 @@ class WeightFragment : Fragment() {
     }
 
     private fun setupData() {
-        val aaChartModel : AAChartModel = AAChartModel()
+        val aaChartModel: AAChartModel = AAChartModel()
             .legendEnabled(true)
             .yAxisVisible(true)
             .chartType(AAChartType.Area)
             .backgroundColor("#FFFFFF")
-            .categories(arrayOf("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))
-            .series(arrayOf(
-                AASeriesElement()
-                    .name("Weight")
-                    .data(arrayOf(70,71,50,73,80,75,76)))
+            .categories(arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"))
+            .series(
+                arrayOf(
+                    AASeriesElement()
+                        .name("Weight")
+                        .data(arrayOf(70, 71, 50, 73, 80, 75, 76))
+                )
             )
-        aaChartModel.colorsTheme(arrayOf("#7e9df4","#a5bbf8","#cbd859","#FFD700"))
+        aaChartModel.colorsTheme(arrayOf("#7e9df4", "#a5bbf8", "#cbd859", "#FFD700"))
         //draw diagram
         binding.chartview3.aa_drawChartWithChartModel(aaChartModel)
 

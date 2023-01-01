@@ -41,16 +41,25 @@ class FillCheckinFragment : Fragment() {
         val btnCheckin = view.findViewById<Button>(R.id.fillcheckin_button)
 
         // custom Spinner for symptoms
-       // val data = arrayOf("Java", "Python", "C++", "C#", "Angular", "Go")
-       // val adapter = ArrayAdapter(requireActivity().applicationContext, R.layout.item_symptom, R.array.symptom_list)
+        // val data = arrayOf("Java", "Python", "C++", "C#", "Angular", "Go")
+        // val adapter = ArrayAdapter(requireActivity().applicationContext, R.layout.item_symptom, R.array.symptom_list)
 
         var symptom: String = "GG"
         val spinner = view.findViewById<Spinner>(R.id.sSymptom)
         //val symptom = spinner.selectedItem.toString()
-        val adapter =ArrayAdapter.createFromResource(requireActivity(),R.array.symptom_list, android.R.layout.simple_spinner_item)
+        val adapter = ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.symptom_list,
+            android.R.layout.simple_spinner_item
+        )
         spinner.adapter = adapter
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 symptom = spinner.selectedItem.toString()
             }
 
@@ -60,11 +69,20 @@ class FillCheckinFragment : Fragment() {
 
 
         val spinner2 = view.findViewById<Spinner>(R.id.sStress)
-        var stressLevel : String ="GG"
-        val adapter2 =ArrayAdapter.createFromResource(requireActivity(),R.array.stress_list, android.R.layout.simple_spinner_item)
+        var stressLevel: String = "GG"
+        val adapter2 = ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.stress_list,
+            android.R.layout.simple_spinner_item
+        )
         spinner2.adapter = adapter2
         spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 stressLevel = spinner2.selectedItem.toString()
             }
 
@@ -74,11 +92,20 @@ class FillCheckinFragment : Fragment() {
 
         val spinner3 = view.findViewById<Spinner>(R.id.sTreatment)
 //        val treatment = spinner3.selectedItem.toString()
-        var treatment : String ="GG"
-        val adapter3 =ArrayAdapter.createFromResource(requireActivity(),R.array.treatment_list, android.R.layout.simple_spinner_item)
+        var treatment: String = "GG"
+        val adapter3 = ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.treatment_list,
+            android.R.layout.simple_spinner_item
+        )
         spinner3.adapter = adapter3
         spinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 treatment = spinner3.selectedItem.toString()
             }
 
@@ -88,11 +115,20 @@ class FillCheckinFragment : Fragment() {
 
         val spinner4 = view.findViewById<Spinner>(R.id.sHealth)
 //        val health_factors = spinner4.selectedItem.toString()
-        var health_factors : String ="GG"
-        val adapter4 =ArrayAdapter.createFromResource(requireActivity(),R.array.healthfactor_list, android.R.layout.simple_spinner_item)
+        var health_factors: String = "GG"
+        val adapter4 = ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.healthfactor_list,
+            android.R.layout.simple_spinner_item
+        )
         spinner4.adapter = adapter4
         spinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 health_factors = spinner4.selectedItem.toString()
             }
 
@@ -106,7 +142,8 @@ class FillCheckinFragment : Fragment() {
             //add new check in data
             //val intent = Intent(requireActivity(), NewNoteActivity::class.java)
             //startActivity(intent)
-            val checkindata = Checkin("admin@qq.com",symptom, stressLevel,treatment,health_factors)
+            val checkindata =
+                Checkin("admin@qq.com", symptom, stressLevel, treatment, health_factors)
             lifecycleScope.launch(Dispatchers.IO) {
                 checkinViewModel.addCheckin(checkindata)
             }

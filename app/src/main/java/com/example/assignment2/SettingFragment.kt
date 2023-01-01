@@ -15,7 +15,8 @@ class SettingFragment : PreferenceFragmentCompat() {
             findNavController().navigate(R.id.changePasswordFragment)
             true
         }
-        findPreference<PreferenceScreen>("reset_password")?.onPreferenceClickListener = showValueListener
-        }
+        findPreference<PreferenceScreen>("reset_password")?.onPreferenceClickListener =
+            showValueListener
+    }
 
 }

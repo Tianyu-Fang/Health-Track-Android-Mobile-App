@@ -29,6 +29,7 @@ class DashboardFragment : Fragment() {
     private val viewModel: AuthViewModel by viewModels {
         AuthViewModel.Provider(AuthRepository.repository)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,20 +45,21 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            val userDB = viewModel.getUserEmail()?.let { db.collection("User").document(viewModel.getUserEmail()!!) }
-            var userName: String
-            if (userDB != null) {
-                userDB.get().addOnSuccessListener { document ->
-                    userName = document.data!!["userName"].toString()
-                    binding.dashboardName.text = userName
-                }
+        val userDB = viewModel.getUserEmail()
+            ?.let { db.collection("User").document(viewModel.getUserEmail()!!) }
+        var userName: String
+        if (userDB != null) {
+            userDB.get().addOnSuccessListener { document ->
+                userName = document.data!!["userName"].toString()
+                binding.dashboardName.text = userName
             }
+        }
 
-                val docRef = db.collection("Measurement")
-                docRef.get().addOnSuccessListener { result ->
-                    val count = result.size() - 1
-                    val measurementDB = db.collection("Measurement").document(count.toString())
-                    var data = MeasurementModel()
+        val docRef = db.collection("Measurement")
+        docRef.get().addOnSuccessListener { result ->
+            val count = result.size() - 1
+            val measurementDB = db.collection("Measurement").document(count.toString())
+            var data = MeasurementModel()
             measurementDB.get().addOnSuccessListener { document ->
                 data =
                     MeasurementModel(

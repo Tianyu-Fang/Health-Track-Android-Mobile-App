@@ -10,9 +10,8 @@ class JournalModel(
 
     var activity: String = " ",
 
-
     var eat: String = " ",
 
     var feeling: String = " "
 
-): Parcelable
+) : Parcelable

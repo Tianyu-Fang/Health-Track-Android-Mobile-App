@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: AuthViewModel by viewModels {
         AuthViewModel.Provider(AuthRepository.repository)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -61,82 +62,81 @@ class MainActivity : AppCompatActivity() {
 
         val sharedPreference = getSharedPreferences("user", Context.MODE_PRIVATE)
 
-        val user_id : String? = sharedPreference.getString("user_id",null)
-            if(user_id==null) {
-                navController.navigate(R.id.loginFragment)
-            }
-            else{
-                viewModel.setUserEmail(user_id)
-                navController.navigate(R.id.dashboardFragment_btm)
-            }
+        val user_id: String? = sharedPreference.getString("user_id", null)
+        if (user_id == null) {
+            navController.navigate(R.id.loginFragment)
+        } else {
+            viewModel.setUserEmail(user_id)
+            navController.navigate(R.id.dashboardFragment_btm)
+        }
 
     }
 
-        @SuppressLint("RestrictedApi")
-        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-            menuInflater.inflate(R.menu.menu_options, menu)
+    @SuppressLint("RestrictedApi")
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_options, menu)
 
-            // Show icons on Overflow option menu
-            if (menu is MenuBuilder) {
-                menu.setOptionalIconsVisible(true)
+        // Show icons on Overflow option menu
+        if (menu is MenuBuilder) {
+            menu.setOptionalIconsVisible(true)
+        }
+
+        MenuCompat.setGroupDividerEnabled(menu!!, true)
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.bottomNavigation)
+        return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
+                || super.onSupportNavigateUp())
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        val navController = findNavController(R.id.bottomNavigation)
+
+        return when (id) {
+            R.id.measurementFragment -> {
+                navController.navigate(R.id.measurementFragment_btm)
+                true
             }
-
-            MenuCompat.setGroupDividerEnabled(menu!!, true)
-
-            return super.onCreateOptionsMenu(menu)
-        }
-
-        override fun onSupportNavigateUp(): Boolean {
-            val navController = this.findNavController(R.id.bottomNavigation)
-            return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
-                    || super.onSupportNavigateUp())
-        }
-
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            val id = item.itemId
-            val navController = findNavController(R.id.bottomNavigation)
-
-            return when (id) {
-                R.id.measurementFragment -> {
-                    navController.navigate(R.id.measurementFragment_btm)
-                    true
-                }
-                R.id.infoFragment -> {
-                    navController.navigate(R.id.viewInfoFragment_info_btm)
-                    true
-                }
-                R.id.dietFragment -> {
-                    navController.navigate(R.id.dietFragment_btm)
-                    true
-                }
-                R.id.journalFragment -> {
-                    navController.navigate(R.id.journalFragment_btm)
-                    true
-                }
-                R.id.sleepFragment -> {
-                    navController.navigate(R.id.sleepFragment_btm)
-                    true
-                }
-                R.id.logout -> {
+            R.id.infoFragment -> {
+                navController.navigate(R.id.viewInfoFragment_info_btm)
+                true
+            }
+            R.id.dietFragment -> {
+                navController.navigate(R.id.dietFragment_btm)
+                true
+            }
+            R.id.journalFragment -> {
+                navController.navigate(R.id.journalFragment_btm)
+                true
+            }
+            R.id.sleepFragment -> {
+                navController.navigate(R.id.sleepFragment_btm)
+                true
+            }
+            R.id.logout -> {
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
-                    //after log out, remove the user_id data
-                    val sharedPreference =
-                        getSharedPreferences("user", Context.MODE_PRIVATE)
-                    val editor = sharedPreference?.edit()
-                    if (editor != null) {
-                        editor.putString("user_id", null)
-                        editor.commit()
-                    }
-                        navController.navigate(R.id.loginFragment)
-                    true
+                //after log out, remove the user_id data
+                val sharedPreference =
+                    getSharedPreferences("user", Context.MODE_PRIVATE)
+                val editor = sharedPreference?.edit()
+                if (editor != null) {
+                    editor.putString("user_id", null)
+                    editor.commit()
                 }
-
-                else -> {
-                    super.onOptionsItemSelected(item)
-                }
+                navController.navigate(R.id.loginFragment)
+                true
             }
 
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
+
+    }
 
 }

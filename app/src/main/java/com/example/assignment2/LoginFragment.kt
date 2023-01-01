@@ -84,21 +84,21 @@ class LoginFragment : Fragment() {
                 }
             }
         }
-            //forget password
-            val textForget = view.findViewById<TextView>(R.id.forget)
+        //forget password
+        val textForget = view.findViewById<TextView>(R.id.forget)
 
-            textForget.setOnClickListener {
-                view.findNavController().navigate(R.id.forgetPasswordFragment)
-            }
-
-            //register
-            val textreg = view.findViewById<TextView>(R.id.textSign)
-
-            textreg.setOnClickListener {
-                view.findNavController().navigate(R.id.registerFragment)
-            }
-
+        textForget.setOnClickListener {
+            view.findNavController().navigate(R.id.forgetPasswordFragment)
         }
+
+        //register
+        val textreg = view.findViewById<TextView>(R.id.textSign)
+
+        textreg.setOnClickListener {
+            view.findNavController().navigate(R.id.registerFragment)
+        }
+
     }
+}
 
 
