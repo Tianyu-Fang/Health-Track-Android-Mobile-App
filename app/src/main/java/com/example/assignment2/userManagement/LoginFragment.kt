@@ -37,7 +37,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
-        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
         mActivity.supportActionBar?.title = "Login"
 
         //login
@@ -63,7 +63,6 @@ class LoginFragment : Fragment() {
 
                     } else {
                         view.findNavController().navigate(R.id.dashboardFragment_btm)
-
                         Toast.makeText(
                             requireActivity(),
                             "Successfully Logged In",
@@ -88,6 +87,7 @@ class LoginFragment : Fragment() {
 
         textForget.setOnClickListener {
             view.findNavController().navigate(R.id.forgetPasswordFragment)
+            mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
 
         //register
@@ -95,9 +95,11 @@ class LoginFragment : Fragment() {
 
         textreg.setOnClickListener {
             view.findNavController().navigate(R.id.registerFragment)
+            mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
 
     }
+
 
 }
 

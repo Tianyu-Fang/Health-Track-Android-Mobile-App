@@ -39,6 +39,7 @@ class FillCheckinFragment : Fragment() {
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val btnCheckin = view.findViewById<Button>(R.id.fillcheckin_button)
+        mActivity.supportActionBar?.title = "Fill Checkin"
 
         // custom Spinner for symptoms
         // val data = arrayOf("Java", "Python", "C++", "C#", "Angular", "Go")

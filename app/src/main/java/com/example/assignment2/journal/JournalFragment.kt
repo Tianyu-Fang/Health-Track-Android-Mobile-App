@@ -28,6 +28,7 @@ class JournalFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mActivity.supportActionBar?.title = "Journal"
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_journal, container, false)
     }

@@ -23,6 +23,7 @@ class MeasurementFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mActivity.supportActionBar?.title = "Health Measurements"
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_measurement, container, false)
         val view: View = inflater.inflate(R.layout.fragment_measurement, container, false)

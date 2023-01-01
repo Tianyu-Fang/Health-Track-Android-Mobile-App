@@ -27,6 +27,7 @@ class ViewInfoFragment : Fragment() {
         val mActivity = activity as AppCompatActivity
         mActivity.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         mActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mActivity.supportActionBar?.title = "Health Information"
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_view_info, container, false)
         viewPager = view.findViewById(R.id.view_pager2)

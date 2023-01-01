@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_nav"
-    app:startDestination="@id/dashboardFragment_btm"
+    app:startDestination="@id/loginFragment"
     tools:ignore="ExtraText">
 
     <activity
@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.assignment2.userManagement.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment_btm_to_dashboardFragment"
@@ -70,14 +70,8 @@
             android:id="@+id/action_dashboardFragment_btm_to_measurementFragment4"
             app:destination="@id/measurementFragment_btm" />
         <action
-            android:id="@+id/action_dashboardFragment_btm_to_sleepFragment3"
-            app:destination="@id/sleepFragment_btm" />
-        <action
             android:id="@+id/action_dashboardFragment_btm_to_journalFragment2"
             app:destination="@id/journalFragment_btm" />
-        <action
-            android:id="@+id/action_dashboardFragment_btm_to_logoutActivity3"
-            app:destination="@id/logoutActivity_btm" />
         <action
             android:id="@+id/action_dashboardFragment_btm_to_chatFragment_btm"
             app:destination="@id/chatFragment_btm" />
@@ -134,11 +128,6 @@
         android:label="fragment_measurement"
         tools:layout="@layout/fragment_measurement" />
     <fragment
-        android:id="@+id/sleepFragment_btm"
-        android:name="com.example.assignment2.SleepFragment"
-        android:label="fragment_sleep"
-        tools:layout="@layout/fragment_sleep" />
-    <fragment
         android:id="@+id/journalFragment_btm"
         android:name="com.example.assignment2.journal.JournalFragment"
         android:label="fragment_journal"
@@ -190,16 +179,6 @@
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/emailVerifyFragment"
-        android:name="com.example.assignment2.EmailVerifyFragment"
-        android:label="fragment_email_verify"
-        tools:layout="@layout/fragment_email_verify" />
-    <fragment
-        android:id="@+id/verifiedSuccessFragment"
-        android:name="com.example.assignment2.VerifiedSuccessFragment"
-        android:label="fragment_verified_success"
-        tools:layout="@layout/fragment_verified_success" />
-    <fragment
         android:id="@+id/viewMeasurementFragment_btm"
         android:name="com.example.assignment2.measurement.ViewMeasurementFragment"
         android:label="fragment_view_measurement"
@@ -242,11 +221,6 @@
         android:name="com.example.assignment2.CheckinFragment"
         android:label="fragment_checkin"
         tools:layout="@layout/fragment_checkin" />
-    <activity
-        android:id="@+id/logoutActivity_btm"
-        android:name="com.example.assignment2.LogoutActivity"
-        android:label="activity_logout"
-        tools:layout="@layout/activity_logout" />
     <fragment
         android:id="@+id/profileUpdateFragment"
         android:name="com.example.assignment2.userManagement.ProfileUpdateFragment"
