@@ -50,8 +50,7 @@ class JournalFragment : Fragment() {
         val btnJournal = view.findViewById<Button>(R.id.journal_button)
 
         val docRef = db.collection("Journal")
-        docRef.get().addOnSuccessListener {
-                result ->
+        docRef.get().addOnSuccessListener { result ->
             val count = result.size()
             val measurementDB = db.collection("Journal").document(count.toString())
 
@@ -66,16 +65,10 @@ class JournalFragment : Fragment() {
             }
 
 
-
-
         }
 
 
     }
-
-
-
-
 
 
 }

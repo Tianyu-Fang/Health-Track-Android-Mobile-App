@@ -10,10 +10,10 @@ import com.example.assignment2.model.CheckinModel
 
 class CheckinAdapter(
     private val dataList: ArrayList<CheckinModel>
-): RecyclerView.Adapter<CheckinAdapter.DataViewHolder>(){
+) : RecyclerView.Adapter<CheckinAdapter.DataViewHolder>() {
 
-    inner class DataViewHolder(itemView: View):
-        RecyclerView.ViewHolder(itemView){
+    inner class DataViewHolder(itemView: View) :
+        RecyclerView.ViewHolder(itemView) {
         val dataTitle = itemView.findViewById<TextView>(R.id.checkinItem)
         val data = itemView.findViewById<TextView>(R.id.checkinData)
     }

@@ -33,6 +33,7 @@ class InfoActivity : AppCompatActivity() {
         addFragmentToList()
         setupViewPager()
     }
+
     @SuppressLint("RestrictedApi")
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_options, menu)
@@ -74,7 +75,6 @@ class InfoActivity : AppCompatActivity() {
     }
 
 
-
     private fun bindView() {
 
         viewPager = findViewById(R.id.view_pager2)
@@ -94,6 +94,7 @@ class InfoActivity : AppCompatActivity() {
         fragmentList.add(InfoExpertFragment())
 
     }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.info_navigation)
         return (NavigationUI.navigateUp(navController, appBarConfiguration!!)
@@ -104,8 +105,8 @@ class InfoActivity : AppCompatActivity() {
         val id = item.itemId
         val navController = findNavController(R.id.info_navigation)
 
-        return when(id){
-            R.id.measurementFragment ->  {
+        return when (id) {
+            R.id.measurementFragment -> {
                 navController.navigate(R.id.measurementFragment)
                 true
             }
@@ -125,7 +126,7 @@ class InfoActivity : AppCompatActivity() {
                 navController.navigate(R.id.sleepFragment)
                 true
             }
-            R.id.logout ->{
+            R.id.logout -> {
 //                val intent = Intent(this, LogoutActivity::class.java)
 //                startActivity(intent)
                 val sharedPreference =
@@ -145,9 +146,6 @@ class InfoActivity : AppCompatActivity() {
         }
 
     }
-
-
-
 
 
 }

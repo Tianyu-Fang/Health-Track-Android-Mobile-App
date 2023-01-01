@@ -9,10 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.assignment2.R
 
 
-
 class InfoFragment : Fragment() {
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

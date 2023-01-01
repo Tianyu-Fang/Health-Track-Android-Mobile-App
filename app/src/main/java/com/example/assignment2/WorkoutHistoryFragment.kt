@@ -66,32 +66,34 @@ class WorkoutHistoryFragment : Fragment() {
             }
 
             val shareIntent = Intent.createChooser(sendIntent, null)
-            startActivity(shareIntent)}
+            startActivity(shareIntent)
+        }
     }
 
 
-
     private fun setupData(weekdata: ArrayList<Workout>) {
-        val Mon = weekdata[1].running_time + weekdata[1].walking_time +weekdata[1].other_time
-        binding.textView7.text =  weekdata[0].running_time.toString()
-        val Tue = weekdata[5].running_time + weekdata[5].walking_time +weekdata[5].other_time
-        val Wed = weekdata[6].running_time + weekdata[6].walking_time +weekdata[6].other_time
-        val Thu = weekdata[4].running_time + weekdata[4].walking_time +weekdata[4].other_time
-        val Fri = weekdata[0].running_time + weekdata[0].walking_time +weekdata[0].other_time
-        val Sat = weekdata[2].running_time + weekdata[2].walking_time +weekdata[2].other_time
-        val Sun = weekdata[3].running_time + weekdata[3].walking_time +weekdata[3].other_time
-        val aaChartModel : AAChartModel = AAChartModel()
+        val Mon = weekdata[1].running_time + weekdata[1].walking_time + weekdata[1].other_time
+        binding.textView7.text = weekdata[0].running_time.toString()
+        val Tue = weekdata[5].running_time + weekdata[5].walking_time + weekdata[5].other_time
+        val Wed = weekdata[6].running_time + weekdata[6].walking_time + weekdata[6].other_time
+        val Thu = weekdata[4].running_time + weekdata[4].walking_time + weekdata[4].other_time
+        val Fri = weekdata[0].running_time + weekdata[0].walking_time + weekdata[0].other_time
+        val Sat = weekdata[2].running_time + weekdata[2].walking_time + weekdata[2].other_time
+        val Sun = weekdata[3].running_time + weekdata[3].walking_time + weekdata[3].other_time
+        val aaChartModel: AAChartModel = AAChartModel()
             .legendEnabled(true)
             .yAxisVisible(false)
             .chartType(AAChartType.Area)
             .backgroundColor("#FFFFFF")
-            .categories(arrayOf("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))
-            .series(arrayOf(
-                AASeriesElement()
-                    .name("Weekly Workout Time")
-                    .data(arrayOf(Mon, Tue, Wed, Thu, Fri, Sat, Sun)))
+            .categories(arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"))
+            .series(
+                arrayOf(
+                    AASeriesElement()
+                        .name("Weekly Workout Time")
+                        .data(arrayOf(Mon, Tue, Wed, Thu, Fri, Sat, Sun))
+                )
             )
-        aaChartModel.colorsTheme(arrayOf("#7e9df4","#a5bbf8","#cbd859","#FFD700"))
+        aaChartModel.colorsTheme(arrayOf("#7e9df4", "#a5bbf8", "#cbd859", "#FFD700"))
         //draw diagram
         binding.chartview1.aa_drawChartWithChartModel(aaChartModel)
 

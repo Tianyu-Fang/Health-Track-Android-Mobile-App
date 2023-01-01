@@ -22,9 +22,9 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
- * A simple [Fragment] subclass.
- * Use the [ViewMeasurementFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * A simple [Fragment] subclass. Use the
+ * [ViewMeasurementFragment.newInstance] factory
+ * method to create an instance of this fragment.
  */
 class ViewMeasurementFragment : Fragment() {
 
@@ -57,8 +57,8 @@ class ViewMeasurementFragment : Fragment() {
 
     companion object {
         /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
+         * Use this factory method to create a new instance of this fragment using
+         * the provided parameters.
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
@@ -103,17 +103,16 @@ class ViewMeasurementFragment : Fragment() {
         }
 
 
-
 //
 //
 //        val measurementData = MeasurementModel(180, 70, 120,"110/70",14, 70, 37, 77)
         val docRef = db.collection("Measurement")
         docRef.get().addOnSuccessListener { result ->
-            val count = result.size()-1
+            val count = result.size() - 1
             val measurementDB = db.collection("Measurement").document(count.toString())
 
 
-        //val measurementDB = db.collection("Measurement").document("randomnumber")
+            //val measurementDB = db.collection("Measurement").document("randomnumber")
 
             var data = MeasurementModel()
 
@@ -146,66 +145,46 @@ class ViewMeasurementFragment : Fragment() {
                 //get height score
                 var heightScore = (data.height * 0.55)
                 //get valid height score
-                if(heightScore>100)
-                    heightScore = 200-heightScore
+                if (heightScore > 100)
+                    heightScore = 200 - heightScore
 
                 var weightScore = data.weight * 0.9
-                if(weightScore > 100)
+                if (weightScore > 100)
                     weightScore = 200 - weightScore
 
-                var heightWeightScore = ((heightScore + weightScore)/2).toInt()
+                var heightWeightScore = ((heightScore + weightScore) / 2).toInt()
 
                 var glucoseScore = (data.glucose * 0.8).toInt()
-                if(glucoseScore > 100)
+                if (glucoseScore > 100)
                     glucoseScore = 200 - glucoseScore
 
                 var pressureScore = 85
 
                 var breathingScore = (data.breathing * 6).toInt()
-                if(breathingScore > 100)
+                if (breathingScore > 100)
                     breathingScore = 200 - breathingScore
 
                 var oxygenScore = (data.oxygen * 1.1).toInt()
-                if(oxygenScore > 100)
+                if (oxygenScore > 100)
                     oxygenScore = 200 - oxygenScore
 
                 var temperatureScore = (data.temperature * 2.8).toInt()
-                if(temperatureScore > 100)
+                if (temperatureScore > 100)
                     temperatureScore = 200 - temperatureScore
 
                 var pulseScore = (data.pulse * 1.2).toInt()
-                if( pulseScore > 100)
+                if (pulseScore > 100)
                     pulseScore = 200 - pulseScore
 
                 var totalHealthScore = ((heightWeightScore + pressureScore
-                                            + glucoseScore + breathingScore
-                                            + oxygenScore  + temperatureScore
-                                            + pulseScore)/7).toInt()
+                        + glucoseScore + breathingScore
+                        + oxygenScore + temperatureScore
+                        + pulseScore) / 7).toInt()
 
                 binding.totalScore.text = "$totalHealthScore"
 
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

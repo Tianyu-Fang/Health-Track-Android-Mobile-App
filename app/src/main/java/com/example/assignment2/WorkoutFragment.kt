@@ -30,13 +30,12 @@ class WorkoutFragment : Fragment() {
         val viewPagerAdapter = WorkoutPagerAdapter(this)
         viewpager2?.adapter = viewPagerAdapter
 
-        val titles = arrayOf("Workout Score","Workout History")
+        val titles = arrayOf("Workout Score", "Workout History")
 
         TabLayoutMediator(
             tabLayout!!,
             viewpager2!!
-        ){
-                tab: TabLayout.Tab, position: Int ->
+        ) { tab: TabLayout.Tab, position: Int ->
             tab.text = titles[position]
         }.attach()
 

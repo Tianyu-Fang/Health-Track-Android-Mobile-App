@@ -22,9 +22,9 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
- * A simple [Fragment] subclass.
- * Use the [EditMeasurementFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * A simple [Fragment] subclass. Use the
+ * [EditMeasurementFragment.newInstance] factory
+ * method to create an instance of this fragment.
  */
 class EditMeasurementFragment : Fragment() {
     // TODO: Rename and change types of parameters
@@ -42,7 +42,6 @@ class EditMeasurementFragment : Fragment() {
     }
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,8 +52,8 @@ class EditMeasurementFragment : Fragment() {
 
     companion object {
         /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
+         * Use this factory method to create a new instance of this fragment using
+         * the provided parameters.
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
@@ -79,7 +78,6 @@ class EditMeasurementFragment : Fragment() {
         val unit_height = view.findViewById<TextInputEditText>(R.id.unit_height_textfield)
 //        unit_height.
         unit_height.setTextSize(TypedValue.COMPLEX_UNIT_SP, 7f)
-
 
 
 //        var weight: Int
@@ -113,8 +111,7 @@ class EditMeasurementFragment : Fragment() {
         val btnMeasurement = view.findViewById<Button>(R.id.measure_button)
 
         val docRef = db.collection("Measurement")
-        docRef.get().addOnSuccessListener {
-                result ->
+        docRef.get().addOnSuccessListener { result ->
             val count = result.size()
             val measurementDB = db.collection("Measurement").document(count.toString())
 
@@ -129,10 +126,19 @@ class EditMeasurementFragment : Fragment() {
                 val pulse = unit_pulse.text.toString().toInt()
 
 
-                val measurementData = MeasurementModel(height, weight, glucose, pressure, breathing, oxygen, temperature, pulse)
+                val measurementData = MeasurementModel(
+                    height,
+                    weight,
+                    glucose,
+                    pressure,
+                    breathing,
+                    oxygen,
+                    temperature,
+                    pulse
+                )
                 measurementDB.set(measurementData)
-                view.findNavController ().navigate(R.id.viewMeasurementFragment_btm)
-        }
+                view.findNavController().navigate(R.id.viewMeasurementFragment_btm)
+            }
 
 //        val measurementDB = db.collection("Measurement").document(count)
 
@@ -141,9 +147,6 @@ class EditMeasurementFragment : Fragment() {
 
 
     }
-
-
-
 
 
 }

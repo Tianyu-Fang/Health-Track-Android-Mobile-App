@@ -80,9 +80,7 @@ class CheckinHistoryFragment : Fragment() {
         }
     }
 
-    /**
-     * Set up click listener
-     */
+    /** Set up click listener */
     private fun setUpClickListener() {
         binding.ivCalendarNext.setOnClickListener {
             cal.add(Calendar.MONTH, 1)
@@ -97,9 +95,7 @@ class CheckinHistoryFragment : Fragment() {
         }
     }
 
-    /**
-     * Setting up adapter for recyclerview
-     */
+    /** Setting up adapter for recyclerview */
     private fun setUpAdapter() {
         val spacingInPixels = resources.getDimensionPixelSize(R.dimen.single_calendar_margin)
         binding.recyclerView.addItemDecoration(HorizontalItemDecoration(spacingInPixels))
@@ -114,9 +110,7 @@ class CheckinHistoryFragment : Fragment() {
         binding.recyclerView.adapter = adapter
     }
 
-    /**
-     * Function to setup calendar for every month
-     */
+    /** Function to setup calendar for every month */
     private fun setUpCalendar() {
         val calendarList = ArrayList<CalendarDateModel>()
         binding.tvDateMonth.text = sdf.format(cal.time)
@@ -133,8 +127,6 @@ class CheckinHistoryFragment : Fragment() {
         calendarList2.addAll(calendarList)
         adapter.setData(calendarList)
     }
-
-
 
 
 }

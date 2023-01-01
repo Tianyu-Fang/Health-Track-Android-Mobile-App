@@ -31,9 +31,7 @@ class CheckinHistory : AppCompatActivity() {
         setUpCalendar()
     }
 
-    /**
-     * Set up click listener
-     */
+    /** Set up click listener */
     private fun setUpClickListener() {
         binding.ivCalendarNext.setOnClickListener {
             cal.add(Calendar.MONTH, 1)
@@ -48,9 +46,7 @@ class CheckinHistory : AppCompatActivity() {
         }
     }
 
-    /**
-     * Setting up adapter for recyclerview
-     */
+    /** Setting up adapter for recyclerview */
     private fun setUpAdapter() {
         val spacingInPixels = resources.getDimensionPixelSize(R.dimen.single_calendar_margin)
         binding.recyclerView.addItemDecoration(HorizontalItemDecoration(spacingInPixels))
@@ -65,9 +61,7 @@ class CheckinHistory : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
     }
 
-    /**
-     * Function to setup calendar for every month
-     */
+    /** Function to setup calendar for every month */
     private fun setUpCalendar() {
         val calendarList = ArrayList<CalendarDateModel>()
         binding.tvDateMonth.text = sdf.format(cal.time)

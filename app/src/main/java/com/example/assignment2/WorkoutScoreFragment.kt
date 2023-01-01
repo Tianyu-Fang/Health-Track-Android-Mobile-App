@@ -15,7 +15,7 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar
 import java.text.SimpleDateFormat
 import java.util.*
 
-class WorkoutScoreFragment: Fragment() {
+class WorkoutScoreFragment : Fragment() {
 
     private lateinit var binding: FragmentWorkoutScoreBinding
 
@@ -43,26 +43,26 @@ class WorkoutScoreFragment: Fragment() {
         val workoutDB = db.collection("Workout").document(dayOfWeek)
         //val workoutData = Workout(1000, 50, 100, 50)
         //workoutDB.set(workoutData)
-        var data = Workout(1,1,1,1)
+        var data = Workout(1, 1, 1, 1)
 
 
         val circularProgressBar = binding.totalScore
 
         workoutDB.get().addOnSuccessListener { document ->
             data =
-            Workout(
+                Workout(
 //                    document.id
-                (document.data!!["goal"] as Number?)!!.toInt(),
-                (document.data!!["running_time"] as Number?)!!.toInt(),
-                (document.data!!["walking_time"] as Number?)!!.toInt(),
-                (document.data!!["other_time"] as Number?)!!.toInt()
-            )
+                    (document.data!!["goal"] as Number?)!!.toInt(),
+                    (document.data!!["running_time"] as Number?)!!.toInt(),
+                    (document.data!!["walking_time"] as Number?)!!.toInt(),
+                    (document.data!!["other_time"] as Number?)!!.toInt()
+                )
             binding.walkingTV.text = "Walking: ${data.walking_time} minutes"
             binding.runningTV.text = "Running: ${data.running_time} minutes"
             binding.otherTV.text = "Other: ${data.other_time} minutes"
             val goal = data.goal
             val finished = data.walking_time + data.running_time + data.other_time
-            val percentage = finished*100/goal
+            val percentage = finished * 100 / goal
             sharedPercentage = percentage
             binding.scorePercentTV.text = "+${percentage}%"
 
@@ -87,7 +87,8 @@ class WorkoutScoreFragment: Fragment() {
                 // or with gradient
                 backgroundProgressBarColorStart = Color.WHITE
                 backgroundProgressBarColorEnd = Color.RED
-                backgroundProgressBarColorDirection = CircularProgressBar.GradientDirection.TOP_TO_BOTTOM
+                backgroundProgressBarColorDirection =
+                    CircularProgressBar.GradientDirection.TOP_TO_BOTTOM
 
                 // Set Width
                 progressBarWidth = 7f // in DP
@@ -99,7 +100,7 @@ class WorkoutScoreFragment: Fragment() {
                 progressDirection = CircularProgressBar.ProgressDirection.TO_RIGHT
             }
 
-             binding.activityText.text = "${percentage}% hours \n of your daily goal"
+            binding.activityText.text = "${percentage}% hours \n of your daily goal"
 
         }
 //        binding.runningTV.text = "${data.running_time} minutes"
@@ -110,14 +111,17 @@ class WorkoutScoreFragment: Fragment() {
 
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "${sharedPercentage}% hours of my daily goal" +
-                        " is achieved on ${dayOfWeek}!")
+                putExtra(
+                    Intent.EXTRA_TEXT, "${sharedPercentage}% hours of my daily goal" +
+                            " is achieved on ${dayOfWeek}!"
+                )
                 type = "text/plain"
             }
 
             val shareIntent = Intent.createChooser(sendIntent, null)
-            startActivity(shareIntent)}
+            startActivity(shareIntent)
         }
+    }
 
 
 }

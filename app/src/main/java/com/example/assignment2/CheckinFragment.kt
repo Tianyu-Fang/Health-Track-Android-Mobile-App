@@ -24,7 +24,7 @@ import kotlin.collections.ArrayList
 class CheckinFragment : Fragment() {
     val TAG = "GetCheckin"
     val TAG2 = "Debug1"
-    var sharedReport :String = " "
+    var sharedReport: String = " "
     private val checkinViewModel: CheckinViewModel by viewModels {
         CheckinViewModelFactory((requireActivity().application as CheckinApplication).repository)
     }
@@ -57,7 +57,8 @@ class CheckinFragment : Fragment() {
             }
 
             val shareIntent = Intent.createChooser(sendIntent, null)
-            startActivity(shareIntent)}
+            startActivity(shareIntent)
+        }
     }
 
     fun constructRecyclerView(view: View, context: CheckinFragment) {
@@ -70,10 +71,11 @@ class CheckinFragment : Fragment() {
             LinearLayoutManager.VERTICAL,
             false
         )
-        checkinViewModel.newRecord.observe(requireActivity()) {
-                records ->
-            val datalist = populateCheckinList(records.symptom,records.stress_level,
-            records.treatments,records.health_factors)
+        checkinViewModel.newRecord.observe(requireActivity()) { records ->
+            val datalist = populateCheckinList(
+                records.symptom, records.stress_level,
+                records.treatments, records.health_factors
+            )
             val checkinAdapter = CheckinAdapter(datalist)
             CheckinRecyclerView.adapter = checkinAdapter
             CheckinRecyclerView.layoutManager = linearLayoutManager
@@ -90,7 +92,12 @@ class CheckinFragment : Fragment() {
 
     }
 
-    fun populateCheckinList(symptom:String, stress_level: String,treatments:String,health_factors:String): ArrayList<CheckinModel> {
+    fun populateCheckinList(
+        symptom: String,
+        stress_level: String,
+        treatments: String,
+        health_factors: String
+    ): ArrayList<CheckinModel> {
 
 //        var record = checkinViewModel.allRecords.value!![0].symptom
 //        Log.d(TAG, record)

@@ -23,7 +23,7 @@ class ProfileUpdateFragment : Fragment() {
     }
 
     private lateinit var email: String
-    private lateinit var user : User
+    private lateinit var user: User
 //    private lateinit var firebaseDatabase: FirebaseDatabase
 //    private lateinit var databaseReference: DatabaseReference
 
@@ -54,21 +54,32 @@ class ProfileUpdateFragment : Fragment() {
         //update the database
         btnUpdate.setOnClickListener {
 
-            user = User(viewModel.getUserEmail(), uName.getText().toString(),blood_Type.getText().toString(),gender_.getText().toString(),DoB_.getText().toString(),
-                height_.getText().toString(),weight_.getText().toString())
+            user = User(
+                viewModel.getUserEmail(),
+                uName.getText().toString(),
+                blood_Type.getText().toString(),
+                gender_.getText().toString(),
+                DoB_.getText().toString(),
+                height_.getText().toString(),
+                weight_.getText().toString()
+            )
 
             viewModel.getUserEmail()?.let { it1 ->
-                viewModel.updateUser(it1, user).observe(viewLifecycleOwner){
-                    if(it == true) {
-                        Toast.makeText(requireContext(),
+                viewModel.updateUser(it1, user).observe(viewLifecycleOwner) {
+                    if (it == true) {
+                        Toast.makeText(
+                            requireContext(),
                             "Profile Updated..",
-                            Toast.LENGTH_SHORT)
+                            Toast.LENGTH_SHORT
+                        )
                             .show()
 
                     } else {
-                        Toast.makeText(requireContext(),
+                        Toast.makeText(
+                            requireContext(),
                             "Fail to update course..",
-                            Toast.LENGTH_SHORT).show()
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
             }
@@ -81,7 +92,7 @@ class ProfileUpdateFragment : Fragment() {
 
     }
 
-    fun displayData(view: View){
+    fun displayData(view: View) {
         var db = Firebase.firestore
         val userDB = viewModel.getUserEmail()?.let { db.collection("User").document(it) }
         var user = User()

@@ -40,7 +40,8 @@ class ChangePasswordFragment : Fragment() {
         val btnChange = view.findViewById<Button>(R.id.change_button)
         val originPassword = view.findViewById<TextInputEditText>(R.id.originInput)
         val newPassword = view.findViewById<TextInputEditText>(R.id.newPasswordInput)
-        val confirmPassword = view.findViewById<TextInputEditText>(R.id.confirmPasswordInput
+        val confirmPassword = view.findViewById<TextInputEditText>(
+            R.id.confirmPasswordInput
         )
         btnChange.setOnClickListener {
             var origin = originPassword.text.toString()
@@ -49,28 +50,33 @@ class ChangePasswordFragment : Fragment() {
             //check if empty input exists
             if (TextUtils.isEmpty(new) || TextUtils.isEmpty(origin) || TextUtils.isEmpty(confirm)) {
                 Toast.makeText(requireContext(), "Please enter password", Toast.LENGTH_LONG).show()
-            }
-            else {
+            } else {
                 //check if origin password is correct
                 viewModel.getUserEmail()?.let { it1 ->
-                    viewModel.login(it1,origin).observe(viewLifecycleOwner){
-                        if(!it){
-                            Toast.makeText(requireActivity(),
+                    viewModel.login(it1, origin).observe(viewLifecycleOwner) {
+                        if (!it) {
+                            Toast.makeText(
+                                requireActivity(),
                                 "Wrong Origin Password",
-                                Toast.LENGTH_SHORT).show()
-                        }else{
-                            if(new!=confirm){
-                                Toast.makeText(requireActivity(),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            if (new != confirm) {
+                                Toast.makeText(
+                                    requireActivity(),
                                     "The two entered passwords do not match",
-                                    Toast.LENGTH_SHORT).show()
-                            } else{
-                                if(new.length<6){
-                                    Toast.makeText(requireActivity(),
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                if (new.length < 6) {
+                                    Toast.makeText(
+                                        requireActivity(),
                                         "The password must be at 6 characters long",
-                                        Toast.LENGTH_SHORT).show()
+                                        Toast.LENGTH_SHORT
+                                    ).show()
                                 } else {
-                                    viewModel.updatePassword(new).observe(viewLifecycleOwner){
-                                        if(it) {
+                                    viewModel.updatePassword(new).observe(viewLifecycleOwner) {
+                                        if (it) {
 
                                             Toast.makeText(
                                                 requireContext(),
@@ -78,10 +84,12 @@ class ChangePasswordFragment : Fragment() {
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                             view.findNavController().navigate(R.id.loginFragment)
-                                        } else{
-                                            Toast.makeText(requireContext(),
+                                        } else {
+                                            Toast.makeText(
+                                                requireContext(),
                                                 "Password not changed",
-                                                Toast.LENGTH_SHORT)
+                                                Toast.LENGTH_SHORT
+                                            )
                                                 .show()
                                         }
                                     }

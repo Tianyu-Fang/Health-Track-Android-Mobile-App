@@ -7,10 +7,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.assignment2.model.Checkin
 import com.example.assignment2.repository.CheckinRepository
 
-class CheckinViewModel(private val repository: CheckinRepository): ViewModel() {
+class CheckinViewModel(private val repository: CheckinRepository) : ViewModel() {
 
     var _checkindata: LiveData<List<Checkin>> = MutableLiveData()
-    var _newCheckindata:LiveData<Checkin> = MutableLiveData()
+    var _newCheckindata: LiveData<Checkin> = MutableLiveData()
     val allRecords: LiveData<List<Checkin>>
         get() = _checkindata
     val newRecord: LiveData<Checkin>
@@ -38,8 +38,6 @@ class CheckinViewModel(private val repository: CheckinRepository): ViewModel() {
     }
 
 
-
-
 //    // update
 //    suspend fun updateNote(note: Note) {
 //        repository.updateNote(note)
@@ -51,8 +49,8 @@ class CheckinViewModel(private val repository: CheckinRepository): ViewModel() {
 //    }
 }
 
-class CheckinViewModelFactory(private val repository: CheckinRepository)
-    : ViewModelProvider.Factory {
+class CheckinViewModelFactory(private val repository: CheckinRepository) :
+    ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(CheckinViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")

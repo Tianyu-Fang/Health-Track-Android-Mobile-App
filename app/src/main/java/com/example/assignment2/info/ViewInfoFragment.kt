@@ -11,7 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.assignment2.R
 import me.relex.circleindicator.CircleIndicator3
 
-class ViewInfoFragment: Fragment() {
+class ViewInfoFragment : Fragment() {
     private val data = mutableListOf<String>()
     private val fragmentList = ArrayList<Fragment>()
     private lateinit var viewPager: ViewPager2
@@ -64,7 +64,6 @@ class ViewInfoFragment: Fragment() {
             }
         }
     }
-
 
 
     private fun addFragmentToList() {

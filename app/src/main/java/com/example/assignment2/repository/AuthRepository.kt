@@ -32,23 +32,24 @@ class AuthRepository {
         return status
     }
 
-    fun setUserEmail(email: String): MutableLiveData<Boolean>{
+    fun setUserEmail(email: String): MutableLiveData<Boolean> {
         val status: MutableLiveData<Boolean> = MutableLiveData()
         userEmail = email
 
         return status
     }
 
-    fun getUserEmail(): String?{
+    fun getUserEmail(): String? {
         return userEmail
     }
 
     fun getUser(): User? {
-        if(user==null)
+        if (user == null)
             return null
         else
             return user
     }
+
     fun signUp(email: String, password: String): MutableLiveData<Boolean> {
         val status: MutableLiveData<Boolean> = MutableLiveData()
         auth = FirebaseAuth.getInstance()
@@ -60,9 +61,9 @@ class AuthRepository {
         return status
     }
 
-    fun addUserInfo(email: String, name: String):MutableLiveData<Boolean>{
+    fun addUserInfo(email: String, name: String): MutableLiveData<Boolean> {
         var status: MutableLiveData<Boolean> = MutableLiveData()
-        val u : User = User(email, name,"","","","","")
+        val u: User = User(email, name, "", "", "", "", "")
 
         db.collection("User")
             .document(email)
@@ -71,6 +72,7 @@ class AuthRepository {
             }
         return status
     }
+
     fun forgotPassword(email: String): MutableLiveData<Boolean> {
         val status: MutableLiveData<Boolean> = MutableLiveData()
         auth = FirebaseAuth.getInstance()
@@ -117,7 +119,7 @@ class AuthRepository {
     // Firestore
     var db = Firebase.firestore
 
-    fun updateUser(email: String, user: User): MutableLiveData<Boolean>{
+    fun updateUser(email: String, user: User): MutableLiveData<Boolean> {
         var status: MutableLiveData<Boolean> = MutableLiveData()
 
         val map: MutableMap<String, Any?> = HashMap()
@@ -131,14 +133,14 @@ class AuthRepository {
 
         db.collection("User").document(email)
             .set(map)
-            .addOnSuccessListener {  }
-            .addOnFailureListener {  }
+            .addOnSuccessListener { }
+            .addOnFailureListener { }
         status.value = true
 
         return status
     }
 
-    fun findUser(){
+    fun findUser() {
         val userDB = userEmail?.let { db.collection("User").document(it) }
 
         var data = User()
@@ -157,7 +159,6 @@ class AuthRepository {
 
             }
         }
-
 
 
     }
