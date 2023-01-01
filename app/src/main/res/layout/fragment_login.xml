@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:text="Forgot password?"
+            android:text="Forget password?"
             android:textColor="@color/blue"
             android:textSize="16dp" />
 
