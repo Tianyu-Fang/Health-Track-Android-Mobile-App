@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".measurement.ViewMeasurementFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -21,653 +21,668 @@
         app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Total Health Score"
-            android:textSize="@dimen/titleSize"
             android:layout_marginLeft="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:text="Total Health Score"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleSize"
+            android:textStyle="bold" />
+
         <Button
+            android:id="@+id/health_score_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/health_score_button"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="50dp"
+            android:layout_marginRight="130dp"
             android:layout_marginBottom="20dp"
-            android:outlineAmbientShadowColor="@color/black"
-            android:outlineSpotShadowColor="@color/black"
             android:background="@color/teal_200"
 
 
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="130dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
             android:text="Health Score Detail"
             android:textColor="@color/black"
-            android:textStyle="bold"
             android:textSize="13dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-<!--        <Button-->
-<!--            android:id="@+id/total_score_btn"-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:background="@drawable/round_button"-->
-<!--            app:cardBackgroundColor="@color/white"-->
-<!--            android:fontFamily="@font/googlesans_bold"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:textSize="30sp"-->
-<!--            android:textColor="@color/stream_ui_accent_green"-->
-<!--            android:layout_marginLeft="290dp"-->
-<!--            -->
-<!--            android:text="" />-->
+        <!--        <Button-->
+        <!--            android:id="@+id/total_score_btn"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:background="@drawable/round_button"-->
+        <!--            app:cardBackgroundColor="@color/white"-->
+        <!--            android:fontFamily="@font/googlesans_bold"-->
+        <!--            android:layout_marginTop="15dp"-->
+        <!--            android:textSize="30sp"-->
+        <!--            android:textColor="@color/stream_ui_accent_green"-->
+        <!--            android:layout_marginLeft="290dp"-->
+        <!--            -->
+        <!--            android:text="" />-->
         <TextView
+            android:id="@+id/total_score"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/total_score"
-            android:text="92"
-            android:textSize="30dp"
-            android:textColor="@color/black"
             android:layout_marginLeft="300dp"
+            android:layout_marginTop="35dp"
             android:fontFamily="@font/googlesans_bold"
-            android:layout_marginTop="35dp"/>
+            android:text="92"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
 
 
     </androidx.cardview.widget.CardView>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
         android:layout_marginTop="110dp"
-        android:layout_marginBottom="55dp">
+        android:layout_marginBottom="55dp"
+        android:background="@color/white">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:rowCount="4">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="20dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
 
-                <ImageView
-                    android:id="@+id/height_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_height"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/height_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_height"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Height"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/height_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/height_data"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Height"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="85sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/height_imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                tools:text="180"
-                android:id="@+id/height_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
-                android:textSize="85sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/height_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="cm"
-                android:id="@+id/height_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/height_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
-
-                <ImageView
-                    android:id="@+id/weight_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_weight"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="180" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/height_unit"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Weight"
+                    android:text="cm"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/height_data"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/weight_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_weight"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Weight"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/weight_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/weight_data"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/white"
+                    android:textSize="85sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/weight_imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                tools:text="70"
-                android:id="@+id/weight_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="40dp"
-                android:textColor="@color/white"
-                android:textSize="85sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/weight_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="kg"
-                android:id="@+id/weight_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/weight_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="20dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
-
-                <ImageView
-                    android:id="@+id/glucose_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_glucose"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="70" />
 
                 <TextView
+                    android:id="@+id/weight_unit"
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Blood Glucose Level"
+                    android:text="kg"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/weight_data"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/glucose_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_glucose"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Blood Glucose Level"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/glucose_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/glucose_data"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/white"
+                    android:textSize="85sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/glucose_imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                tools:text="120"
-                android:id="@+id/glucose_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
-                android:textSize="85sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/glucose_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="mg/dL"
-                android:id="@+id/glucose_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/glucose_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
-
-                <ImageView
-                    android:id="@+id/presure_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_pressure"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="120" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/glucose_unit"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Blood Pressure"
+                    android:text="mg/dL"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/glucose_data"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/presure_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_pressure"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Blood Pressure"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/presure_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/presure_data"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="60dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/white"
+                    android:textSize="45sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/presure_imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                tools:text="110/70"
-                android:id="@+id/presure_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="60dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
-                android:textSize="45sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/presure_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="mmHg"
-                android:id="@+id/presure_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/presure_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="20dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
-
-                <ImageView
-                    android:id="@+id/breathing_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_breathe"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="110/70" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/presure_unit"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Breathing"
+                    android:text="mmHg"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/presure_data"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/breathing_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_breathe"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Breathing"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/breathing_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/breathing_data"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/white"
+                    android:textSize="85sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/breathing_imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                tools:text="14"
-                android:id="@+id/breathing_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
-                android:textSize="85sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/breathing_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="/min"
-                android:id="@+id/breathing_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/breathing_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
-
-                <ImageView
-                    android:id="@+id/oxygen_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_oxygen"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="14" />
 
                 <TextView
+                    android:id="@+id/breathing_unit"
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Blood Oxygen Saturation"
+                    android:text="/min"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/breathing_data"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
 
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/oxygen_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_oxygen"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Blood Oxygen Saturation"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/oxygen_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/oxygen_data"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/white"
+                    android:textSize="85sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/oxygen_imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                tools:text="70"
-                android:id="@+id/oxygen_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
-                android:textSize="85sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/oxygen_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="%"
-                android:id="@+id/oxygen_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/oxygen_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="20dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
-
-                <ImageView
-                    android:id="@+id/temperature_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_temperature"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="70" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/oxygen_unit"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Body Temperature"
+                    android:text="%"
                     android:textColor="@color/white"
-                    android:textSize="13sp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/oxygen_data"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/temperature_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_temperature"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Body Temperature"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/temperature_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/temperature_data"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/white"
+                    android:textSize="85sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/temperature_imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                tools:text="37"
-                android:id="@+id/temperature_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
-                android:textSize="85sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/temperature_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="C"
-                android:id="@+id/temperature_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/temperature_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginTop="5dp">
-
-                <ImageView
-                    android:id="@+id/pulse_imageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_heart"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="37" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/temperature_unit"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/googlesans_bold"
-                    android:text="Pulse Rate"
+                    android:text="C"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/temperature_data"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/pulse_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_heart"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Pulse Rate"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/pulse_imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/pulse_data"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/white"
+                    android:textSize="85sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/pulse_imageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="77" />
+
+                <TextView
+                    android:id="@+id/pulse_unit"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="/min"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toEndOf="@+id/pulse_data"
                     app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                tools:text="77"
-                android:id="@+id/pulse_data"
-                android:fontFamily="@font/googlesans_bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/white"
-                android:textSize="85sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/pulse_imageView"
-                app:layout_constraintTop_toTopOf="parent"            />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="/min"
-                android:id="@+id/pulse_unit"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_marginTop="130dp"
-                android:layout_marginLeft="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/pulse_data"
-                app:layout_constraintTop_toTopOf="parent"            />
-        </androidx.cardview.widget.CardView>
-    </GridLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
 
     </ScrollView>
 

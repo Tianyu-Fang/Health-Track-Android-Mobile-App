@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.checkin
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import com.example.assignment2.R
 
 
 class CheckinBoardFragment : Fragment() {

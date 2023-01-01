@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.workout
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,12 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.assignment2.databinding.FragmentWorkoutHistoryBinding
-import com.example.assignment2.model.Checkin
 import com.example.assignment2.model.Workout
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
 import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
-import com.github.aachartmodel.aainfographics.aaoptionsmodel.AAStyle
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 

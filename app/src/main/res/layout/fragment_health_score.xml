@@ -8,23 +8,20 @@
     android:orientation="vertical"
     tools:context=".measurement.HealthScoreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
-
 
     <RelativeLayout
         android:id="@+id/header_title"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
         <TextView
             android:id="@+id/health_score"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Health Score"
+            android:textColor="@color/black"
             android:textSize="@dimen/titleSize"
             android:textStyle="bold" />
 
@@ -36,9 +33,10 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:background="@color/grey">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -73,11 +71,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/score_height_weight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="85"
-                        android:id="@+id/score_height_weight"
                         android:textColor="@color/stream_ui_accent_red"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -116,11 +114,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/score_glucose"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="90"
-                        android:id="@+id/score_glucose"
                         android:textColor="@color/stream_ui_accent_green"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -159,11 +157,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/score_pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="95"
-                        android:id="@+id/score_pressure"
                         android:textColor="@color/stream_ui_accent_green"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -202,11 +200,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/score_breathing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="88"
-                        android:id="@+id/score_breathing"
                         android:textColor="@color/stream_ui_accent_red"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -245,13 +243,13 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/score_oxygen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="75"
                         android:textColor="@color/stream_ui_accent_red"
                         android:textSize="18sp"
-                        android:id="@+id/score_oxygen"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.60"
@@ -288,11 +286,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/score_temperature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="100"
-                        android:id="@+id/score_temperature"
                         android:textColor="@color/stream_ui_accent_green"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -331,11 +329,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/score_pulse"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="98"
-                        android:id="@+id/score_pulse"
                         android:textColor="@color/stream_ui_accent_green"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -351,7 +349,6 @@
 
 
     </ScrollView>
-
 
 
 </LinearLayout>

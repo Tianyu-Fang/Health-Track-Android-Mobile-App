@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.checkin
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
+import com.example.assignment2.R
 import com.example.assignment2.model.Checkin
 import com.example.assignment2.viewmodel.CheckinViewModel
 import com.example.assignment2.viewmodel.CheckinViewModelFactory

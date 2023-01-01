@@ -1,16 +1,15 @@
-package com.example.assignment2
+package com.example.assignment2.checkin
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.SnapHelper
+import com.example.assignment2.R
 import com.example.assignment2.adapter.CalendarAdapter
 import com.example.assignment2.databinding.FragmentCheckinHistoryBinding
 import com.example.assignment2.model.CalendarDateModel

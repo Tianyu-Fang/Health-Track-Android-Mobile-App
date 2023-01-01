@@ -5,92 +5,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".userManagement.ProfileFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
             android:id="@+id/info"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profile"
                 android:layout_marginStart="30dp"
-                android:textStyle="bold"
-                android:textSize="@dimen/titleSize" />
+                android:text="Profile"
+                android:textSize="@dimen/titleSize"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/setting"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/profile"
                 android:layout_marginStart="220dp"
-                android:src="@drawable/setting"/>
+                android:layout_toEndOf="@+id/profile"
+                android:src="@drawable/setting" />
 
 
             <ImageView
                 android:id="@+id/avator"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_below="@+id/profile"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_below="@+id/profile"
                 android:src="@drawable/xmu_logo" />
 
             <TextView
                 android:id="@+id/userName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tang Jiacheng"
+                android:layout_below="@+id/profile"
                 android:layout_marginStart="20dp"
-                android:textStyle="bold"
-                android:textSize="@dimen/titleSize"
-                android:hint="User Name"
                 android:layout_toEndOf="@+id/avator"
-                android:layout_below="@+id/profile"/>
+                android:hint="User Name"
+                android:text="Tang Jiacheng"
+                android:textSize="@dimen/titleSize"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/userEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="dmt1909196@xmu.edu.my"
+                android:layout_below="@+id/userName"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:textSize="@dimen/subTitleSize"
-                android:layout_below="@+id/userName"
-                android:layout_toEndOf="@id/avator"/>
+                android:layout_toEndOf="@id/avator"
+                android:text="dmt1909196@xmu.edu.my"
+                android:textSize="@dimen/subTitleSize" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/profile_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="410dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="0dp"/>
+                android:layout_marginBottom="10dp" />
 
             <Button
                 android:id="@+id/update_button"
-                android:layout_above="@id/logOut_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_above="@id/logOut_button"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
+                android:background="@drawable/login_button"
                 android:text="Update profile"
-                android:textColor="@color/white"
-                android:background="@drawable/login_button"/>
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/logOut_button"
@@ -101,15 +104,15 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="60dp"
+                android:background="@drawable/grey_button"
                 android:text="Log out"
-                android:textColor="@color/black"
-                android:background="@drawable/grey_button"/>
+                android:textColor="@color/black" />
         </RelativeLayout>
 
     </LinearLayout>
-<!--    <include layout="@layout/bottom_navigation"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom"-->
-<!--        />-->
+    <!--    <include layout="@layout/bottom_navigation"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        />-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

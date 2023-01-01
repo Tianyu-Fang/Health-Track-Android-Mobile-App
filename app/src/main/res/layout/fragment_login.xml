@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".userManagement.LoginFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,19 +16,19 @@
             android:id="@+id/loginTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="100dp"
             android:text="Login"
-            android:layout_marginStart="30dp"
-            android:textStyle="bold"
-            android:textSize="@dimen/titleSize" />
+            android:textSize="@dimen/titleSize"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/loginSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:text="Login to View More Details"
-            android:layout_marginStart="30dp"
             android:textSize="@dimen/subTitleSize" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -46,35 +47,34 @@
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edt_text"
-                android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordtextfield"
-            app:passwordToggleEnabled="true"
-            app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
+            android:hint="Password"
+            app:errorEnabled="true"
 
-            android:hint="Password">
+            app:passwordToggleEnabled="true">
 
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/pass_edt_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
 
 
         <Button
@@ -84,23 +84,23 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="-10dp"
             android:layout_marginEnd="30dp"
+            android:background="@drawable/login_button"
             android:text="Login"
-            android:textColor="@color/white"
-            android:background="@drawable/login_button"/>
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/forget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:text="Forgot password?"
             android:textColor="@color/blue"
-            android:layout_gravity="center_horizontal"
             android:textSize="16dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/or"
@@ -112,13 +112,15 @@
                 android:layout_marginRight="20dip"
                 android:text="or"
                 android:textSize="18dp" />
+
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="150dip"
                 android:layout_height="1dip"
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@id/or"
-                android:background="#999"/>
+                android:background="#999" />
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="150dip"
@@ -137,8 +139,8 @@
                 android:id="@+id/dont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="80dp"
+                android:layout_marginTop="5dp"
                 android:text="Don't have an account "
                 android:textSize="18dp" />
 
@@ -146,8 +148,8 @@
                 android:id="@+id/textSign"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
                 android:text=" Sign up."
                 android:textColor="@color/blue"
                 android:textSize="18dp" />
