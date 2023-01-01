@@ -3,29 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/grey"
+    android:orientation="vertical"
     tools:context=".measurement.HeightFragment">
 
     <RelativeLayout
         android:id="@+id/header_title"
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_height="40dp">
+        android:layout_height="40dp"
+        android:background="@color/white">
+
         <TextView
             android:id="@+id/measurement"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Height"
+            android:textColor="@color/black"
             android:textSize="@dimen/titleSize"
             android:textStyle="bold" />
     </RelativeLayout>
 
     <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
         android:id="@+id/chartview2"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
 </LinearLayout>

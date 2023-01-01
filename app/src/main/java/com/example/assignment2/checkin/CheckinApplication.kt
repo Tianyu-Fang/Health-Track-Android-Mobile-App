@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.checkin
 
 import android.app.Application
 import com.example.assignment2.repository.CheckinRepository

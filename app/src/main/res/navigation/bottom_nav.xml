@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.assignment2.userManagement.LoginFragment"
-        android:label="fragment_login"
+        android:label="Log in"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment2_to_profileFragment_btm"
@@ -48,8 +48,8 @@
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment_btm"
-        android:name="com.example.assignment2.DashboardFragment"
-        android:label="fragment_dashboard"
+        android:name="com.example.assignment2.checkin.DashboardFragment"
+        android:label="Home"
         tools:layout="@layout/fragment_dashboard" >
         <action
             android:id="@+id/action_dashboardFragment_to_profileFragment2"
@@ -78,8 +78,8 @@
     </fragment>
     <fragment
         android:id="@+id/checkinBoardFragment_btm"
-        android:name="com.example.assignment2.CheckinBoardFragment"
-        android:label="fragment_checkin_board"
+        android:name="com.example.assignment2.checkin.CheckinBoardFragment"
+        android:label="Checkin Board"
         tools:layout="@layout/fragment_checkin_board" >
         <action
             android:id="@+id/action_checkinBoardFragment_btm_to_dashboardFragment_btm"
@@ -90,8 +90,8 @@
     </fragment>
     <fragment
         android:id="@+id/checkinHistoryFragment_btm"
-        android:name="com.example.assignment2.CheckinHistoryFragment"
-        android:label="fragment_checkin_history"
+        android:name="com.example.assignment2.checkin.CheckinHistoryFragment"
+        android:label="Checkin History"
         tools:layout="@layout/fragment_checkin_history" >
         <action
             android:id="@+id/action_checkinHistoryFragment_btm_to_fillCheckinFragment_btm"
@@ -105,8 +105,8 @@
     </fragment>
     <fragment
         android:id="@+id/fillCheckinFragment_btm"
-        android:name="com.example.assignment2.FillCheckinFragment"
-        android:label="fragment_fill_checkin"
+        android:name="com.example.assignment2.checkin.FillCheckinFragment"
+        android:label="Fill Checkin"
         tools:layout="@layout/fragment_fill_checkin" >
         <action
             android:id="@+id/action_fillCheckinFragment_btm_to_checkinHistoryFragment3"
@@ -114,23 +114,23 @@
     </fragment>
     <fragment
         android:id="@+id/workoutFragment_btm"
-        android:name="com.example.assignment2.WorkoutFragment"
-        android:label="fragment_workout"
+        android:name="com.example.assignment2.workout.WorkoutFragment"
+        android:label="Workout"
         tools:layout="@layout/fragment_workout" />
     <fragment
         android:id="@+id/viewInfoFragment_info_btm"
         android:name="com.example.assignment2.info.ViewInfoFragment"
-        android:label="fragment_view_info"
+        android:label="View Info"
         tools:layout="@layout/fragment_view_info" />
     <fragment
         android:id="@+id/measurementFragment_btm"
         android:name="com.example.assignment2.measurement.MeasurementFragment"
-        android:label="fragment_measurement"
+        android:label="Measurement"
         tools:layout="@layout/fragment_measurement" />
     <fragment
         android:id="@+id/journalFragment_btm"
         android:name="com.example.assignment2.journal.JournalFragment"
-        android:label="fragment_journal"
+        android:label="Journal"
         tools:layout="@layout/fragment_journal" >
         <action
             android:id="@+id/action_journalFragment_btm_to_journalDisplayFragment_btm"
@@ -138,19 +138,19 @@
     </fragment>
     <fragment
         android:id="@+id/dietFragment_btm"
-        android:name="com.example.assignment2.DietFragment"
-        android:label="fragment_diet"
+        android:name="com.example.assignment2.measurement.DietFragment"
+        android:label="Diet"
         tools:layout="@layout/fragment_diet" />
 
     <fragment
         android:id="@+id/chatFragment_btm"
-        android:name="com.example.assignment2.ChatFragment"
-        android:label="fragment_chat"
+        android:name="com.example.assignment2.chat.ChatFragment"
+        android:label="Channels"
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.assignment2.userManagement.SettingFragment"
-        android:label="SettingFragment" >
+        android:label="Settings" >
         <action
             android:id="@+id/action_settingFragment2_to_changePasswordFragment2"
             app:destination="@id/changePasswordFragment" />
@@ -158,12 +158,12 @@
     <fragment
         android:id="@+id/changePasswordFragment"
         android:name="com.example.assignment2.userManagement.ChangePasswordFragment"
-        android:label="fragment_change_password"
+        android:label="Change Password"
         tools:layout="@layout/fragment_change_password" />
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.assignment2.userManagement.RegisterFragment"
-        android:label="fragment_register"
+        android:label="Register"
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_registerFragment2_to_loginFragment2"
@@ -172,7 +172,7 @@
     <fragment
         android:id="@+id/forgetPasswordFragment"
         android:name="com.example.assignment2.userManagement.ForgetPasswordFragment"
-        android:label="fragment_forget_password"
+        android:label="Forget Password"
         tools:layout="@layout/fragment_forget_password" >
         <action
             android:id="@+id/action_forgetPasswordFragment_to_loginFragment"
@@ -181,7 +181,7 @@
     <fragment
         android:id="@+id/viewMeasurementFragment_btm"
         android:name="com.example.assignment2.measurement.ViewMeasurementFragment"
-        android:label="fragment_view_measurement"
+        android:label="View Measurement"
         tools:layout="@layout/fragment_view_measurement" >
         <action
             android:id="@+id/action_viewMeasurementFragment_btm_to_healthScoreFragment2"
@@ -199,32 +199,32 @@
     <fragment
         android:id="@+id/editMeasurementFragment2"
         android:name="com.example.assignment2.measurement.EditMeasurementFragment"
-        android:label="fragment_edit_measurement"
+        android:label="Edit Measurement"
         tools:layout="@layout/fragment_edit_measurement" />
     <fragment
         android:id="@+id/healthScoreFragment_btm"
         android:name="com.example.assignment2.measurement.HealthScoreFragment"
-        android:label="fragment_health_score"
+        android:label="Health score"
         tools:layout="@layout/fragment_health_score" />
     <fragment
         android:id="@+id/heightFragment_btm"
         android:name="com.example.assignment2.measurement.HeightFragment"
-        android:label="fragment_height"
+        android:label="Height"
         tools:layout="@layout/fragment_height" />
     <fragment
         android:id="@+id/weightFragment_btm"
         android:name="com.example.assignment2.measurement.WeightFragment"
-        android:label="fragment_weight"
+        android:label="Weight"
         tools:layout="@layout/fragment_weight" />
     <fragment
         android:id="@+id/checkinFragment_btm"
-        android:name="com.example.assignment2.CheckinFragment"
-        android:label="fragment_checkin"
+        android:name="com.example.assignment2.checkin.CheckinFragment"
+        android:label="Checkin Report"
         tools:layout="@layout/fragment_checkin" />
     <fragment
         android:id="@+id/profileUpdateFragment"
         android:name="com.example.assignment2.userManagement.ProfileUpdateFragment"
-        android:label="fragment_profile_update"
+        android:label="Update Profile"
         tools:layout="@layout/fragment_profile_update" >
         <action
             android:id="@+id/action_profileUpdateFragment_to_profileFragment"
@@ -233,6 +233,6 @@
     <fragment
         android:id="@+id/journalDisplayFragment_btm"
         android:name="com.example.assignment2.journal.JournalDisplayFragment"
-        android:label="fragment_journal_display"
+        android:label="View Journal"
         tools:layout="@layout/fragment_journal_display" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.workout
 
 import android.content.Intent
 import android.graphics.Color

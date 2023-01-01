@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userManagement.ProfileUpdateFragment"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".userManagement.ProfileUpdateFragment">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <com.google.android.material.textfield.TextInputLayout
 
-            android:id="@+id/profileTitle1"
+            <com.google.android.material.textfield.TextInputLayout
 
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/profileTitle1"
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:hint="Your Name">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-
-            <!--this is the actual edit text which takes the input-->
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="data"/>
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:hint="Your Name"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp">
 
-        </com.google.android.material.textfield.TextInputLayout>
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="data" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -51,11 +54,11 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
+                android:hint="Date of Birth"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                android:hint="Date of Birth">
+                app:boxCornerRadiusTopStart="10dp">
 
 
                 <!--this is the actual edit text which takes the input-->
@@ -63,10 +66,9 @@
                     android:id="@+id/Date_of_Birth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="data"/>
+                    tools:text="data" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -80,11 +82,11 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
+                android:hint="gender"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                android:hint="gender">
+                app:boxCornerRadiusTopStart="10dp">
 
 
                 <!--this is the actual edit text which takes the input-->
@@ -92,7 +94,7 @@
                     android:id="@+id/gender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="data"/>
+                    tools:text="data" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,11 +109,11 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
+                android:hint="Blood Type"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                android:hint="Blood Type">
+                app:boxCornerRadiusTopStart="10dp">
 
 
                 <!--this is the actual edit text which takes the input-->
@@ -119,7 +121,7 @@
                     android:id="@+id/blood_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="data"/>
+                    tools:text="data" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,11 +136,11 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
+                android:hint="Height"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                android:hint="Height">
+                app:boxCornerRadiusTopStart="10dp">
 
 
                 <!--this is the actual edit text which takes the input-->
@@ -146,9 +148,10 @@
                     android:id="@+id/height"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="data"/>
+                    tools:text="data" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/profileTitle6"
@@ -160,11 +163,11 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
+                android:hint="Weight"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                android:hint="Weight">
+                app:boxCornerRadiusTopStart="10dp">
 
 
                 <!--this is the actual edit text which takes the input-->
@@ -172,40 +175,41 @@
                     android:id="@+id/weight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="data"/>
+                    tools:text="data" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <Button
-        android:id="@+id/update_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-        android:text="Update profile"
-        android:textColor="@color/white"
-        android:background="@drawable/login_button"/>
-
-            <Button
-                android:id="@+id/cancel_submit"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="30dp"
-                android:text="cancel update"
-                android:textColor="@color/white"
-                android:background="@drawable/login_button"/>
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/update_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button"
+                    android:text="Update profile"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/cancel_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button"
+                    android:text="cancel update"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

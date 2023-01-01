@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.chat
 
 import android.content.Context
 import android.content.Intent

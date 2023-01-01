@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WorkoutScoreFragment"
-    android:background="@color/exciteOrange">
+    android:background="@color/exciteOrange"
+    tools:context=".workout.WorkoutScoreFragment">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -14,21 +14,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
-
-<!-- The back icon
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/backIV"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:clickable="false"
-        android:focusable="false"
-        android:src="@drawable/ic_arrow_back"
-        android:tint="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
--->
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/stepsView"
@@ -89,21 +74,21 @@
         android:fontFamily="@font/stream_roboto_bold"
         android:gravity="center"
         android:lines="2"
+        android:text="2/4 hours \n of your daily goal"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stepsView"
-        tools:text="2/4 hours \n of your daily goal"
-        android:text="2/4 hours \n of your daily goal"/>
+        tools:text="2/4 hours \n of your daily goal" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/scorePercentTV"
         style="@style/ScoreDetailsPercentStyle"
+        android:text="+10%"
         app:layout_constraintStart_toStartOf="@+id/stepsView"
         app:layout_constraintTop_toTopOf="@+id/stepsView"
-        tools:text="+10%"
-        android:text="+10%"/>
+        tools:text="+10%" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/scoreTV"
@@ -195,12 +180,12 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
-        android:contentDescription="share"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_baseline_share_24"
         android:backgroundTint="@color/white"
+        android:contentDescription="share"
+        android:src="@drawable/ic_baseline_share_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />

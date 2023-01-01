@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.workout
 
 import android.annotation.SuppressLint
 import android.os.Bundle

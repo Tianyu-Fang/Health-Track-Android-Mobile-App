@@ -1,19 +1,12 @@
-package com.example.assignment2
+package com.example.assignment2.checkin
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.appcompat.view.menu.MenuBuilder
-import androidx.core.view.MenuCompat
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
 import com.example.assignment2.databinding.FragmentDashboardBinding
 import com.example.assignment2.model.MeasurementModel
-import com.example.assignment2.model.User
 import com.example.assignment2.model.Workout
 import com.example.assignment2.repository.AuthRepository
 import com.example.assignment2.viewmodel.AuthViewModel

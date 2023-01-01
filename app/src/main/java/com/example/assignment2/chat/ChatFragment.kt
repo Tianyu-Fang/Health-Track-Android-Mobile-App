@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.chat
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

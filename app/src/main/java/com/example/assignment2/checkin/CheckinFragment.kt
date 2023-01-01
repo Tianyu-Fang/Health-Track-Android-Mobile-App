@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.checkin
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.assignment2.R
 import com.example.assignment2.adapter.CheckinAdapter
 import com.example.assignment2.model.CheckinModel
 import com.example.assignment2.viewmodel.CheckinViewModel
