@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     android:orientation="vertical"
     tools:context=".journal.JournalDisplayFragment">
 
     <RelativeLayout
         android:id="@+id/header_title"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white">
+
         <TextView
             android:id="@+id/journal"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Journal"
+            android:textColor="@color/black"
             android:textSize="@dimen/titleSize"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -41,7 +44,6 @@
             android:layout_marginBottom="10dp"
             android:hint="Please select one or more images" />
 
-
         <TextView
             android:id="@+id/activity"
             android:layout_width="wrap_content"
@@ -61,7 +63,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp">
-
 
             <!--this is the actual edit text which takes the input-->
             <TextView
@@ -92,7 +93,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp">
-
 
             <!--this is the actual edit text which takes the input-->
             <TextView
@@ -142,11 +142,11 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_journal"
         android:layout_width="wrap_content"
-        android:contentDescription="share"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_baseline_add_24"
-        android:backgroundTint="@color/white" />
+        android:layout_margin="26dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="share"
+        android:src="@drawable/ic_baseline_add_24" />
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/grey"
-    tools:context=".HeightFragment">
+    tools:context=".measurement.HeightFragment">
 
     <RelativeLayout
         android:id="@+id/header_title"

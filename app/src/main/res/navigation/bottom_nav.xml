@@ -229,12 +229,12 @@
         tools:layout="@layout/fragment_health_score" />
     <fragment
         android:id="@+id/heightFragment_btm"
-        android:name="com.example.assignment2.HeightFragment"
+        android:name="com.example.assignment2.measurement.HeightFragment"
         android:label="fragment_height"
         tools:layout="@layout/fragment_height" />
     <fragment
         android:id="@+id/weightFragment_btm"
-        android:name="com.example.assignment2.WeightFragment"
+        android:name="com.example.assignment2.measurement.WeightFragment"
         android:label="fragment_weight"
         tools:layout="@layout/fragment_weight" />
     <fragment
