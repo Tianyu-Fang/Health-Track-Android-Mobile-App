@@ -49,7 +49,7 @@ PainKiller is a mobile application designed to help individuals take control of 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/PainKiller.git
-```
+   ```
 
 ## 🎨 User Interface (UI) & Navigation Screenshots
 
