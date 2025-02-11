@@ -35,3 +35,4 @@ replay_pid*
 .gradle/7.4/executionHistory/executionHistory.bin
 .gradle/7.4/executionHistory/executionHistory.lock
 .gradle/7.4/fileHashes/fileHashes.lock
+.DS_Store
